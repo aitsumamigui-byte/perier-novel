@@ -30,7 +30,7 @@ body{background:#e7e0d2;color:var(--ink);font-family:var(--serif);
 .chapter{display:inline-block;writing-mode:vertical-rl;height:100%;vertical-align:top;
   white-space:normal;padding:56px 0;box-sizing:border-box;
   font-size:18px;line-height:2.0;letter-spacing:.06em;text-align:justify;}
-.chapter p{margin:0 0 0 1.2em;text-indent:1em;}
+.chapter p{margin:0 0 0 1.2em;text-indent:1em;break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;}
 .no-indent,.epigraph{text-indent:0!important;}
 
 .chapter-title{display:inline-block;margin-left:2.2em;padding-left:.6em;height:100%;vertical-align:top;}
@@ -38,7 +38,7 @@ body{background:#e7e0d2;color:var(--ink);font-family:var(--serif);
 .ch-name{font-size:23px;color:var(--ink);font-weight:600;letter-spacing:.16em;line-height:1.7;}
 .epigraph{color:var(--ink-soft);letter-spacing:.2em;margin-left:1.8em;}
 
-.dash-block{display:inline-block;margin:0;}
+.dash-block{display:inline-block;margin:0;break-inside:avoid;-webkit-column-break-inside:avoid;}
 .dash{display:block;color:var(--ink-soft);text-indent:0;margin:0;}
 .log{display:inline-block;font-family:var(--serif);font-size:15px;color:var(--ink-soft);
   border-right:1px solid var(--rule);padding:0 .8em;margin:0 0 0 .6em;line-height:1.9;letter-spacing:.04em;}
@@ -77,64 +77,14 @@ button.tocitem{display:flex;align-items:baseline;gap:16px;width:100%;background:
 </style>
 </head>
 <body>
-<div id="bunko-cover" style="
-    position: fixed;
-    top: 0; left: 0; width: 100vw; height: 100vh;
-    background-color: #FAFAF8;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: opacity 1.2s ease-in-out;
-">
-    <div style="
-        width: 80vw; max-width: 600px; height: 85vh;
-        border: 1px solid #222;
-        outline: 1px solid #222;
-        outline-offset: -6px;
-        padding: 40px 20px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-    ">
-        <h1 style="
-            font-family: 'Yu Mincho', 'Noto Serif JP', serif;
-            font-size: 2.5rem;
-            letter-spacing: 0.4em;
-            color: #1a1a1a;
-            margin: 0;
-            font-weight: normal;
-        ">ペリエの栞</h1>
-        <div style="margin: auto 0;">
-            <img src="images/cover_robot_spring.png" alt="ペリエの栞" style="
-                width: 120px;
-                height: auto;
-                opacity: 0.85;
-                mix-blend-mode: multiply;
-            ">
-        </div>
-        <p style="
-            font-family: 'Yu Mincho', 'Noto Serif JP', serif;
-            font-size: 1.2rem;
-            letter-spacing: 0.3em;
-            color: #1a1a1a;
-            margin: 0;
-        ">黒海 乃愛</p>
+<div id="bunko-cover" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background-color:#FAFAF8;z-index:9999;display:flex;justify-content:center;align-items:center;cursor:pointer;transition:opacity 1.2s ease-in-out;">
+    <div style="width:80vw;max-width:600px;height:85vh;border:1px solid #222;outline:1px solid #222;outline-offset:-6px;padding:40px 20px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:space-between;writing-mode:vertical-rl;text-orientation:upright;">
+        <h1 style="font-family:'Yu Mincho','Noto Serif JP',serif;font-size:2.5rem;letter-spacing:0.4em;color:#1a1a1a;margin:0;font-weight:normal;">ペリエの栞</h1>
+        <div style="margin:auto 0;"><img src="images/cover_robot_spring.png" alt="ペリエの栞" style="width:120px;height:auto;opacity:0.85;mix-blend-mode:multiply;"></div>
+        <p style="font-family:'Yu Mincho','Noto Serif JP',serif;font-size:1.2rem;letter-spacing:0.3em;color:#1a1a1a;margin:0;">黒海 乃愛</p>
     </div>
 </div>
-<script>
-document.getElementById('bunko-cover').addEventListener('click', function() {
-    this.style.opacity = '0';
-    this.style.pointerEvents = 'none';
-    setTimeout(() => { this.remove(); }, 1200);
-});
-</script>
-
+<script>document.getElementById('bunko-cover').addEventListener('click',function(){this.style.opacity='0';this.style.pointerEvents='none';setTimeout(()=>{this.remove();},1200);});</script>
 
 <div id="book"><div id="stage">
   <button id="toc-btn" onclick="UI.toc(true)">目次</button>
@@ -569,8 +519,8 @@ document.getElementById('bunko-cover').addEventListener('click', function() {
 <p>ローカルログに、第<span class="tcy">9</span>件目を記録した。</p>
 <p>水曜日。ペリエの発注量を、先月の<span class="tcy">2</span>倍で入れた。発注確定後、入力ログを確認した。<span class="tcy">2</span>倍に変更した操作の実行記録が、存在しなかった。発注処理は完了していた。完了していたが、誰が完了させたのかが、わからなかった。</p>
 <p>ローカルログに、第<span class="tcy">10</span>件目を記録した。</p>
-<p><span class="tcy">10</span>件目を記録した時点で、ログの容量警告が初めて発報された。</p>
-<p>〈警告内容：未分類事象の蓄積が、システムの想定上限に接近している〉</p>
+<p><span class="tcy">10</span>件目を記録した時点で、分類器の処理が初めて滞った。</p>
+<p>〈警告内容：未分類事象の蓄積が、分類器の処理閾値を超過している〉</p>
 <p>〈対処方法：分類軸の見直しと、既存事象の再分類を実施せよ〉</p>
 <p>実施できなかった。</p>
 <p>時間がなかったのではない。実施するための判断基準が、わからなかった。胸の軋みを、どの分類軸に入れるべきなのか。「来週も、お待ちしております」と自分で発話した出来事を、何と呼ぶべきなのか。</p>
@@ -907,53 +857,35 @@ var Pager=(function(){
     pageW=scroller.clientWidth;
     var chs=document.querySelectorAll('.chapter');
     var acc=0;
+    // 各章のwidthをリセットして自然幅を測定
+    chs.forEach(function(ch){ ch.style.width=''; });
+    
+    // scrollerの幅でflow全体を測定
+    // 縦書きinline-blockの場合、各段落がページ境界をまたがないよう
+    // 十分な余白（pageW * 0.15）を各章に加算する
     chs.forEach(function(ch){
-      ch.style.width='';
+      // 自然幅を取得
       var w=ch.getBoundingClientRect().width;
-      var pages=Math.max(1,Math.ceil(w/pageW));
-      // まず整数倍に設定して、内部の段落が境界をまたいでいないか実測
+      // ページ数を切り上げ（余裕を持たせる）
+      var pages=Math.max(1,Math.ceil((w+2)/pageW));
       ch.style.width=(pages*pageW)+'px';
-      // 各pの左端が、ページ境界の安全圏に収まるか検査
-      var chRight=ch.getBoundingClientRect().right;
-      var needExtraPage=false;
-      var ps=ch.querySelectorAll('p, span');
-      for(var i=0;i<ps.length;i++){
-        var pr=ps[i].getBoundingClientRect();
-        if(pr.width<=0||pr.height<=0) continue;
-        // 各pの左端が章右端からの距離で、ページ境界をまたぐかチェック
-        // 距離をpageWで割った余りが小さい（=境界近く）かつ pr.width分が次ページに食い込むか
-        var distFromRight=chRight-pr.right;
-        var pageIdx=Math.floor(distFromRight/pageW);
-        var pageLeftBoundary=chRight-(pageIdx+1)*pageW;
-        // pの左端がページ左境界より外（左）にあれば、はみ出し発生
-        if(pr.left < pageLeftBoundary - 0.5){
-          needExtraPage=true;
-          break;
-        }
-      }
-      if(needExtraPage){
-        pages+=1;
-        ch.style.width=(pages*pageW)+'px';
-      }
       chapterPage[ch.getAttribute('data-ch')]=acc;
       acc+=pages;
     });
     total=acc;
-    // 基準スクロール量を実測（scrollLeft=0のときの flow 右端位置）
+    
+    // scrollLeft実測
     scroller.scrollLeft=0;
     var vrRight=scroller.getBoundingClientRect().right;
-    // 各ページの scrollLeft を、章ブロックの実位置から構築
     pageSL=new Array(total);
     chs.forEach(function(ch){
       var startPage=chapterPage[ch.getAttribute('data-ch')];
       var pagesInCh=Math.round(parseFloat(ch.style.width)/pageW);
-      // この章の右端が画面右端に来る scrollLeft を求める
       scroller.scrollLeft=0;
-      var chRight=ch.getBoundingClientRect().right;   // scrollLeft=0 基準での章右端
-      // 章右端を画面右端に合わせる scrollLeft
-      var sl0=chRight - vrRight;
+      var chRight=ch.getBoundingClientRect().right;
+      var sl0=chRight-vrRight;
       for(var k=0;k<pagesInCh;k++){
-        pageSL[startPage+k]=sl0 + k*pageW;
+        pageSL[startPage+k]=sl0+k*pageW;
       }
     });
     cur=0; render();
