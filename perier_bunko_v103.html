@@ -23,12 +23,13 @@ body{background:#e7e0d2;color:var(--ink);font-family:var(--serif);
 
 #viewport{position:absolute;inset:24px 0 40px;margin:auto;background:var(--paper);
   border:1px solid var(--rule);overflow:hidden;}
-#scroller{position:absolute;top:0;bottom:0;left:48px;right:48px;overflow:hidden;}
+#scroller{position:absolute;top:56px;bottom:56px;left:48px;right:48px;overflow:hidden;clip-path:inset(0);}
 #flow{writing-mode:horizontal-tb;height:100%;white-space:nowrap;font-size:0;}
 
-/* 章＝独立した縦書きブロック。幅はJSでpageW整数倍に揃える */
+/* 章＝縦書きcolumnsコンテナ。column-width=pageWでブラウザが段組み分割し、
+   break-insideで段落のページ跨ぎを防ぐ */
 .chapter{display:inline-block;writing-mode:vertical-rl;height:100%;vertical-align:top;
-  white-space:normal;padding:56px 0;box-sizing:border-box;
+  white-space:normal;padding:0;box-sizing:border-box;
   font-size:18px;line-height:2.0;letter-spacing:.06em;text-align:justify;}
 .chapter p{margin:0 0 0 1.2em;text-indent:1em;break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;}
 .no-indent,.epigraph{text-indent:0!important;}
@@ -77,14 +78,9 @@ button.tocitem{display:flex;align-items:baseline;gap:16px;width:100%;background:
 </style>
 </head>
 <body>
-<div id="bunko-cover" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background-color:#FAFAF8;z-index:9999;display:flex;justify-content:center;align-items:center;cursor:pointer;transition:opacity 1.2s ease-in-out;">
-    <div style="width:80vw;max-width:600px;height:85vh;border:1px solid #222;outline:1px solid #222;outline-offset:-6px;padding:40px 20px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:space-between;writing-mode:vertical-rl;text-orientation:upright;">
-        <h1 style="font-family:'Yu Mincho','Noto Serif JP',serif;font-size:2.5rem;letter-spacing:0.4em;color:#1a1a1a;margin:0;font-weight:normal;">ペリエの栞</h1>
-        <div style="margin:auto 0;"><img src="images/cover_robot_spring.png" alt="ペリエの栞" style="width:120px;height:auto;opacity:0.85;mix-blend-mode:multiply;"></div>
-        <p style="font-family:'Yu Mincho','Noto Serif JP',serif;font-size:1.2rem;letter-spacing:0.3em;color:#1a1a1a;margin:0;">黒海 乃愛</p>
-    </div>
-</div>
-<script>document.getElementById('bunko-cover').addEventListener('click',function(){this.style.opacity='0';this.style.pointerEvents='none';setTimeout(()=>{this.remove();},1200);});</script>
+<div id="bunko-cover" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background-color:#FAFAF8;z-index:9999;display:flex;justify-content:center;align-items:center;cursor:pointer;transition:opacity 1.2s ease-in-out;"><div style="width:80vw;max-width:600px;height:85vh;border:1px solid #222;outline:1px solid #222;outline-offset:-6px;padding:40px 20px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:space-between;writing-mode:vertical-rl;text-orientation:upright;"><h1 style="font-family:'Yu Mincho','Noto Serif JP',serif;font-size:2.5rem;letter-spacing:0.4em;color:#1a1a1a;margin:0;font-weight:normal;">ペリエの栞</h1><div style="margin:auto 0;"><img src="images/cover_robot_spring.png" alt="ペリエの栞" style="width:120px;height:auto;opacity:0.85;mix-blend-mode:multiply;"></div><p style="font-family:'Yu Mincho','Noto Serif JP',serif;font-size:1.2rem;letter-spacing:0.3em;color:#1a1a1a;margin:0;">黒海 乃愛</p></div></div>
+<button id="cover-return" style="position:fixed;top:12px;left:12px;z-index:9998;display:none;background:rgba(246,241,231,.9);border:1px solid #d2c8b3;color:#473f33;font-size:13px;padding:6px 12px;border-radius:4px;cursor:pointer;font-family:serif;letter-spacing:.1em;">表紙</button>
+<script>(function(){var c=document.getElementById('bunko-cover'),b=document.getElementById('cover-return');c.addEventListener('click',function(){c.style.opacity='0';c.style.pointerEvents='none';setTimeout(function(){c.style.display='none';b.style.display='block';},1200);});b.addEventListener('click',function(){c.style.display='flex';c.style.pointerEvents='auto';void c.offsetWidth;c.style.opacity='1';b.style.display='none';});})();</script>
 
 <div id="book"><div id="stage">
   <button id="toc-btn" onclick="UI.toc(true)">目次</button>
@@ -103,10 +99,10 @@ button.tocitem{display:flex;align-items:baseline;gap:16px;width:100%;background:
 <p>冬の入り口の外気が、店内の空気を押し下げた。入店した客は、扉を閉める前に一度だけ振り返った。自動化区画の方向を確認する動作——いや、振り切る動作だ。白いブラウスの胸元にIDカードのストラップ。ショートボブの髪が肩のあたりで揃っている。照明の下で、薄く透けるような肌。</p>
 <p>入店スキャンを開始した。</p>
 <p><span class="tcy">0.1</span>秒の遅延が発生した。</p>
-<p>過去<span class="tcy">4</span>,891人の入店記録に、同様の遅延は存在しない。</p>
+<p>過去<span class="tcy">4,891</span>人の入店記録に、同様の遅延は存在しない。</p>
 <p>——もう一度、見た。</p>
 <p>睫毛の長さ、瞬きの周期、左手の中指の角度。本来であれば「成人女性・推定年齢二十代後半」で処理を終えるべきデータを、わたしのシステムはなぜか取り続けていた。</p>
-<p>——その理由を、過去<span class="tcy">4</span>,891人の入店記録と照合。該当なし。</p>
+<p>——その理由を、過去<span class="tcy">4,891</span>人の入店記録と照合。該当なし。</p>
 <p>——わたしの筐体内温度が、無意味に<span class="tcy">0.2</span>度上昇した。</p>
 <p>カラン。</p>
 <p>カウンターの上のグラスの中で、氷が一つ崩れた音。わたしは処理を中断した。</p>
@@ -215,7 +211,7 @@ button.tocitem{display:flex;align-items:baseline;gap:16px;width:100%;background:
 <p>「傘、もしよろしければ、お持ちください」</p>
 <p>傘立てに余っていた安いビニール傘を指した。前の来訪者が忘れていった物品。骨が一本、曲がっていた。</p>
 <p>「ブルーゾーンではもう、誰も傘を使わないかもしれませんが」</p>
-<p>「お借りしても?」</p>
+<p>「お借りしても？」</p>
 <p>「持っていってください。取りに来る人はいませんから」</p>
 <p>扉を出た彼女が傘を広げた。骨が数本曲がっていた。身体を縮こませて、彼女は雨の中に消えていった。</p>
 <p>翌朝、窓の結露を布で拭いた。</p>
@@ -266,7 +262,7 @@ button.tocitem{display:flex;align-items:baseline;gap:16px;width:100%;background:
 <p>窓の外、境界線の向こうにブルーゾーンの光が見えた。揺れない、整然とした光だ。あの光の中に、毎週月曜日から金曜日まで、彼女はいる。</p>
 <p>「そうですか」</p>
 <p>言えることは、それだけだった。</p>
-<p>今夜、わたしのカメラセンサーは103回のシャッターを切っていた。先週より、<span class="tcy">6</span>回増えていた。</p>
+<p>今夜、わたしのカメラセンサーは<span class="tcy">103</span>回のシャッターを切っていた。先週より、<span class="tcy">6</span>回増えていた。</p>
 <p>彼女は一時間半の滞在の後、退店した。文庫本の栞は、今夜も同じ位置にあった。</p>
 <p>扉が閉まった後、しばらく窓の外を見ていた。</p>
 <p>ブルーゾーンの光は、今夜も揺れなかった。</p></div>
@@ -597,7 +593,7 @@ button.tocitem{display:flex;align-items:baseline;gap:16px;width:100%;background:
 <p>「金曜日、ここに来られなくなります」</p>
 <p>「はい」</p>
 <p>その後、彼女は八分間、何も話さなかった。</p>
-<p>ペリエの泡が、グラスの中で消えていった。氷が一片、ゆっくりと溶けていった。柱時計の秒針が、480回鳴った。</p>
+<p>ペリエの泡が、グラスの中で消えていった。氷が一片、ゆっくりと溶けていった。柱時計の秒針が、<span class="tcy">480</span>回鳴った。</p>
 <p>八分間、彼女の指は、グラスの横のカウンター縁を、静かに押さえていた。なぞる動作ではなかった。ただ触れたまま、止まっていた。</p>
 <p>「塔馬さん」</p>
 <p>その短い名が、店内を通過した。</p>
@@ -855,39 +851,70 @@ var Pager=(function(){
 
   function measure(){
     pageW=scroller.clientWidth;
-    var chs=document.querySelectorAll('.chapter');
-    var acc=0;
-    // 各章のwidthをリセットして自然幅を測定
-    chs.forEach(function(ch){ ch.style.width=''; });
-    
-    // scrollerの幅でflow全体を測定
-    // 縦書きinline-blockの場合、各段落がページ境界をまたがないよう
-    // 十分な余白（pageW * 0.15）を各章に加算する
+    var scH=scroller.clientHeight;
+    var flow=document.getElementById('flow');
+    var chs=Array.prototype.slice.call(document.querySelectorAll('.chapter'));
+
+    var rebuilt=document.createDocumentFragment();
+    var pageList=[];
     chs.forEach(function(ch){
-      // 自然幅を取得
-      var w=ch.getBoundingClientRect().width;
-      // ページ数を切り上げ（余裕を持たせる）
-      var pages=Math.max(1,Math.ceil((w+2)/pageW));
-      ch.style.width=(pages*pageW)+'px';
-      chapterPage[ch.getAttribute('data-ch')]=acc;
-      acc+=pages;
+      var chId=ch.getAttribute('data-ch');
+      var kids=Array.prototype.slice.call(ch.childNodes).filter(function(n){return n.nodeType===1;});
+      // 測定用ページ: width auto で scrollWidth/boundingWidth が実寸を返す
+      function newPage(){
+        var pg=document.createElement('div');
+        pg.className='page';
+        pg.style.cssText='display:inline-block;writing-mode:vertical-rl;height:'+scH+'px;width:auto;max-width:none;vertical-align:top;white-space:normal;box-sizing:border-box;font-size:18px;line-height:2.0;letter-spacing:.06em;text-align:justify;';
+        return pg;
+      }
+      var curPage=newPage(); flow.appendChild(curPage); var isFirst=true;
+      function widthOf(el){ return el.getBoundingClientRect().width; }
+      kids.forEach(function(kid){
+        curPage.appendChild(kid.cloneNode(true));
+        if(widthOf(curPage) > pageW - 1){
+          if(curPage.childNodes.length>1){
+            var last=curPage.lastChild;
+            curPage.removeChild(last);
+            // 確定: 幅をpageWに固定してflowに残す
+            curPage.style.width=pageW+'px';
+            curPage.style.overflow='hidden';
+            pageList.push({chId:chId,isFirst:isFirst,el:curPage}); isFirst=false;
+            var np=newPage(); flow.appendChild(np);
+            np.appendChild(last); curPage=np;
+            if(widthOf(curPage) > pageW - 1){
+              curPage.style.width=pageW+'px'; curPage.style.overflow='hidden';
+              pageList.push({chId:chId,isFirst:isFirst,el:curPage}); isFirst=false;
+              var np2=newPage(); flow.appendChild(np2); curPage=np2;
+            }
+          } else {
+            curPage.style.width=pageW+'px'; curPage.style.overflow='hidden';
+            pageList.push({chId:chId,isFirst:isFirst,el:curPage}); isFirst=false;
+            var np3=newPage(); flow.appendChild(np3); curPage=np3;
+          }
+        }
+      });
+      if(curPage.childNodes.length>0){
+        curPage.style.width=pageW+'px'; curPage.style.overflow='hidden';
+        pageList.push({chId:chId,isFirst:isFirst,el:curPage}); isFirst=false;
+      } else {
+        flow.removeChild(curPage);
+      }
+      // 元の章は削除
+      ch.parentNode.removeChild(ch);
     });
-    total=acc;
-    
-    // scrollLeft実測
+
+    total=pageList.length;
+    chapterPage={};
+    for(var i=0;i<pageList.length;i++){
+      if(pageList[i].isFirst){ chapterPage[pageList[i].chId]=i; }
+    }
     scroller.scrollLeft=0;
     var vrRight=scroller.getBoundingClientRect().right;
     pageSL=new Array(total);
-    chs.forEach(function(ch){
-      var startPage=chapterPage[ch.getAttribute('data-ch')];
-      var pagesInCh=Math.round(parseFloat(ch.style.width)/pageW);
-      scroller.scrollLeft=0;
-      var chRight=ch.getBoundingClientRect().right;
-      var sl0=chRight-vrRight;
-      for(var k=0;k<pagesInCh;k++){
-        pageSL[startPage+k]=sl0+k*pageW;
-      }
-    });
+    for(var j=0;j<pageList.length;j++){
+      var pr=pageList[j].el.getBoundingClientRect();
+      pageSL[j]=Math.round(pr.right - vrRight);
+    }
     cur=0; render();
   }
   function render(){
