@@ -46,6 +46,26 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 .ea pre{background:#0d0d14;padding:10px;border-radius:4px;font-size:10px;overflow:auto;max-height:300px;white-space:pre-wrap}
 .ib{text-align:center;padding:3px;font-size:9px;color:#444}
 @media(max-width:768px){.view-section.vis{grid-template-columns:1fr}.pop{width:90%;left:5%!important}}
+
+.author-sel{background:#0d0d14;color:#d4d4d4;border:1px solid #444;padding:2px 4px;font-size:10px;border-radius:2px;margin-bottom:4px;margin-left:4px}
+.author-tag{font-size:8px;padding:1px 4px;border-radius:8px;margin-right:4px;font-weight:700}
+.author-hancho{background:#4a3a1a;color:#f0c040}
+.author-kuro{background:#1a2a3a;color:#4a9eff}
+.author-gemi{background:#3a1a2a;color:#ff6a9e}
+.author-non{background:#1a3a2a;color:#6aff9e}
+.history-panel{display:none;padding:10px;max-width:700px;margin:0 auto}
+.history-panel.vis{display:block}
+.history-panel h3{font-size:13px;color:#b8a88a;margin-bottom:8px}
+.history-list{max-height:400px;overflow-y:auto}
+.history-item{padding:6px 8px;border-bottom:1px solid #1a1a2e;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.history-item .hi-time{color:#555;white-space:nowrap;min-width:70px}
+.history-item .hi-action{color:#b8a88a;min-width:30px}
+.history-item .hi-detail{color:#aaa;flex:1}
+.import-area{display:none;padding:10px;max-width:700px;margin:0 auto}
+.import-area.vis{display:block}
+.import-area h3{font-size:13px;color:#b8a88a;margin-bottom:8px}
+.import-area textarea{width:100%;height:150px;background:#0d0d14;color:#d4d4d4;border:1px solid #444;border-radius:4px;padding:10px;font-family:monospace;font-size:11px;resize:vertical}
+.import-area .imp-actions{display:flex;gap:6px;margin-top:8px}
 </style></head><body>
 <div class="hd"><h1>ペリエの栞 レビューツール</h1><p>段落クリック→コメント | 取り消し線＋代替文 | 全体メモ | EP/時系列切替 | エクスポート</p></div>
 <div class="mt">
@@ -60,7 +80,7 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <button onclick="nv(-1)">&#9664;</button><button onclick="nv(1)">&#9654;</button>
 <span class="s">|</span>
 <button onclick="toggleGN()">全体メモ</button>
-<button onclick="doExport()">Export</button>
+<button onclick="doExport()">Export</button><button onclick="doImport()">Import</button><button onclick="showHistory()">履歴</button>
 <button onclick="clearAll()" style="border-color:#c44;color:#c44">全削除</button>
 <span id="cnt"></span>
 </div>
@@ -72,7 +92,7 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <button onclick="nv(-1)">&#9664;</button><button onclick="nv(1)">&#9654;</button>
 <span class="s">|</span>
 <button onclick="toggleGN()">全体メモ</button>
-<button onclick="doExport()">Export</button>
+<button onclick="doExport()">Export</button><button onclick="doImport()">Import</button><button onclick="showHistory()">履歴</button>
 <span id="cnt2"></span>
 </div>
 <div class="ib" id="info"></div>
@@ -2042,6 +2062,7 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <h4 id="pTit"></h4><div class="ex" id="pEx" style="display:none"></div>
 <select id="pTyp" style="background:#0d0d14;color:#d4d4d4;border:1px solid #444;padding:2px;font-size:10px;border-radius:2px;margin-bottom:4px">
 <option value="comment">コメント</option><option value="strikethrough">取り消し線＋代替文</option><option value="reorder">順序変更</option></select>
+<select id="pAuth" class="author-sel"><option value="hancho">はんちょー</option><option value="kuro">クロ</option><option value="gemi">Gemi</option><option value="non">のん</option></select>
 <textarea id="pTxt" placeholder="コメントを入力..."></textarea>
 <div class="ac"><button onclick="saveCm()">保存</button><button onclick="closePop()">取消</button><button class="dg" onclick="delCm()" id="pDel" style="display:none">削除</button></div>
 </div>
@@ -2091,7 +2112,10 @@ function openPop(paraId,x,y,preview){
   document.getElementById('pTit').textContent=preview+'...';
   document.getElementById('pTxt').value='';document.getElementById('pTyp').value='comment';
   const exDiv=document.getElementById('pEx');
-  if(ex.length>0){exDiv.style.display='block';exDiv.innerHTML=ex.map(c=>'<div class="nt"><div class="tp">'+(c.type==='strikethrough'?'取消':c.type==='reorder'?'順序':'memo')+'</div><div class="tx">'+c.text+'</div></div>').join('');document.getElementById('pDel').style.display='inline-block'}
+  if(ex.length>0){exDiv.style.display='block';exDiv.innerHTML=ex.map(c=>{
+const authCls=c.author?'author-'+c.author:'author-hancho';
+const authName=c.author==='kuro'?'クロ':c.author==='gemi'?'Gemi':c.author==='non'?'のん':'はんちょー';
+return '<div class="nt"><div class="tp"><span class="author-tag '+authCls+'">'+authName+'</span>'+(c.type==='strikethrough'?'取消':c.type==='reorder'?'順序':'memo')+'</div><div class="tx">'+c.text+'</div></div>'}).join('');document.getElementById('pDel').style.display='inline-block'}
   else{exDiv.style.display='none';document.getElementById('pDel').style.display='none'}
   pop.style.left=Math.min(x,window.innerWidth-340)+'px';
   pop.style.top=Math.min(y,window.innerHeight-250)+'px';
@@ -2104,7 +2128,7 @@ function saveCm(){
   if(!rv[pt])rv[pt]=[];rv[pt].push({type:typ,text:txt,ts:new Date().toISOString()});
   localStorage.setItem('perier_rv',JSON.stringify(rv));closePop();renderRv();updCnt();
 }
-function delCm(){if(!pt)return;delete rv[pt];localStorage.setItem('perier_rv',JSON.stringify(rv));closePop();renderRv();updCnt()}
+function delCm(){if(!pt)return;addHist('del',pt,{text:'(deleted)'});delete rv[pt];localStorage.setItem('perier_rv',JSON.stringify(rv));closePop();renderRv();updCnt()}
 function getCm(k){return rv[k]||[]}
 function renderRv(){
   document.querySelectorAll('.has-c,.has-s').forEach(el=>{el.classList.remove('has-c','has-s');el.querySelectorAll('.cm,.rep').forEach(m=>m.remove())});
@@ -2114,7 +2138,7 @@ function renderRv(){
     let hs=false,rp='';
     for(const c of comments){if(c.type==='strikethrough'){hs=true;rp=c.text}}
     p.classList.add('has-c');if(hs)p.classList.add('has-s');
-    const m=document.createElement('span');m.className='cm';m.title=comments.map(c=>c.text).join(' | ');p.appendChild(m);
+    const m=document.createElement('span');m.className='cm';m.title=comments.map(c=>{const a=c.author==='kuro'?'[クロ]':c.author==='gemi'?'[Gemi]':c.author==='non'?'[のん]':'[はんちょー]';return a+c.text}).join(' | ');p.appendChild(m);
     if(rp){const r=document.createElement('span');r.className='rep';r.textContent=rp;p.appendChild(r)}
   }
 }
@@ -2149,5 +2173,101 @@ function doExport(){
 function cpEx(){navigator.clipboard.writeText(document.getElementById('eTxt').textContent).then(()=>alert('コピーしました'))}
 function clearAll(){if(!confirm('全コメント削除？'))return;rv={};localStorage.setItem('perier_rv',JSON.stringify(rv));renderRv();updCnt()}
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closePop()});
+
+// History tracking
+let hist=JSON.parse(localStorage.getItem('perier_hist')||'[]');
+function addHist(action,key,entry){
+  hist.push({action,key,author:entry.author||'hancho',text:entry.text||'',ts:new Date().toISOString()});
+  if(hist.length>200)hist=hist.slice(-200);
+  localStorage.setItem('perier_hist',JSON.stringify(hist));
+}
+function showHistory(){
+  const d=document.getElementById('histPanel');
+  if(d.classList.contains('vis')){d.classList.remove('vis');return}
+  document.getElementById('gn').classList.remove('vis');
+  document.getElementById('ea').classList.remove('vis');
+  document.getElementById('impArea').classList.remove('vis');
+  d.classList.add('vis');
+  const list=document.getElementById('histList');
+  if(hist.length===0){list.innerHTML='<p style="color:#555;padding:20px;text-align:center">履歴なし</p>';return}
+  list.innerHTML=hist.slice().reverse().map(h=>{
+    const t=new Date(h.ts);
+    const time=t.toLocaleDateString('ja-JP',{month:'numeric',day:'numeric'})+' '+t.toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit'});
+    const authCls='author-'+(h.author||'hancho');
+    const authName=h.author==='kuro'?'クロ':h.author==='gemi'?'Gemi':h.author==='non'?'のん':'はんちょー';
+    const act=h.action==='add'?'+':'−';
+    return '<div class="history-item"><span class="hi-time">'+time+'</span><span class="author-tag '+authCls+'">'+authName+'</span><span class="hi-action">'+act+'</span><span class="hi-detail">'+h.key+': '+h.text.substring(0,60)+'</span></div>'
+  }).join('');
+}
+// Import
+function doImport(){
+  const d=document.getElementById('impArea');
+  if(d.classList.contains('vis')){d.classList.remove('vis');return}
+  document.getElementById('gn').classList.remove('vis');
+  document.getElementById('ea').classList.remove('vis');
+  document.getElementById('histPanel').classList.remove('vis');
+  d.classList.add('vis');
+  document.getElementById('impTxt').value='';
+}
+function execImport(){
+  const txt=document.getElementById('impTxt').value.trim();
+  if(!txt){alert('データを貼り付けてください');return}
+  try{
+    const data=JSON.parse(txt);
+    let count=0;
+    for(const[k,comments]of Object.entries(data)){
+      if(!rv[k])rv[k]=[];
+      for(const c of comments){
+        c.ts=c.ts||new Date().toISOString();
+        c.author=c.author||'gemi';
+        rv[k].push(c);
+        addHist('import',k,c);
+        count++;
+      }
+    }
+    localStorage.setItem('perier_rv',JSON.stringify(rv));
+    renderRv();updCnt();
+    document.getElementById('impArea').classList.remove('vis');
+    alert(count+'件のコメントをインポートしました');
+  }catch(e){alert('JSONパースエラー: '+e.message)}
+}
+// Enhanced export (JSON format)
+function doExport(){
+  const d=document.getElementById('ea');
+  if(d.classList.contains('vis')){d.classList.remove('vis');return}
+  document.getElementById('gn').classList.remove('vis');
+  document.getElementById('histPanel').classList.remove('vis');
+  document.getElementById('impArea').classList.remove('vis');
+  d.classList.add('vis');
+  // Two format buttons
+  const pre=document.getElementById('eTxt');
+  const jsonStr=JSON.stringify(rv,null,2);
+  let readable='# ペリエの栞 レビューコメント\n# '+new Date().toLocaleString('ja-JP')+'\n\n';
+  for(const[k,cs]of Object.entries(rv).sort()){
+    if(k.startsWith('general')){readable+='【全体メモ '+k+'】'+cs[0].text+'\n\n';continue}
+    for(const c of cs){
+      const auth=c.author==='kuro'?'[クロ]':c.author==='gemi'?'[Gemi]':c.author==='non'?'[のん]':'[はんちょー]';
+      const tl=c.type==='strikethrough'?'[取消] ':c.type==='reorder'?'[順序] ':'';
+      readable+=auth+' '+k+': '+tl+c.text+'\n';
+    }
+  }
+  readable+='\n---\n# JSON (Import用)\n'+jsonStr;
+  pre.textContent=readable;
+}
+
 go('ep-1');updCnt();
-</script></body></html>
+</script>
+<div class="history-panel" id="histPanel">
+<h3>変更履歴</h3>
+<div class="history-list" id="histList"></div>
+</div>
+<div class="import-area" id="impArea">
+<h3>レビューデータ インポート</h3>
+<p style="font-size:11px;color:#666;margin-bottom:8px">GemiちゃんやのんちゃんからのレビューJSONを貼り付けてください。既存コメントとマージされます。</p>
+<textarea id="impTxt" placeholder='{"ep1-k-0":[{"type":"comment","text":"ここ修正","author":"gemi"}],...}'></textarea>
+<div class="imp-actions">
+<button onclick="execImport()">インポート実行</button>
+<button onclick="document.getElementById('impArea').classList.remove('vis')">キャンセル</button>
+</div>
+</div>
+</body></html>
