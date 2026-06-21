@@ -1,0 +1,281 @@
+/* ========================================
+   『ペリエの栞』制作ノート — 結露テイストCSS
+   kissa「結露」の世界観：深夜・雨・硝子・余白
+   ======================================== */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@300;400&family=Share+Tech+Mono&display=swap');
+
+/* --- ベースカラー変数 --- */
+:root {
+  --bg-primary:      #0d1117;   /* 深夜の窓 */
+  --bg-secondary:    #161b22;   /* カウンターの影 */
+  --bg-card:         #1a2030;   /* グラスの底 */
+  --border-color:    #2a3a50;   /* 硝子の縁 */
+  --text-primary:    #c9d4e0;   /* 間接照明の白 */
+  --text-secondary:  #7a8fa8;   /* 結露の滲み */
+  --text-muted:      #4a5a6a;   /* 霧の奥 */
+  --accent-blue:     #5b9bd5;   /* ペリエの気泡 */
+  --accent-cold:     #7ec8c8;   /* グラスの冷気 */
+  --accent-warm:     #c8a87e;   /* 珈琲の湯気 */
+  --accent-error:    #e05c5c;   /* バグ（赤） */
+  --mono-font:       'Share Tech Mono', 'Courier New', monospace;
+  --serif-font:      'Noto Serif JP', 'Yu Mincho', serif;
+  --sans-font:       'Noto Sans JP', 'Hiragino Sans', sans-serif;
+}
+
+/* --- グローバルリセット --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--serif-font);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 2.0;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- レイアウト --- */
+.markdown-body,
+article,
+main,
+.container {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 60px 32px 120px;
+}
+
+/* --- 見出し --- */
+h1 {
+  font-family: var(--serif-font);
+  font-size: 1.8em;
+  font-weight: 500;
+  color: var(--accent-cold);
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.6em;
+  margin-bottom: 0.3em;
+  letter-spacing: 0.05em;
+}
+
+h2 {
+  font-family: var(--serif-font);
+  font-size: 1.3em;
+  font-weight: 400;
+  color: var(--accent-blue);
+  border: none;
+  border-left: 3px solid var(--accent-blue);
+  padding-left: 0.8em;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  letter-spacing: 0.05em;
+}
+
+h3 {
+  font-family: var(--sans-font);
+  font-size: 1.0em;
+  font-weight: 400;
+  color: var(--accent-warm);
+  margin-top: 2em;
+  margin-bottom: 0.8em;
+}
+
+h4, h5, h6 {
+  color: var(--text-secondary);
+  font-weight: 300;
+}
+
+/* --- 本文 --- */
+p {
+  color: var(--text-primary);
+  line-height: 2.0;
+  margin-bottom: 1.2em;
+}
+
+/* --- リンク --- */
+a {
+  color: var(--accent-cold);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+a:hover {
+  color: var(--accent-blue);
+  border-bottom-color: var(--accent-blue);
+}
+
+/* --- 引用（セリフ・キャッチコピー） --- */
+blockquote {
+  background-color: var(--bg-card);
+  border-left: 3px solid var(--accent-cold);
+  border-radius: 0 4px 4px 0;
+  margin: 2em 0;
+  padding: 1.2em 1.6em;
+  color: var(--text-primary);
+  font-style: normal;
+  font-family: var(--serif-font);
+  font-size: 0.95em;
+  line-height: 2.0;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+/* --- コード（システムログ・処理ログ） --- */
+code {
+  font-family: var(--mono-font);
+  font-size: 0.85em;
+  color: var(--accent-cold);
+  background-color: var(--bg-card);
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+  border: 1px solid var(--border-color);
+}
+
+pre {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1.2em 1.4em;
+  overflow-x: auto;
+  margin: 1.5em 0;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.85em;
+  color: var(--accent-cold);
+  line-height: 1.7;
+}
+
+/* --- テーブル（バグログ・修正記録） --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-family: var(--sans-font);
+  font-size: 0.9em;
+}
+
+th {
+  background-color: var(--bg-secondary);
+  color: var(--accent-blue);
+  font-weight: 400;
+  padding: 0.7em 1em;
+  border: 1px solid var(--border-color);
+  text-align: left;
+  letter-spacing: 0.03em;
+}
+
+td {
+  padding: 0.6em 1em;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  vertical-align: top;
+}
+
+tr:nth-child(even) td {
+  background-color: var(--bg-card);
+}
+
+/* --- 水平線（章の区切り） --- */
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 3em 0;
+  opacity: 0.5;
+}
+
+/* --- リスト --- */
+ul, ol {
+  padding-left: 1.6em;
+  margin-bottom: 1.2em;
+}
+
+li {
+  line-height: 2.0;
+  margin-bottom: 0.3em;
+  color: var(--text-primary);
+}
+
+/* --- 打ち消し線（AIの怒号ログ） --- */
+del {
+  color: var(--text-muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--accent-error);
+  opacity: 0.7;
+}
+
+/* --- 太字・強調 --- */
+strong {
+  color: var(--accent-warm);
+  font-weight: 500;
+}
+
+em {
+  color: var(--accent-cold);
+  font-style: normal;
+}
+
+/* --- メタ情報（定価・ディレクター表記） --- */
+.meta,
+p > strong:first-child {
+  color: var(--text-secondary);
+  font-size: 0.88em;
+  font-family: var(--sans-font);
+  font-weight: 300;
+}
+
+/* --- スクロールバー --- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-blue);
+}
+
+/* --- 選択範囲 --- */
+::selection {
+  background-color: rgba(91, 155, 213, 0.25);
+  color: var(--text-primary);
+}
+
+/* --- レスポンシブ --- */
+@media (max-width: 600px) {
+  .markdown-body,
+  article,
+  main,
+  .container {
+    padding: 32px 20px 80px;
+  }
+
+  h1 { font-size: 1.4em; }
+  h2 { font-size: 1.1em; }
+
+  table {
+    font-size: 0.8em;
+  }
+
+  th, td {
+    padding: 0.5em 0.6em;
+  }
+}
