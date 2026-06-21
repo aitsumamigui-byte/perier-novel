@@ -66,6 +66,22 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 .import-area h3{font-size:13px;color:#b8a88a;margin-bottom:8px}
 .import-area textarea{width:100%;height:150px;background:#0d0d14;color:#d4d4d4;border:1px solid #444;border-radius:4px;padding:10px;font-family:monospace;font-size:11px;resize:vertical}
 .import-area .imp-actions{display:flex;gap:6px;margin-top:8px}
+
+.editing{background:#1a1a0a!important;border:1px solid #b8a88a!important;outline:none;white-space:pre-wrap;min-height:2em}
+.edit-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;border-top:1px solid #555;padding:8px 12px;z-index:250;gap:6px;align-items:center;flex-wrap:wrap}
+.edit-bar.vis{display:flex}
+.edit-bar button{font-size:10px;padding:3px 8px;background:#2a2a3e;color:#d4d4d4;border:1px solid #444;border-radius:3px;cursor:pointer;font-family:inherit}
+.edit-bar button:hover{background:#3a3a4e}
+.edit-bar button.primary{background:#b8a88a;color:#0a0a0f;border-color:#b8a88a}
+.edit-bar .edit-info{font-size:10px;color:#888;margin-right:auto}
+.search-bar{display:none;padding:8px 12px;background:#12121a;border-bottom:1px solid #333;gap:6px;align-items:center;position:sticky;top:34px;z-index:190}
+.search-bar.vis{display:flex}
+.search-bar input{background:#0d0d14;color:#d4d4d4;border:1px solid #444;padding:4px 8px;border-radius:3px;font-size:11px;font-family:inherit;width:160px}
+.search-bar button{font-size:10px;padding:3px 8px}
+.search-bar .sr-count{font-size:10px;color:#888;margin-left:4px}
+.highlight-match{background:rgba(255,200,0,.3)!important;border-radius:2px}
+.deleted-para{display:none}
+.added-para{background:rgba(100,200,100,.08)!important;border-left:2px solid #6c6!important;padding-left:6px!important}
 </style></head><body>
 <div class="hd"><h1>ペリエの栞 レビューツール</h1><p>段落クリック→コメント | 取り消し線＋代替文 | 全体メモ | EP/時系列切替 | エクスポート</p></div>
 <div class="mt">
@@ -80,7 +96,7 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <button onclick="nv(-1)">&#9664;</button><button onclick="nv(1)">&#9654;</button>
 <span class="s">|</span>
 <button onclick="toggleGN()">全体メモ</button>
-<button onclick="doExport()">Export</button><button onclick="doImport()">Import</button><button onclick="showHistory()">履歴</button>
+<button onclick="toggleSearch()">検索/置換</button><button onclick="doExport()">Export</button><button onclick="doImport()">Import</button><button onclick="showHistory()">履歴</button>
 <button onclick="clearAll()" style="border-color:#c44;color:#c44">全削除</button>
 <span id="cnt"></span>
 </div>
@@ -92,10 +108,18 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <button onclick="nv(-1)">&#9664;</button><button onclick="nv(1)">&#9654;</button>
 <span class="s">|</span>
 <button onclick="toggleGN()">全体メモ</button>
-<button onclick="doExport()">Export</button><button onclick="doImport()">Import</button><button onclick="showHistory()">履歴</button>
+<button onclick="toggleSearch()">検索/置換</button><button onclick="doExport()">Export</button><button onclick="doImport()">Import</button><button onclick="showHistory()">履歴</button>
 <span id="cnt2"></span>
 </div>
-<div class="ib" id="info"></div>
+<div class="search-bar" id="searchBar">
+<input id="srFind" placeholder="検索..." onkeydown="if(event.key==='Enter')doFind()">
+<input id="srReplace" placeholder="置換...">
+<button onclick="doFind()">検索</button>
+<button onclick="doReplace()">置換</button>
+<button onclick="doReplaceAll()">全置換</button>
+<button onclick="closeSearch()">閉じる</button>
+<span class="sr-count" id="srCount"></span>
+</div><div class="ib" id="info"></div>
 <div class="view-section" data-id="ep-1">
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版</span><span class="et">第1話 或る金曜日の夜</span></div><div class="pb" data-sync="ep-1"><p class="reviewable" data-para="ep1-t-0">或る金曜日の夜</p>
 <p class="reviewable" data-para="ep1-t-1">晩秋の金曜日。午後9時13分。</p>
@@ -2255,6 +2279,170 @@ function doExport(){
   pre.textContent=readable;
 }
 
+
+// === Direct Editing ===
+let editingPara=null,editOriginal='',edits=JSON.parse(localStorage.getItem('perier_edits')||'{}');
+
+// Double-click to edit
+document.addEventListener('dblclick',function(e){
+  const p=e.target.closest('.reviewable');
+  if(!p||editingPara)return;
+  startEdit(p);
+});
+
+function startEdit(p){
+  editingPara=p;
+  editOriginal=p.innerHTML;
+  // Strip comment markers etc for clean editing
+  const cleanText=p.textContent.replace(/\u2192 .*/g,'').trim();
+  p.textContent=cleanText;
+  p.contentEditable=true;
+  p.classList.add('editing');
+  p.focus();
+  document.getElementById('editBar').classList.add('vis');
+  document.getElementById('editInfo').textContent='編集中: '+p.dataset.para;
+}
+
+function exitEdit(){
+  if(!editingPara)return;
+  editingPara.innerHTML=editOriginal;
+  editingPara.contentEditable=false;
+  editingPara.classList.remove('editing');
+  editingPara=null;
+  document.getElementById('editBar').classList.remove('vis');
+  renderRv();
+}
+
+function saveEdit(){
+  if(!editingPara)return;
+  const newText=editingPara.textContent.trim();
+  const paraId=editingPara.dataset.para;
+  // Store edit
+  edits[paraId]={original:editOriginal.replace(/<[^>]*>/g,'').trim(),edited:newText,ts:new Date().toISOString()};
+  localStorage.setItem('perier_edits',JSON.stringify(edits));
+  // Update display
+  const escaped=newText.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  editingPara.innerHTML='<p>'+escaped+'</p>';
+  editingPara.innerHTML=escaped;
+  editingPara.contentEditable=false;
+  editingPara.classList.remove('editing');
+  editingPara.classList.add('added-para');
+  addHist('edit',paraId,{text:newText.substring(0,40)+'...',author:'hancho'});
+  editingPara=null;
+  document.getElementById('editBar').classList.remove('vis');
+  renderRv();
+}
+
+function addParaBefore(){
+  if(!editingPara)return;
+  const newP=document.createElement('p');
+  newP.className='reviewable added-para';
+  newP.dataset.para=editingPara.dataset.para+'-ins-b';
+  newP.textContent='（新規段落）';
+  editingPara.parentNode.insertBefore(newP,editingPara);
+  exitEdit();
+  startEdit(newP);
+}
+
+function addParaAfter(){
+  if(!editingPara)return;
+  const newP=document.createElement('p');
+  newP.className='reviewable added-para';
+  newP.dataset.para=editingPara.dataset.para+'-ins-a';
+  newP.textContent='（新規段落）';
+  editingPara.parentNode.insertBefore(newP,editingPara.nextSibling);
+  exitEdit();
+  startEdit(newP);
+}
+
+function deletePara(){
+  if(!editingPara)return;
+  if(!confirm('この段落を削除しますか？'))return;
+  const paraId=editingPara.dataset.para;
+  edits[paraId]={deleted:true,ts:new Date().toISOString()};
+  localStorage.setItem('perier_edits',JSON.stringify(edits));
+  addHist('delete',paraId,{text:'(段落削除)',author:'hancho'});
+  editingPara.classList.add('deleted-para');
+  editingPara.contentEditable=false;
+  editingPara.classList.remove('editing');
+  editingPara=null;
+  document.getElementById('editBar').classList.remove('vis');
+}
+
+// Escape to cancel edit
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'&&editingPara)exitEdit();
+  if(e.key==='Escape')closePop();
+  if(e.ctrlKey&&e.key==='f'){e.preventDefault();toggleSearch()}
+});
+
+// === Search & Replace ===
+let searchMatches=[];
+function toggleSearch(){
+  const bar=document.getElementById('searchBar');
+  if(bar.classList.contains('vis')){closeSearch();return}
+  bar.classList.add('vis');
+  document.getElementById('srFind').focus();
+}
+function closeSearch(){
+  document.getElementById('searchBar').classList.remove('vis');
+  clearHighlights();
+  document.getElementById('srCount').textContent='';
+}
+function clearHighlights(){
+  document.querySelectorAll('.highlight-match').forEach(el=>{
+    el.outerHTML=el.textContent;
+  });
+}
+function doFind(){
+  clearHighlights();
+  const term=document.getElementById('srFind').value.trim();
+  if(!term)return;
+  let count=0;
+  document.querySelectorAll('.pb p.reviewable').forEach(p=>{
+    if(p.closest('.view-section')&&!p.closest('.view-section').classList.contains('vis'))return;
+    const html=p.innerHTML;
+    const regex=new RegExp('('+term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');
+    if(regex.test(html)){
+      p.innerHTML=html.replace(regex,'<span class="highlight-match">$1</span>');
+      count++;
+    }
+  });
+  document.getElementById('srCount').textContent=count+'件';
+}
+function doReplace(){
+  const find=document.getElementById('srFind').value;
+  const rep=document.getElementById('srReplace').value;
+  if(!find)return;
+  const hl=document.querySelector('.highlight-match');
+  if(hl){
+    hl.textContent=rep;
+    hl.classList.remove('highlight-match');
+    addHist('replace','search',{text:find+' → '+rep,author:'hancho'});
+  }
+  doFind();
+}
+function doReplaceAll(){
+  const find=document.getElementById('srFind').value;
+  const rep=document.getElementById('srReplace').value;
+  if(!find)return;
+  let count=0;
+  document.querySelectorAll('.pb p.reviewable').forEach(p=>{
+    if(p.closest('.view-section')&&!p.closest('.view-section').classList.contains('vis'))return;
+    if(p.textContent.includes(find)){
+      p.textContent=p.textContent.split(find).join(rep);
+      p.classList.add('added-para');
+      count++;
+    }
+  });
+  addHist('replaceAll','search',{text:find+' → '+rep+' ('+count+'件)',author:'hancho'});
+  clearHighlights();
+  document.getElementById('srCount').textContent=count+'件置換';
+}
+
+// Include edits in export
+const origExport=doExport;
+
 go('ep-1');updCnt();
 </script>
 <div class="history-panel" id="histPanel">
@@ -2270,4 +2458,11 @@ go('ep-1');updCnt();
 <button onclick="document.getElementById('impArea').classList.remove('vis')">キャンセル</button>
 </div>
 </div>
-</body></html>
+<div class="edit-bar" id="editBar">
+<span class="edit-info" id="editInfo">編集モード</span>
+<button onclick="addParaBefore()">↑段落追加</button>
+<button onclick="addParaAfter()">↓段落追加</button>
+<button onclick="deletePara()">段落削除</button>
+<button onclick="exitEdit()">編集終了</button>
+<button class="primary" onclick="saveEdit()">変更を保存</button>
+</div></body></html>
