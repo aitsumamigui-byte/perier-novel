@@ -33,7 +33,7 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 .cm{position:absolute;right:-3px;top:0;width:6px;height:6px;background:#b8a88a;border-radius:50%}
 .pop{position:fixed;z-index:300;background:#1a1a2e;border:1px solid #555;border-radius:6px;padding:12px;width:320px;box-shadow:0 4px 16px rgba(0,0,0,.6);display:none}
 .pop h4{font-size:11px;color:#b8a88a;margin-bottom:6px}
-.pop textarea{width:100%;height:50px;background:#0d0d14;color:#d4d4d4;border:1px solid #444;border-radius:3px;padding:6px;font-family:inherit;font-size:11px;resize:vertical}
+.pop textarea{width:100%;height:100px;background:#0d0d14;color:#d4d4d4;border:1px solid #444;border-radius:3px;padding:6px;font-family:inherit;font-size:11px;resize:vertical}
 .pop .ac{display:flex;gap:4px;margin-top:6px}.pop .ac button{font-size:10px;padding:3px 8px}
 .pop .ac button.dg{border-color:#c44;color:#c44}
 .pop .ex{background:#0d0d14;border-radius:3px;padding:6px;margin-bottom:6px;font-size:11px;max-height:80px;overflow-y:auto}
@@ -83,7 +83,7 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 .deleted-para{display:none}
 .added-para{background:rgba(100,200,100,.08)!important;border-left:2px solid #6c6!important;padding-left:6px!important}
 </style></head><body>
-<div class="hd"><h1>ペリエの栞 レビューツール</h1><p>段落クリック→コメント | 取り消し線＋代替文 | 全体メモ | EP/時系列切替 | エクスポート</p></div>
+<div class="hd"><h1>ペリエの栞 レビューツール</h1><p>段落クリック→全文textarea（取り消し線＋代替文デフォルト）| 全体メモ | EP/時系列切替 | エクスポート</p></div>
 <div class="mt">
 <button class="a" onclick="setMode('ep',this)">EP単位</button>
 <button onclick="setMode('tl',this)">時系列</button>
@@ -2151,13 +2151,13 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <div class="pop" id="pop">
 <h4 id="pTit"></h4><div class="ex" id="pEx" style="display:none"></div>
 <select id="pTyp" style="background:#0d0d14;color:#d4d4d4;border:1px solid #444;padding:2px;font-size:10px;border-radius:2px;margin-bottom:4px">
-<option value="comment">コメント</option><option value="strikethrough">取り消し線＋代替文</option><option value="reorder">順序変更</option></select>
+<option value="comment">コメント</option><option value="strikethrough" selected>取り消し線＋代替文</option><option value="reorder">順序変更</option></select>
 <select id="pAuth" class="author-sel"><option value="hancho">黒海乃愛</option><option value="kuro">クロ</option><option value="gemi">Gemi</option><option value="non">のん</option></select>
-<textarea id="pTxt" placeholder="コメントを入力..."></textarea>
+<textarea id="pTxt" placeholder="代替文を入力（元の段落テキストが入っています）..."></textarea>
 <div class="ac"><button onclick="saveCm()">保存</button><button onclick="closePop()">取消</button><button class="dg" onclick="delCm()" id="pDel" style="display:none">削除</button></div>
 </div>
 <script>
-let mode='ep',cur='',rv=JSON.parse(localStorage.getItem('perier_rv')||'{}'),pt=null;
+let mode='ep',cur='',rv=JSON.parse(localStorage.getItem('perier_rv')||'{}'),pt=null,origText='';
 const epL=[...Array(10)].map((_,i)=>'ep-'+(i+1));
 const tlL=["tl-f1", "tl-past1", "tl-f3", "tl-past2", "tl-f5", "tl-past3", "tl-f7", "tl-past4", "tl-f9", "tl-f10"];
 function getL(){return mode==='ep'?epL:tlL}
@@ -2194,13 +2194,16 @@ function go(id){
 function nv(d){const l=getL();let i=l.indexOf(cur);i=(i+d+l.length)%l.length;go(l[i])}
 document.addEventListener('click',function(e){
   const p=e.target.closest('.reviewable');if(!p)return;
-  openPop(p.dataset.para,e.clientX,e.clientY,p.textContent.substring(0,30));
+  const raw=Array.from(p.childNodes).filter(n=>n.nodeType===3).map(n=>n.textContent).join('').trim();
+  openPop(p.dataset.para,e.clientX,e.clientY,raw.substring(0,30),raw);
 });
-function openPop(paraId,x,y,preview){
-  pt=paraId;const pop=document.getElementById('pop');
+function openPop(paraId,x,y,preview,fullText){
+  pt=paraId;origText=fullText||'';const pop=document.getElementById('pop');
   const ex=getCm(paraId);
-  document.getElementById('pTit').textContent=preview+'...';
-  document.getElementById('pTxt').value='';document.getElementById('pTyp').value='comment';
+  document.getElementById('pTit').textContent=preview+(preview.length>=30?'...':'');
+  document.getElementById('pTyp').value='strikethrough';
+  document.getElementById('pTxt').value=origText;
+  document.getElementById('pTxt').placeholder='代替文を入力（元の段落テキストが入っています）...';
   const exDiv=document.getElementById('pEx');
   if(ex.length>0){exDiv.style.display='block';exDiv.innerHTML=ex.map(c=>{
 const authCls=c.author?'author-'+c.author:'author-hancho';
@@ -2211,10 +2214,16 @@ return '<div class="nt"><div class="tp"><span class="author-tag '+authCls+'">'+a
   pop.style.top=Math.min(y,window.innerHeight-250)+'px';
   pop.style.display='block';document.getElementById('pTxt').focus();
 }
-function closePop(){document.getElementById('pop').style.display='none';pt=null}
+function closePop(){document.getElementById('pop').style.display='none';pt=null;origText=''}
+document.getElementById('pTyp').addEventListener('change',function(){
+  const ta=document.getElementById('pTxt');
+  if(this.value==='comment'){ta.value='';ta.placeholder='コメントを入力...';}
+  else{ta.value=origText;ta.placeholder='代替文を入力（元の段落テキストが入っています）...';}
+});
 function saveCm(){
   if(!pt)return;const txt=document.getElementById('pTxt').value.trim();if(!txt)return;
   const typ=document.getElementById('pTyp').value;
+  if(typ==='strikethrough'&&txt===origText.trim())return;
   if(!rv[pt])rv[pt]=[];rv[pt].push({type:typ,text:txt,ts:new Date().toISOString()});
   localStorage.setItem('perier_rv',JSON.stringify(rv));closePop();renderRv();updCnt();
 }
