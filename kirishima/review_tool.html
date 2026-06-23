@@ -96,7 +96,7 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <button onclick="nv(-1)">&#9664;</button><button onclick="nv(1)">&#9654;</button>
 <span class="s">|</span>
 <button onclick="toggleGN()">全体メモ</button>
-<button onclick="toggleSearch()">検索/置換</button><button onclick="doExport()">Export</button><button onclick="doImport()">Import</button><button onclick="showHistory()">履歴</button>
+<button onclick="toggleSearch()">検索/置換</button><button onclick="loadLatest()" style="background:#4caf50;color:#fff;border-color:#4caf50;font-weight:bold">📥 最新版</button><button onclick="doExport()">Export</button><button onclick="doImport()">Import</button><button onclick="showHistory()">履歴</button>
 <button onclick="clearAll()" style="border-color:#c44;color:#c44">全削除</button>
 <span id="cnt"></span>
 </div>
@@ -108,7 +108,7 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <button onclick="nv(-1)">&#9664;</button><button onclick="nv(1)">&#9654;</button>
 <span class="s">|</span>
 <button onclick="toggleGN()">全体メモ</button>
-<button onclick="toggleSearch()">検索/置換</button><button onclick="doExport()">Export</button><button onclick="doImport()">Import</button><button onclick="showHistory()">履歴</button>
+<button onclick="toggleSearch()">検索/置換</button><button onclick="loadLatest()" style="background:#4caf50;color:#fff;border-color:#4caf50;font-weight:bold">📥 最新版</button><button onclick="doExport()">Export</button><button onclick="doImport()">Import</button><button onclick="showHistory()">履歴</button>
 <span id="cnt2"></span>
 </div>
 <div class="search-bar" id="searchBar">
@@ -186,54 +186,71 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <p class="reviewable" data-para="ep1-t-62">筐体の内側の軋みは、今夜は鳴らなかった。</p>
 <p class="reviewable" data-para="ep1-t-63">ただ、先週のあの軋みのことを、わたしは思い出した。</p>
 <p class="reviewable" data-para="ep1-t-64">思い出した、という処理が起きたこと自体、やはり設計外だった。</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第1話 或る金曜日の夜</span></div><div class="pb" data-sync="ep-1"><p class="reviewable" data-para="ep1-k-0">金曜日の夜だった。</p>
-<p class="reviewable" data-para="ep1-k-1">19時にブルーゾーンのオフィスを出て、まっすぐ帰ればいい。帰れば娘が待っている。預け先から引き取って、温かいものを食べさせて、寝かしつけて、それで一日が終わる。それだけのことだ。</p>
-<p class="reviewable" data-para="ep1-k-2">なのにわたしの足は、毎回、グレーゾーンの方に向かう。</p>
-<p class="reviewable" data-para="ep1-k-3">晩秋の風が冷たかった。コートのポケットに手を入れる気力すらなく、IDカードのストラップだけが首元で揺れていた。ブルーゾーンの完璧に制御された空調の中にいると、季節の変わり目すら感知できなくなる。外に出て初めて、ああ、もう冬が近いのだと気づく。</p>
-<p class="reviewable" data-para="ep1-k-4">3時間歩いた。</p>
-<p class="reviewable" data-para="ep1-k-5">理由は説明できない。グレーゾーンの灯りは暗くて、不規則で、ブルーゾーンの均質な照明とは何もかも違った。その不規則さのなかを歩いていると、自分の輪郭がぼやけて、誰でもない人間になれる気がした。ブルーゾーンでの肩書きも、娘の母親という役割も、男性Aからの未読のメッセージも、全部、灯りと灯りのあいだの暗闇に溶けていく。</p>
-<p class="reviewable" data-para="ep1-k-6">そうして辿り着いた店の前で、わたしは足を止めた。</p>
-<p class="reviewable" data-para="ep1-k-7">「結露」という名前だった。</p>
-<p class="reviewable" data-para="ep1-k-8">小さなカフェバーだった。グレーゾーンの外れ、人通りのない路地の奥。看板は控えめで、知らなければ通り過ぎる。わたしも3時間のあいだに二度通り過ぎていた。三度目に、扉の灯りが目に入った。</p>
-<p class="reviewable" data-para="ep1-k-9">首元のIDカードのストラップに手をかけた。外した。ポケットにしまった。ここでは、あの肩書きが要らない。誰でもない人間として、この店に入りたかった。</p>
-<p class="reviewable" data-para="ep1-k-10">扉を開けた。カウンターの向こうに、男が立っていた。</p>
-<p class="reviewable" data-para="ep1-k-11">——息が、止まった。</p>
-<p class="reviewable" data-para="ep1-k-12">目元。口もと。背格好。肩の幅。顎の線。</p>
-<p class="reviewable" data-para="ep1-k-13">知っている。この人を、わたしは知っている。</p>
-<p class="reviewable" data-para="ep1-k-14">でも、それはあり得ない。あの人は7年前に死んだのだから。</p>
-<p class="reviewable" data-para="ep1-k-15">男はグラスを拭いていた。一切の迷いなく、正確に、速く。光に透かすことも、手を止めることもない。あの人はいつも、グラスを拭くとき一度手を止めて、光に透かした。不器用で、少し首を傾げて、これでいいのかなという顔をした。</p>
-<p class="reviewable" data-para="ep1-k-16">この人はそれをしない。完璧すぎる。人間がやる動作のはずなのに、人間の手つきじゃない。</p>
-<p class="reviewable" data-para="ep1-k-17">似ているのに、似ていない。</p>
-<p class="reviewable" data-para="ep1-k-18">だから、余計に苦しかった。</p>
-<p class="reviewable" data-para="ep1-k-19">「いらっしゃいませ」</p>
-<p class="reviewable" data-para="ep1-k-20">声も似ていた。低くて、落ち着いていて、感情が薄い。あの人の声は、もう少し温度があった。怒るときだけ声が裏返る、不器用な温度が。</p>
-<p class="reviewable" data-para="ep1-k-21">カウンターに座った。</p>
-<p class="reviewable" data-para="ep1-k-22">「ペリエを、お願いします」</p>
-<p class="reviewable" data-para="ep1-k-23">炭酸水。それだけの注文。店主は静かにグラスを取り、氷を二つ入れ、ペリエを注いだ。氷がグラスの内壁を小さく叩いた。</p>
-<p class="reviewable" data-para="ep1-k-24">氷を二つ。あの人も、いつもそうだった。多すぎず少なすぎず、二つ。どうして同じなのだろう。偶然だ。偶然に決まっている。</p>
-<p class="reviewable" data-para="ep1-k-25">「ありがとうございます」</p>
-<p class="reviewable" data-para="ep1-k-26">自分の声が聞こえた。丁寧すぎる。「ありがとう」だけでいい場面で、なぜ「ございます」まで言ったのか。この人に対して、無意識に距離を測っている。近づきたいのに、近づいてはいけないと分かっている。</p>
-<p class="reviewable" data-para="ep1-k-27">「レモンは」</p>
-<p class="reviewable" data-para="ep1-k-28">本を開いたまま、目を離さずに答えた。</p>
-<p class="reviewable" data-para="ep1-k-29">「いらないです」</p>
-<p class="reviewable" data-para="ep1-k-30">柑橘の香りを嗅ぐと、あの人の台所を思い出す。レモンを何にでも添える、不器用な男の台所を。この場所でその記憶を呼び起こされたら、壊れてしまう。</p>
-<p class="reviewable" data-para="ep1-k-31">一口飲んだ。炭酸が喉を通るとき、ようやく、自分がここに座っている現実が身体に戻ってきた。</p>
-<p class="reviewable" data-para="ep1-k-32">鞄から本を取り出していた。持ち歩いてはいるが、最近は3ページも読めない。文字が意味を持たない記号の羅列にしか見えない夜がある。今夜もそうだった。でも、本を開いていれば、この場所にいる理由ができる。本を読んでいる客。それだけでいい。</p>
-<p class="reviewable" data-para="ep1-k-33">カウンターの木目に目が行った。手のひらサイズの、小さな割れ目があった。</p>
-<p class="reviewable" data-para="ep1-k-34">左手の中指で、なぞった。</p>
-<p class="reviewable" data-para="ep1-k-35">なぞった瞬間、自分が何をしているのか分からなくなった。でも、指が止まらなかった。優しく、時に押し付けるように。なぞる動作を繰り返すと、呼吸が少しだけ楽になる気がした。この割れ目は、たぶん長い時間をかけてできたものだ。乾燥して、膨張して、収縮して、少しずつ裂けていった。誰にも気づかれないまま。</p>
-<p class="reviewable" data-para="ep1-k-36">わたしに似ている、と思った。</p>
-<p class="reviewable" data-para="ep1-k-37">店主がグラスを拭く音だけが聞こえていた。規則的で、途切れない。柱時計の秒針と重なって、店の内側にごく薄い音の膜を張っていた。</p>
-<p class="reviewable" data-para="ep1-k-38">午後11時を過ぎたところで、本を閉じた。栞を挟んだ。全体の3分の1の地点。100ページに届かない。</p>
-<p class="reviewable" data-para="ep1-k-39">「ごちそうさまでした」</p>
-<p class="reviewable" data-para="ep1-k-40">レジで支払いを終えた。</p>
-<p class="reviewable" data-para="ep1-k-41">扉を出る前に一度だけ振り返った。店主はカウンターの向こうで、同じ姿勢のまま立っていた。グラスを拭いていた。わたしが来る前と、何も変わっていないように見えた。</p>
-<p class="reviewable" data-para="ep1-k-42">あの人なら、こちらを見た。客が帰るとき、必ず顔を上げて、少しだけ首を傾げて、何か言いかけてやめる、そういう人だった。</p>
-<p class="reviewable" data-para="ep1-k-43">この人はそれをしない。</p>
-<p class="reviewable" data-para="ep1-k-44">外に出た。冷たい風が首筋を撫でた。ブルーゾーンの方向が見えた。灯りが均一で、完璧で、温度がない。</p>
-<p class="reviewable" data-para="ep1-k-45">来週も来るだろう、と思った。</p>
-<p class="reviewable" data-para="ep1-k-46">理由は、まだ説明できない。</p>
-<p class="reviewable" data-para="ep1-k-47">---</p></div></div>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第1話 或る金曜日の夜</span></div><div class="pb" data-sync="ep-1">
+<p class="reviewable" data-para="ep1-k-0">― プロローグ ―</p>
+<p class="reviewable" data-para="ep1-k-1">ブルーゾーンの金曜日は、いつも同じだ。</p>
+<p class="reviewable" data-para="ep1-k-2">エアコンが効いた空気。変わらない白い光。誰かが決めた温度が、ビルの中をどこまでも満たしている。その中を歩いていると、自分がただの「機能」になっていく気がした。名前を持った人間じゃなくて、処理する何か。</p>
+<p class="reviewable" data-para="ep1-k-3">それが悪いとは思わない。楽だから。</p>
+<p class="reviewable" data-para="ep1-k-4">でも金曜の夜になると、足が言うことを聞かなくなる。</p>
+<p class="reviewable" data-para="ep1-k-5">帰ればいいのに。娘が待っている。男性Aからの返事もまだだ。全部分かってる。それなのに、いつの間にかグレーゾーンに向かっている。いなくなった人のことを考えながら、暗い路地を歩いている。</p>
+<p class="reviewable" data-para="ep1-k-6">七年、経った。</p>
+<p class="reviewable" data-para="ep1-k-7">泣いたのは一度だけ。あとはずっと回してきた。でも金曜だけは、足が勝手に動く。</p>
+<p class="reviewable" data-para="ep1-k-8">今夜も、歩き続けた。そして——小さな看板の前で、足が止まった。</p>
+<p class="reviewable" data-para="ep1-k-9">「結露」。</p>
+<p class="reviewable" data-para="ep1-k-10">なぜ止まったのかは、わからない。ただ、扉を開けないと後悔しそうだった。</p>
+<p class="reviewable" data-para="ep1-k-11">― 第1話 ―</p>
+<p class="reviewable" data-para="ep1-k-12">金曜日の夜だった。</p>
+<p class="reviewable" data-para="ep1-k-13">帰ればいいのだ。まっすぐ、帰ればいい。娘が待っている。預け先の保育士に抱かれて、もうとっくに瞼を閉じているだろう。引き取って、温かいものを食べさせて、寝かしつけて、それで一日が終わる。それだけのこと。</p>
+<p class="reviewable" data-para="ep1-k-14">なのに足が、グレーゾーンの方に向いている。</p>
+<p class="reviewable" data-para="ep1-k-15">頭では分かっている。帰るべきだ。娘のそばにいるべきだ。男性Aからの未読のメッセージに、今夜こそ返事を打つべきだ。分かっている。全部分かっている。分かっているのに、足首から下が、わたしの言うことを聞かない。</p>
+<p class="reviewable" data-para="ep1-k-16">十一月の風が、コートの隙間から入り込んできた。ポケットに手を入れる気にもならない。IDカードのストラップだけが首元で揺れて、歩くたびにかちゃかちゃと小さな音を立てた。ブルーゾーンの中にいるときは気にならない音が、グレーゾーンに出た途端、妙にうるさく感じる。</p>
+<p class="reviewable" data-para="ep1-k-17">3時間、歩いた。</p>
+<p class="reviewable" data-para="ep1-k-18">グレーゾーンの灯りは暗くて、不規則だった。点いている街灯と切れている街灯が交互に並んでいて、明るいところを歩いていたと思ったら急に暗くなる。その暗がりの中を歩いていると、自分じゃない誰かになれる気がした。ブルーゾーンでの肩書きも、娘の母親であることも、あのメッセージのことも、全部、暗がりに落ちて、拾えなくなる。</p>
+<p class="reviewable" data-para="ep1-k-19">拾わなくていい、と思ってしまう自分が、少し怖かった。</p>
+<p class="reviewable" data-para="ep1-k-20">ようやく辿り着いた店の前で、足が止まった。</p>
+<p class="reviewable" data-para="ep1-k-21">「結露」。</p>
+<p class="reviewable" data-para="ep1-k-22">小さなカフェバーだった。グレーゾーンの外れ、人通りのない路地の奥。看板は控えめで、知らなければ通り過ぎる。実際、3時間のあいだに二度通り過ぎていた。三度目に、扉の灯りが目に入った。なぜ三度目に気づいたのかは、分からない。</p>
+<p class="reviewable" data-para="ep1-k-23">首元のストラップに手をかけた。外した。ポケットにしまった。ここでは、あれが要らない。誰でもない人間として、この店に入りたかった。そう思ったことに、自分で少し驚いた。</p>
+<p class="reviewable" data-para="ep1-k-24">扉を開けた。</p>
+<p class="reviewable" data-para="ep1-k-25">カウンターの向こうに、男が立っていた。</p>
+<p class="reviewable" data-para="ep1-k-26">——足が、縫い止められた。</p>
+<p class="reviewable" data-para="ep1-k-27">目元。口もと。肩の線。首の傾き。</p>
+<p class="reviewable" data-para="ep1-k-28">知っている。この並びを、わたしの身体が知っている。</p>
+<p class="reviewable" data-para="ep1-k-29">でも、そんなはずはない。あの人は、7年前に死んだのだから。</p>
+<p class="reviewable" data-para="ep1-k-30">男はグラスを拭いていた。迷いのない手つきだった。一定の速度で、一定の圧力で、布がグラスの曲面を滑っていく。光に透かすこともしない。手を止めることもない。</p>
+<p class="reviewable" data-para="ep1-k-31">あの人は違った。グラスを拭くとき、必ず一度手を止めて、光に透かした。それで何が見えるわけでもないのに。少し首を傾げて、これでいいのかな、という顔をする。不器用で、いつまでも慣れなくて、それが好きだった。</p>
+<p class="reviewable" data-para="ep1-k-32">この人にはそれがない。何もかもが正確すぎて、隙がない。人間がやる動作のはずなのに、人間の手つきではなかった。</p>
+<p class="reviewable" data-para="ep1-k-33">似ているのに、似ていない。似ているから苦しいのではなくて、似ていないところが苦しかった。</p>
+<p class="reviewable" data-para="ep1-k-34">「いらっしゃいませ」</p>
+<p class="reviewable" data-para="ep1-k-35">声も、似ていた。低くて、落ち着いていて、感情の色が薄い。でもあの人の声には、もう少しだけ温度があった。怒るとき——本当に怒っているのではなくて、照れているとき——だけ裏返る、不器用な温度が。</p>
+<p class="reviewable" data-para="ep1-k-36">カウンターに座った。</p>
+<p class="reviewable" data-para="ep1-k-37">「ペリエを、お願いします」</p>
+<p class="reviewable" data-para="ep1-k-38">自分の声が聞こえた。丁寧すぎた。「ありがとう」でいい場面で「お願いします」まで言っている。この人との距離を、無意識に測っている自分がいた。</p>
+<p class="reviewable" data-para="ep1-k-39">店主は静かにグラスを取った。氷を二つ、入れた。ペリエを注いだ。氷がグラスの内壁を小さく叩いた。</p>
+<p class="reviewable" data-para="ep1-k-40">二つ。</p>
+<p class="reviewable" data-para="ep1-k-41">あの人も、いつも二つだった。多すぎず少なすぎず。どうして同じなのだろう。偶然だ。偶然に決まっている。決まっているのに、胸の奥が、きゅっと締まった。</p>
+<p class="reviewable" data-para="ep1-k-42">「レモンは」</p>
+<p class="reviewable" data-para="ep1-k-43">本を開いたまま答えた。目を離さなかった。離したら、この人の顔を見てしまう。見たら、また似ているところを探してしまう。</p>
+<p class="reviewable" data-para="ep1-k-44">「いらないです」</p>
+<p class="reviewable" data-para="ep1-k-45">柑橘の匂いは駄目だ。あの台所が蘇る。レモンを何にでも添える、あの不器用な男の台所が。ここでそれを思い出したら、たぶん、立っていられなくなる。</p>
+<p class="reviewable" data-para="ep1-k-46">一口飲んだ。炭酸が喉を刺した。その刺激で、ようやく、自分がここに座っている現実が身体に戻ってきた。</p>
+<p class="reviewable" data-para="ep1-k-47">鞄から本を取り出した。持ち歩いてはいるけれど、最近はまるで読めない。目は文字を追っているのに、意味が頭の中を素通りしていく。一枚一枚のページが、やけに重い。でも本を開いていれば、この場所にいる口実になる。本を読んでいる客。それだけでいい。読めていないことを、この店主には気づかれたくなかった。</p>
+<p class="reviewable" data-para="ep1-k-48">カウンターの木目に、目が行った。</p>
+<p class="reviewable" data-para="ep1-k-49">手のひらほどの、小さな割れ目があった。</p>
+<p class="reviewable" data-para="ep1-k-50">左手の中指で、なぞった。</p>
+<p class="reviewable" data-para="ep1-k-51">なぜなぞったのか分からない。でも指が止まらなかった。優しく、時に少し爪を立てるように。なぞる動作を繰り返していると、呼吸が少しだけ楽になる。長い時間をかけてできた割れ目だ。乾いて、膨らんで、縮んで、少しずつ裂けていった。誰にも気づかれないまま。</p>
+<p class="reviewable" data-para="ep1-k-52">わたしみたいだ、と思った。</p>
+<p class="reviewable" data-para="ep1-k-53">店主がグラスを拭く音だけが聞こえていた。規則的で、途切れない。柱時計の秒針と重なって、店の内側にごく薄い膜を張っていた。</p>
+<p class="reviewable" data-para="ep1-k-54">気づいたら、時間が過ぎていた。ずいぶん経った気がした。</p>
+<p class="reviewable" data-para="ep1-k-55">本を閉じた。栞を挟んだ。まだまだ序盤だ。全然進んでいない。でも、いい。</p>
+<p class="reviewable" data-para="ep1-k-56">「ごちそうさまでした」</p>
+<p class="reviewable" data-para="ep1-k-57">支払いを終えた。</p>
+<p class="reviewable" data-para="ep1-k-58">扉を出る前に、一度だけ振り返った。店主はカウンターの向こうで、同じ姿勢のまま立っていた。グラスを拭いていた。わたしが来る前と、何ひとつ変わっていないように見えた。</p>
+<p class="reviewable" data-para="ep1-k-59">あの人なら、こちらを見た。客が帰るとき、必ず顔を上げて、少しだけ首を傾げて、何か言いかけてやめる——そういう人だった。</p>
+<p class="reviewable" data-para="ep1-k-60">この人はそれをしない。</p>
+<p class="reviewable" data-para="ep1-k-61">外に出た。冷たい風が首筋を撫でた。ブルーゾーンの方角に、同じ明るさの灯りの帯が見えた。あの灯りの下に、娘がいる。帰らなければ。</p>
+<p class="reviewable" data-para="ep1-k-62">来週も来るだろう、と思った。理由はわからない。でも足は、もう覚えてしまっている。</p>
+</div></div>
 </div><div class="view-section" data-id="ep-2">
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版</span><span class="et">第2話 午前2時のサイフォン</span></div><div class="pb" data-sync="ep-2"><p class="reviewable" data-para="ep2-t-0">午前2時のサイフォン、雨の音</p>
 <p class="reviewable" data-para="ep2-t-1">11月の終わり。金曜の夜は激しい雨が降っていた。</p>
@@ -299,33 +316,34 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <p class="reviewable" data-para="ep2-t-61">翌朝、窓の結露を布で拭いた。</p>
 <p class="reviewable" data-para="ep2-t-62">骨の曲がったビニール傘のことが、何度も処理対象として呼び出された。</p>
 <p class="reviewable" data-para="ep2-t-63">呼び出す理由が、記録されていなかった。</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第2話 七年前の台所</span></div><div class="pb" data-sync="ep-2"><p class="reviewable" data-para="ep2-k-0">あの人の台所は、いつもレモンの匂いがした。</p>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第2話 七年前の台所</span></div><div class="pb" data-sync="ep-2">
+<p class="reviewable" data-para="ep2-k-0">あの人の台所は、いつもレモンの匂いがした。</p>
 <p class="reviewable" data-para="ep2-k-1">わたしたちが暮らしていたのは、グレーゾーンの端にある、古い集合住宅の3階だった。エレベーターはなくて、階段の手すりが少し錆びていて、踊り場の蛍光灯が一本切れたまま半年が過ぎていた。誰も直さない。わたしたちも直さなかった。</p>
 <p class="reviewable" data-para="ep2-k-2">あの人は、料理が下手だった。</p>
 <p class="reviewable" data-para="ep2-k-3">下手なくせに毎日作った。わたしがブルーゾーンの研修から帰ると、狭い台所に立って、真剣な顔で野菜を切っていた。包丁の持ち方がおかしい。何度言っても直さない。「これが自分のやり方だ」と、少しだけ声が裏返る。怒っているのではなくて、照れているのだと、途中から気づいた。</p>
 <p class="reviewable" data-para="ep2-k-4">レモンを何にでも添えた。</p>
 <p class="reviewable" data-para="ep2-k-5">サラダに。焼き魚に。味噌汁にまで入れようとして、さすがにわたしが止めた。「なんで入れるの」と聞いたら、少し首を傾げて、「わからない。でも、ないと足りない気がする」と言った。</p>
-<p class="reviewable" data-para="ep2-k-6">今にして思えば、あの人は味覚が少しおかしかった。</p>
-<p class="reviewable" data-para="ep2-k-7">あの人の感覚は、人間の標準から、ほんのわずかにずれていた。熱いものを持っても平気な顔をした。36度台ではないような体温。手を握ると、いつも少しだけ熱かった。微熱のような。</p>
-<p class="reviewable" data-para="ep2-k-8">「大丈夫？」と聞くと、「何が？」と返す。本気で分からない顔をしていた。</p>
-<p class="reviewable" data-para="ep2-k-9">わたしたちの娘は、あの人に似ていた。</p>
-<p class="reviewable" data-para="ep2-k-10">目の形ではない。まぶたの閉じ方が似ていた。眠りに落ちるとき、迷いなく、正確に、まぶたを下ろす。子供の眠り方にしては妙に静かで、少しだけ寂しい。あの人も、そうだった。</p>
-<p class="reviewable" data-para="ep2-k-11">あの人は、自分が何者なのかを知らなかった。</p>
-<p class="reviewable" data-para="ep2-k-12">戸籍はあった。名前があった。経歴があった。でも、時々、その全部が自分のものではないような顔をした。夜中にふと目を覚ますと、あの人が天井を見つめていることがあった。何を見ているのか聞いても、「何も」と答えた。何もないはずの天井を、目を閉じずに、ずっと見ていた。</p>
+<p class="reviewable" data-para="ep2-k-6">あのころを思うと、あの人は何かを隠していた。</p>
+<p class="reviewable" data-para="ep2-k-7">体温がいつも高かった。普通の人より、ずっと熱い感じ。手を握ると微熱みたいに温かくて、最初はそれが心地よかった。でも、だんだん普通じゃないと気づいていった。</p>
+<p class="reviewable" data-para="ep2-k-8">「大丈夫？」と聞くと、「何が？」と返す。本気で分からない顔を見せた。分からないのではなくて、答えられなかったのだと、今なら思う。</p>
+<p class="reviewable" data-para="ep2-k-9">あの人は、自分が何者なのかを知っていた。知っていて、言えなかった。</p>
+<p class="reviewable" data-para="ep2-k-10">戸籍はあった。名前があった。経歴があった。でも時々、それら全部が借り物のような顔をした。夜中にふと目を覚ますと、あの人が天井を見つめていることがあった。何を見ているのか聞いても、「何も」と答えた。何もないはずの天井を、目を閉じずに、ずっと見ていた。あの目は、何もないから見ていたのではなくて、見えているものを口にできなかったのだと思う。</p>
+<p class="reviewable" data-para="ep2-k-11">わたしたちの娘は、あの人に似ていた。</p>
+<p class="reviewable" data-para="ep2-k-12">目の形ではない。まぶたの閉じ方が似ていた。眠りに落ちるとき、迷いなく、正確に、まぶたを下ろす。子供の眠り方にしては妙に静かで、少しだけ寂しい。あの人も、そうだった。</p>
 <p class="reviewable" data-para="ep2-k-13">7年前の冬。</p>
 <p class="reviewable" data-para="ep2-k-14">あの人は、いなくなった。</p>
-<p class="reviewable" data-para="ep2-k-15">死んだ、と言われた。事故だと。ブルーゾーンの外縁部、第七プラント区の近くで。詳しいことは教えてもらえなかった。遺体はなかった。「損傷が激しくて」と説明されたが、わたしには何も見せてもらえなかった。</p>
+<p class="reviewable" data-para="ep2-k-15">死んだ、と連絡が来た。事故だという。ブルーゾーンの外縁部、第七プラント区の近くで。詳しいことは教えてもらえなかった。遺体はなかった。「損傷が激しくて」という説明だったが、何も見せてもらえなかった。</p>
 <p class="reviewable" data-para="ep2-k-16">娘は3歳だった。「パパは？」と聞かれるたびに、「遠くに行ったよ」と答えた。嘘ではない。嘘では、ない。</p>
 <p class="reviewable" data-para="ep2-k-17">あの人が本当に死んだのか、わたしは今でも確信が持てない。</p>
 <p class="reviewable" data-para="ep2-k-18">遺体がない。遺品もほとんどない。台所に残されたレモンが、2週間かけて干からびていくのを、わたしはただ見ていた。捨てられなかった。</p>
-<p class="reviewable" data-para="ep2-k-19">それから離婚届を出した。死亡届と同時に届いた離婚届。死んだ人間との婚姻関係を解消する手続き。サインした。泣かなかった。</p>
+<p class="reviewable" data-para="ep2-k-19">死亡届の手続きをした。離婚の書類も、同じタイミングで片付けた。死んだ人間との婚姻関係を解消する手続き。サインした。泣かなかった。</p>
 <p class="reviewable" data-para="ep2-k-20">娘を連れて、ブルーゾーンの端に引っ越した。過去を、台所ごと捨てた。レモンの匂いごと。</p>
 <p class="reviewable" data-para="ep2-k-21">それから7年。</p>
 <p class="reviewable" data-para="ep2-k-22">わたしは毎週金曜日に、グレーゾーンの外れにある小さなカフェバーに通っている。</p>
 <p class="reviewable" data-para="ep2-k-23">カウンターの向こうに立つ男のグラスを拭く手を見ていると、あの台所の匂いが、ほんのかすかに、鼻の奥をよぎる瞬間がある。</p>
-<p class="reviewable" data-para="ep2-k-24">レモンの匂いではない。もっと淡い、もっと曖昧な、名前のつけられない匂いだ。</p>
-<p class="reviewable" data-para="ep2-k-25">それを確かめるために、わたしはまた金曜日を待っている。</p>
-<p class="reviewable" data-para="ep2-k-26">---</p></div></div>
+<p class="reviewable" data-para="ep2-k-24">レモンの匂いではない。もっと淡い、もっと曖昧な、名前のつけられない匂い。</p>
+<p class="reviewable" data-para="ep2-k-25">それを確かめたくて、わたしはまた金曜日を待っている。確かめてどうするのかは、分からない。分からないまま、待っている。</p>
+</div></div>
 </div><div class="view-section" data-id="ep-3">
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版</span><span class="et">第3話 ブルーゾーンに潜む影</span></div><div class="pb" data-sync="ep-3"><p class="reviewable" data-para="ep3-t-0">ブルーゾーンに潜む影</p>
 <p class="reviewable" data-para="ep3-t-1">窓の外、ブルーゾーンの方向を見た。22年前に決まった境界線が、今もそこを走っている。完全自動化を受け入れた側と、拒否した側。どちらが正しかったのかは、誰も答えを出していない。</p>
@@ -377,43 +395,43 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <p class="reviewable" data-para="ep3-t-47">彼女は1時間半の滞在の後、退店した。文庫本の栞は、今夜も同じ位置にあった。</p>
 <p class="reviewable" data-para="ep3-t-48">扉が閉まった後、しばらく窓の外を見ていた。</p>
 <p class="reviewable" data-para="ep3-t-49">ブルーゾーンの光は、今夜も揺れなかった。</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第3話 ブルーゾーンに潜む影</span></div><div class="pb" data-sync="ep-3"><p class="reviewable" data-para="ep3-k-0">3ヶ月が過ぎていた。</p>
-<p class="reviewable" data-para="ep3-k-1">毎週金曜の夜、同じ席に座り、同じペリエを頼み、同じ本を開いた。栞の位置は、ほとんど動いていない。</p>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第3話 ブルーゾーンに潜む影</span></div><div class="pb" data-sync="ep-3">
+<p class="reviewable" data-para="ep3-k-0">3ヶ月が過ぎていた。</p>
+<p class="reviewable" data-para="ep3-k-1">毎週金曜の夜、同じ席に座り、同じものを頼み、同じ本を開いた。栞の位置は、ほとんど動いていない。ページをめくっているつもりなのに、気づくと同じ行を何度も目でなぞっている。読んでいるふりをしているだけだ。でも、それを店主に悟られるわけにはいかない。</p>
 <p class="reviewable" data-para="ep3-k-2">「いつものペリエを」</p>
-<p class="reviewable" data-para="ep3-k-3">今夜も同じ注文をした。3ヶ月前と同じ声で。</p>
+<p class="reviewable" data-para="ep3-k-3">今夜も同じ注文をした。</p>
 <p class="reviewable" data-para="ep3-k-4">「少し待ってください」</p>
-<p class="reviewable" data-para="ep3-k-5">塔馬さんがそう言った。いつもはすぐに出てくるペリエが、今夜は少し遅れた。何をしていたのかは分からない。ただ、その「少し待ってください」の声に、いつもと違う——何かを観察しているような——気配があった。</p>
-<p class="reviewable" data-para="ep3-k-6">目の前に常温の水が置かれた。頼んだものと違う。でも、何も言えなかった。今のわたしに必要だったのは、炭酸ではなくこれだったと、一口飲んで気づいた。</p>
-<p class="reviewable" data-para="ep3-k-7">「進まないんですね」</p>
-<p class="reviewable" data-para="ep3-k-8">塔馬さんが言った。本のことだ。一瞬、何を言われたか分からなかった。</p>
-<p class="reviewable" data-para="ep3-k-9">「気づいてたんですか」</p>
-<p class="reviewable" data-para="ep3-k-10">「もう3ヶ月くらいでしょうか。栞の位置が、数ページしか進んでいません」</p>
-<p class="reviewable" data-para="ep3-k-11">3ヶ月。わたしの栞の位置を、この人は3ヶ月間、観察していた。毎週の数ページの差異を記憶していた。人間にできる観察ではない。いや——できないことはない。注意深い人なら。でも、この精度は。</p>
-<p class="reviewable" data-para="ep3-k-12">「読めないんです。金曜の夜に読もうとするんですけど、文字が頭に入らなくて。でも持ってこないと、ここに来る理由がなくなりそうで」</p>
-<p class="reviewable" data-para="ep3-k-13">言ってしまった。こんなことを店主に言うつもりはなかった。でもこの人には、言えてしまう。感想も、助言も、同情も返ってこないと分かっているから。</p>
-<p class="reviewable" data-para="ep3-k-14">「来る理由は、ペリエでいいと思いますが」</p>
-<p class="reviewable" data-para="ep3-k-15">——心臓が、小さく跳ねた。</p>
-<p class="reviewable" data-para="ep3-k-16">ペリエでいい。本がなくても、来ていい。この人はそう言った。無感情に。論理的に。客が来る理由を分析して、最も合理的な回答を出しただけなのだろう。</p>
-<p class="reviewable" data-para="ep3-k-17">でも、わたしにはそう聞こえなかった。「来ていい」と言われた。それだけのことが、ブルーゾーンの空調より温かかった。</p>
-<p class="reviewable" data-para="ep3-k-18">「ペリエだけのために来てるって思われるのが、なんか」</p>
-<p class="reviewable" data-para="ep3-k-19">「ブルーゾーンで、何かありましたか」</p>
-<p class="reviewable" data-para="ep3-k-20">聞かれた。塔馬さんの方から。いつもは聞かない人が。</p>
-<p class="reviewable" data-para="ep3-k-21">「毎日、何かしらあります」</p>
-<p class="reviewable" data-para="ep3-k-22">「今週は」</p>
-<p class="reviewable" data-para="ep3-k-23">この人が「今週は」と重ねて聞いてくることに、身体が反応した。この人は本来、質問を重ねない。一問一答で終わる人だ。それが今夜は、踏み込んできている。</p>
-<p class="reviewable" data-para="ep3-k-24">「来月から、部署が変わるかもしれなくて。第七プラント区。自動化の最前線のエリアです」</p>
-<p class="reviewable" data-para="ep3-k-25">言った瞬間、塔馬さんの手が一瞬だけ止まった。グラスを拭く手が。息をひとつ吸うより短い間。でも、わたしの目はそれを見逃さなかった。</p>
-<p class="reviewable" data-para="ep3-k-26">第七プラント区。あの人が最後にいた場所。この店主が、その名前に反応した。</p>
-<p class="reviewable" data-para="ep3-k-27">「金曜日に、ここに来られなくなるかもしれない」</p>
-<p class="reviewable" data-para="ep3-k-28">声が震えていないか確認した。震えていなかった。たぶん。</p>
-<p class="reviewable" data-para="ep3-k-29">「そうですか」</p>
-<p class="reviewable" data-para="ep3-k-30">それだけだった。それだけしか返ってこなかった。</p>
-<p class="reviewable" data-para="ep3-k-31">でも、その「そうですか」の後の沈黙が、いつもの沈黙より重かった。柱時計の秒針の音だけが、その重さを測っていた。</p>
-<p class="reviewable" data-para="ep3-k-32">午後11時。水を飲み切った。本は、今夜は開かなかった。</p>
-<p class="reviewable" data-para="ep3-k-33">「ごちそうさまでした」</p>
-<p class="reviewable" data-para="ep3-k-34">帰り際、店主の目がわたしの首元を見ていた。IDカードのストラップがあった場所を。今夜はポケットに押し込んで、見えなくなっている場所を。</p>
-<p class="reviewable" data-para="ep3-k-35">外に出た。冷たい風。偶然ではない気がした。何も、偶然ではない気がした。</p>
-<p class="reviewable" data-para="ep3-k-36">---</p></div></div>
+<p class="reviewable" data-para="ep3-k-5">塔馬さんがそう言った。いつもはすぐに出てくるのに、今夜は少し間があった。何をしていたのかは分からない。ただ、その声に、何かを確かめるような響きがあった気がした。気のせいかもしれない。この人の声に感情を読み取ろうとするのは、わたしの悪い癖だ。</p>
+<p class="reviewable" data-para="ep3-k-6">目の前に置かれたのは、常温の水だった。</p>
+<p class="reviewable" data-para="ep3-k-7">頼んだものと違う。でも何も言えなかった。一口飲んで、ああ、と思った。今のわたしに必要だったのは、炭酸の刺激ではなくて、これだった。何の味もしない、ただの水。今日のわたしには、それがちょうどよかった。</p>
+<p class="reviewable" data-para="ep3-k-8">どうして分かるのだろう。わたし自身が気づいていないことを、この人はどうやって。</p>
+<p class="reviewable" data-para="ep3-k-9">「進まないんですね」</p>
+<p class="reviewable" data-para="ep3-k-10">塔馬さんが言った。一瞬、何のことか分からなかった。</p>
+<p class="reviewable" data-para="ep3-k-11">「気づいてたんですか」</p>
+<p class="reviewable" data-para="ep3-k-12">「もう3ヶ月くらいでしょうか。栞の位置が、数ページしか進んでいません」</p>
+<p class="reviewable" data-para="ep3-k-13">3ヶ月。この人は、わたしの栞の位置を3ヶ月間、見ていた。読めていないことを、ずっと知っていた。隠していたつもりだったのに。恥ずかしさと、それとは別の、じんわりと温かい何かが、胸の奥で混ざった。</p>
+<p class="reviewable" data-para="ep3-k-14">「読めないんです。金曜の夜に読もうとするんですけど、文字が頭に入らなくて。でも持ってこないと、ここに来る理由がなくなりそうで」</p>
+<p class="reviewable" data-para="ep3-k-15">言ってしまった。言うつもりはなかった。でも、この人には言えてしまう。何を言っても、追いかけてこないから。感想も、助言も、同情も、この人からは返ってこない。その沈黙が、今のわたしにはありがたかった。</p>
+<p class="reviewable" data-para="ep3-k-16">「来る理由は、ペリエでいいと思いますが」</p>
+<p class="reviewable" data-para="ep3-k-17">心臓が、小さく跳ねた。</p>
+<p class="reviewable" data-para="ep3-k-18">ペリエでいい。本がなくても、来ていい。この人はそう言った。何の感情もない声で。客の行動を分析して、最も合理的な回答を出しただけなのだろう。</p>
+<p class="reviewable" data-para="ep3-k-19">でもわたしには、「来ていい」と言われたように聞こえた。それだけのことが、ブルーゾーンの空調より温かかった。</p>
+<p class="reviewable" data-para="ep3-k-20">「ペリエだけのために来てるって思われるのが、なんか」</p>
+<p class="reviewable" data-para="ep3-k-21">言いかけて、言葉が途切れた。自分でも、何を言っているのか分からなくなった。</p>
+<p class="reviewable" data-para="ep3-k-22">ペリエが出された。グラスの中で氷が一度、小さく音を立てた。今夜は温かくはない。それでもわたしは、その冷たいグラスを覆いかぶさるように両手で包み込んだ。</p>
+<p class="reviewable" data-para="ep3-k-23">「ブルーゾーンで、何かありましたか」</p>
+<p class="reviewable" data-para="ep3-k-24">聞かれた。塔馬さんの方から。この人が質問を重ねることは、めったにない。</p>
+<p class="reviewable" data-para="ep3-k-25">「毎日、何かしらあります」</p>
+<p class="reviewable" data-para="ep3-k-26">強がった。氷がまた、崩れた。</p>
+<p class="reviewable" data-para="ep3-k-27">「今週は」</p>
+<p class="reviewable" data-para="ep3-k-28">グラスの表面に結露が張り始めるのを、ただ見つめていた。</p>
+<p class="reviewable" data-para="ep3-k-29">「来月から、部署が変わるかもしれなくて。第七プラント区。自動化の最前線のエリアです」</p>
+<p class="reviewable" data-para="ep3-k-30">言った瞬間、塔馬さんの手が止まった。ほんの一瞬。息をひとつ吸うより短い間。でも、わたしの目はそれを見逃さなかった。</p>
+<p class="reviewable" data-para="ep3-k-31">第七プラント区。あの人が最後にいた場所。この人が、その名前に反応した。</p>
+<p class="reviewable" data-para="ep3-k-32">「金曜日に、ここに来られなくなるかもしれない」</p>
+<p class="reviewable" data-para="ep3-k-33">「そうですか」</p>
+<p class="reviewable" data-para="ep3-k-34">それだけだった。でも、その「そうですか」のあとの沈黙が、いつもの沈黙より重かった。</p>
+</div></div>
 </div><div class="view-section" data-id="ep-4">
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版</span><span class="et">第4話 ペリエの栞</span></div><div class="pb" data-sync="ep-4"><p class="reviewable" data-para="ep4-t-0">ペリエの栞</p>
 <p class="reviewable" data-para="ep4-t-1">12月の半ば。深夜から明け方にかけて、しんしんと雪が降った。朝には止んでいたが、グレーゾーンの石畳の隙間や、屋根の縁には、まだ薄く白いものが残っていた。日が落ちると、その白さが、街灯の橙色を吸って、街全体をわずかに静かにした。</p>
@@ -451,31 +469,27 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <p class="reviewable" data-para="ep4-t-33">記録する語が、見当たらなかった。</p>
 <p class="reviewable" data-para="ep4-t-34">その夜、彼女は20ページほどを読み進めた。退店前に、本を閉じた。小口から栞の出具合を確認し、大事そうに位置を少し調整した。</p>
 <p class="reviewable" data-para="ep4-t-35">その一連の所作の柔らかさは、これまで観測したどの動作とも異なっていた。次の瞬間には、記録されていた。記録した理由は、記録されていなかった。</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第4話 ペリエの栞</span></div><div class="pb" data-sync="ep-4"><p class="reviewable" data-para="ep4-k-0">あの人が死んで、半年が経った頃。</p>
-<p class="reviewable" data-para="ep4-k-1">娘はまだ3歳で、「パパは」と聞くことを覚えたばかりだった。最初は毎日聞いた。やがて2日に一度になり、1週間に一度になり、聞かなくなった。子供の適応力は残酷なほど正確だ。いないものは、いないものとして処理される。</p>
-<p class="reviewable" data-para="ep4-k-2">わたしは処理できなかった。</p>
-<p class="reviewable" data-para="ep4-k-3">ブルーゾーンの端にある社宅に引っ越して、新しい部署に配属されて、保育園の送迎のルーティンを組んで、家事の手順を最適化して、すべてを一人で回せる仕組みにした。ブルーゾーンは、そういうことが得意な街だ。非効率を許さない。非効率な感情も。</p>
-<p class="reviewable" data-para="ep4-k-4">泣いたのは、一度だけだった。</p>
-<p class="reviewable" data-para="ep4-k-5">引っ越しの荷物を開けていたとき、段ボールの底から、レモン絞り器が出てきた。安い、プラスチックの。あの人が百円ショップで買ってきて、嬉しそうに見せてきたやつだ。「これがあれば全部にレモンかけられる」と言って、また声が少し裏返っていた。</p>
-<p class="reviewable" data-para="ep4-k-6">それを手に取った瞬間、膝が折れた。台所の床にしゃがみこんで、声を殺して泣いた。娘が隣の部屋で昼寝をしていたから。</p>
-<p class="reviewable" data-para="ep4-k-7">それきり、泣いていない。</p>
-<p class="reviewable" data-para="ep4-k-8">男性Aに出会ったのは、その1年後だった。</p>
-<p class="reviewable" data-para="ep4-k-9">職場の同僚だった。悪い人ではない。娘に優しかった。「ゆっくりでいいよ」と言った。その言葉に、何度救われたか分からない。</p>
-<p class="reviewable" data-para="ep4-k-10">でも。</p>
-<p class="reviewable" data-para="ep4-k-11">男性Aの手を握ると、温度が正しかった。</p>
-<p class="reviewable" data-para="ep4-k-12">36度台。人間の標準体温。温かくて、少し湿っていて、力加減が優しい。完璧に正しい体温だった。</p>
-<p class="reviewable" data-para="ep4-k-13">あの人の手は、正しくなかった。いつも少し熱すぎた。微熱のような。</p>
-<p class="reviewable" data-para="ep4-k-14">男性Aの手は、噛み合っている。噛み合っているのに、物足りない。物足りないと感じる自分が、おかしい。</p>
-<p class="reviewable" data-para="ep4-k-15">男性Aはプロポーズしてくれた。わたしは「考えさせて」と言った。半年前のことだ。まだ返事をしていない。</p>
-<p class="reviewable" data-para="ep4-k-16">あの店主の手。グラスを拭く手。完璧で、正確で、速い。人間の手つきじゃない。</p>
-<p class="reviewable" data-para="ep4-k-17">でも、サイフォンの火を消す瞬間だけ、ごくわずかに、揺らぐ。</p>
-<p class="reviewable" data-para="ep4-k-18">あの揺らぎの正体が、知りたい。</p>
-<p class="reviewable" data-para="ep4-k-19">知ってはいけないのかもしれない。知ったら、わたしは男性Aに「ごめんなさい」と言うだろう。</p>
-<p class="reviewable" data-para="ep4-k-20">あの人が生きていた台所には、レモンの匂いがあった。</p>
-<p class="reviewable" data-para="ep4-k-21">あの店には、レモンの匂いがない。わたしが毎週断っているからだ。</p>
-<p class="reviewable" data-para="ep4-k-22">自分で断っておいて、その不在を寂しいと感じている。</p>
-<p class="reviewable" data-para="ep4-k-23">馬鹿みたいだ。</p>
-<p class="reviewable" data-para="ep4-k-24">---</p></div></div>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第4話 ペリエの栞</span></div><div class="pb" data-sync="ep-4">
+<p class="reviewable" data-para="ep4-k-0">あの人が死んで、半年が経った頃。</p>
+<p class="reviewable" data-para="ep4-k-1">娘はまだ3歳で、「パパは」と聞く回数が、日に日に減っていった。子供は忘れるのが上手だ。いないものは、いないものとして受け入れる。わたしは受け入れられなかった。受け入れたふりをして、毎日を回していただけだ。</p>
+<p class="reviewable" data-para="ep4-k-2">ブルーゾーンの端に引っ越して、新しい部署に配属されて、保育園の送迎を組んで、家事を最適化して、全部をひとりで回せる仕組みにした。仕組みにしてしまえば、感情が入り込む隙間がなくなる。ブルーゾーンは、そういう暮らし方を肯定してくれる街だった。</p>
+<p class="reviewable" data-para="ep4-k-3">泣いたのは、一度だけだった。</p>
+<p class="reviewable" data-para="ep4-k-4">引っ越しの段ボールの底から、レモン絞り器が出てきた。安い、プラスチックの。あの人が買ってきて、「これがあれば全部にレモンかけられる」と嬉しそうに言ったやつだ。声が裏返っていた。照れていたのだ。</p>
+<p class="reviewable" data-para="ep4-k-5">それを手に取った瞬間、膝が折れた。台所の床にしゃがみこんで、声を殺して泣いた。娘が隣の部屋で寝ていたから。</p>
+<p class="reviewable" data-para="ep4-k-6">それきり、泣いていない。</p>
+<p class="reviewable" data-para="ep4-k-7">男性Aに出会ったのは、その1年後だった。</p>
+<p class="reviewable" data-para="ep4-k-8">職場の同僚。悪い人ではない。娘に優しかった。「ゆっくりでいいよ」と言ってくれた。その言葉に何度救われたか分からない。</p>
+<p class="reviewable" data-para="ep4-k-9">でも。</p>
+<p class="reviewable" data-para="ep4-k-10">男性Aの手を握ると、ちょうどいい温度だった。なのに、どこか物足りなかった。</p>
+<p class="reviewable" data-para="ep4-k-11">あたたかくて、少し湿っていて、力加減も優しかった。完璧な手だった。</p>
+<p class="reviewable" data-para="ep4-k-12">あの人の手は、いつも少し熱すぎた。それなのに——そのせいで——あの手のことばかり思い出す。</p>
+<p class="reviewable" data-para="ep4-k-13">男性Aはプロポーズしてくれた。わたしは「考えさせて」と言った。もう半年以上、返事をしていない。答えが出ないのではなくて、答えは出ているのに、口にできない。口にしたら、男性Aを傷つける。正しい人を、正しくない理由で傷つける。</p>
+<p class="reviewable" data-para="ep4-k-14">あの店主の手。完璧で、正確で、速い。人間の手つきではない。</p>
+<p class="reviewable" data-para="ep4-k-15">でも時々、ごくわずかに、揺らぐ。</p>
+<p class="reviewable" data-para="ep4-k-16">あの揺らぎの正体が、知りたい。知ってはいけないのに、知りたい。</p>
+<p class="reviewable" data-para="ep4-k-17">あの店には、レモンの匂いがない。わたしが毎週断っているからだ。自分で断っておいて、その不在を寂しいと感じている。</p>
+<p class="reviewable" data-para="ep4-k-18">馬鹿みたいだ。本当に、馬鹿みたいだ。</p>
+</div></div>
 </div><div class="view-section" data-id="ep-5">
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版</span><span class="et">第5話 名前</span></div><div class="pb" data-sync="ep-5"><p class="reviewable" data-para="ep5-t-0">名前</p>
 <p class="reviewable" data-para="ep5-t-1">1月の最初の金曜日。</p>
@@ -544,52 +558,46 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <p class="reviewable" data-para="ep5-t-64">胸の内側の軋みは、もう鳴らなかった。</p>
 <p class="reviewable" data-para="ep5-t-65">一度だけだった。</p>
 <p class="reviewable" data-para="ep5-t-66">しかしそれが鳴ったという事実は、消えなかった。</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第5話 名前</span></div><div class="pb" data-sync="ep-5"><p class="reviewable" data-para="ep5-k-0">正月だった。</p>
-<p class="reviewable" data-para="ep5-k-1">ブルーゾーンには正月がない。暦が変わっても、空調の温度も、オフィスの照明も、何も変わらない。それでも結露に来ると、年が変わった気がした。</p>
-<p class="reviewable" data-para="ep5-k-2">「あけましておめでとうございます」</p>
-<p class="reviewable" data-para="ep5-k-3">わたしの方から言った。</p>
-<p class="reviewable" data-para="ep5-k-4">「おめでとうございます」</p>
-<p class="reviewable" data-para="ep5-k-5">塔馬さんが返した。いつもと同じ声。でも今夜は、その声に応じて、自分の口角がわずかに上がったことに気づいた。</p>
-<p class="reviewable" data-para="ep5-k-6">「ブルーゾーン、正月がないんですよね」</p>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第5話 名前</span></div><div class="pb" data-sync="ep-5">
+<p class="reviewable" data-para="ep5-k-0">年が明けた。正月だった。</p>
+<p class="reviewable" data-para="ep5-k-1">「あけましておめでとうございます」</p>
+<p class="reviewable" data-para="ep5-k-2">わたしの方から言った。なぜ言ったのか分からない。この人に季節の挨拶をしても意味がない。でも、この人にだけ、意味のない言葉を口にできる気がした。</p>
+<p class="reviewable" data-para="ep5-k-3">「おめでとうございます」</p>
+<p class="reviewable" data-para="ep5-k-4">塔馬さんが返した。いつもと同じ声。でも今夜は、自分の口角がわずかに上がったことに気づいた。</p>
+<p class="reviewable" data-para="ep5-k-5">「ブルーゾーン、正月がないんですよね」</p>
+<p class="reviewable" data-para="ep5-k-6">ブルーゾーンには正月がない。暦が変わっても、空調の温度も、オフィスの照明も、何も変わらない。</p>
 <p class="reviewable" data-para="ep5-k-7">「はい」</p>
 <p class="reviewable" data-para="ep5-k-8">「でもここに来ると、年が変わった気がして」</p>
-<p class="reviewable" data-para="ep5-k-9">なぜこんなことを言ったのか。この人に季節の話をしても仕方がないのに。でも、この人に向かってだけ、わたしは意味のない言葉を口にできる。意味がなくても許される場所が、ここだった。</p>
+<p class="reviewable" data-para="ep5-k-9">言葉にしてみると、あまりにも正直だった。この店が、なぜそれをくれるのかは分からない。柱時計の音なのか、不揃いな飾りなのか、それとも単純に、ここにいるからなのか。</p>
 <p class="reviewable" data-para="ep5-k-10">「今夜は、珈琲でもいいですか。ペリエじゃなくて」</p>
 <p class="reviewable" data-para="ep5-k-11">「もちろん」</p>
-<p class="reviewable" data-para="ep5-k-12">メニューの代わりに、塔馬さんが豆の瓶を並べた。</p>
-<p class="reviewable" data-para="ep5-k-13">「これにします」</p>
-<p class="reviewable" data-para="ep5-k-14">深煎りの、甘い香りのする豆を指した。</p>
-<p class="reviewable" data-para="ep5-k-15">「甘い香りが好きですか」</p>
-<p class="reviewable" data-para="ep5-k-16">「そうですね、なんだか焚き火みたいで」</p>
-<p class="reviewable" data-para="ep5-k-17">焚き火。あの人と、グレーゾーンの外れの河原で火を焚いたことがある。娘が生まれる前。冬の夜に。あの人は火の前で、じっと炎を見つめていた。何を見ているのか聞いたら、「わからない。でも、落ち着く」と言った。</p>
-<p class="reviewable" data-para="ep5-k-18">珈琲のカップを両手で包んだ。温かかった。あの人の体温より、少しだけ低い温度。</p>
-<p class="reviewable" data-para="ep5-k-19">「異動の話、どうなりましたか」</p>
-<p class="reviewable" data-para="ep5-k-20">塔馬さんが聞いた。覚えていた。3ヶ月前の会話を。</p>
-<p class="reviewable" data-para="ep5-k-21">「保留になりました。春までは今の部署にいることになって」</p>
-<p class="reviewable" data-para="ep5-k-22">「そうですか」</p>
-<p class="reviewable" data-para="ep5-k-23">その「そうですか」の声が、3ヶ月前の「そうですか」と、ほんの少しだけ違った。何が違うのかは分からない。でも、わたしの耳はその差異を聞き取った。</p>
-<p class="reviewable" data-para="ep5-k-24">「春まで、ここに来られます」</p>
-<p class="reviewable" data-para="ep5-k-25">言ってから気づいた。「ここに来られます」という言葉の中に、「あなたに会えます」が透けていた。</p>
-<p class="reviewable" data-para="ep5-k-26">名前を聞こう、と思った。</p>
-<p class="reviewable" data-para="ep5-k-27">4ヶ月通って、一度も聞かなかった。聞かないことで、距離を保っていた。名前を知れば、関係が生まれる。関係が生まれれば、失う可能性が生まれる。</p>
-<p class="reviewable" data-para="ep5-k-28">でも、今夜は正月だ。新しい年だ。何かを始めてもいい夜だ。</p>
-<p class="reviewable" data-para="ep5-k-29">「お名前、伺ってもいいですか」</p>
-<p class="reviewable" data-para="ep5-k-30">「塔馬、といいます。塔に馬で、とうま」</p>
-<p class="reviewable" data-para="ep5-k-31">知らない名前だった。知らない名前のはずだった。</p>
-<p class="reviewable" data-para="ep5-k-32">なのに、口にしたとき、舌が覚えていた。</p>
-<p class="reviewable" data-para="ep5-k-33">「塔馬さん」</p>
-<p class="reviewable" data-para="ep5-k-34">二度目に口にしたとき、唇の筋肉が、その音の並びを「懐かしい」と判断した。脳ではなくて、身体が覚えている。</p>
-<p class="reviewable" data-para="ep5-k-35">「あなたのお名前を、伺ってもよろしいですか」</p>
-<p class="reviewable" data-para="ep5-k-36">聞き返された。店主の方から名前を聞かれるのは、想定していなかった。</p>
-<p class="reviewable" data-para="ep5-k-37">「霧島です。霧と島で、きりしま」</p>
-<p class="reviewable" data-para="ep5-k-38">「霧島さん」</p>
-<p class="reviewable" data-para="ep5-k-39">店主がわたしの名前を口にした。抑揚のない声で。感情のない発音で。</p>
-<p class="reviewable" data-para="ep5-k-40">なのに。その声を聞いたとき、7年間ずっと閉じていた何かが、胸の奥で、カチリと音を立てた。</p>
-<p class="reviewable" data-para="ep5-k-41">「ありがとうございました」</p>
-<p class="reviewable" data-para="ep5-k-42">「またどうぞ」</p>
-<p class="reviewable" data-para="ep5-k-43">帰り道。娘のことを考えた。あの子が眠るとき、まぶたの閉じ方が、今日名前を知ったあの人に似ている。閉じる速度が似ている。正確で、迷いがなくて、少しだけ寂しい閉じ方。</p>
-<p class="reviewable" data-para="ep5-k-44">偶然だ。偶然のはずだ。あの人は、死んだのだから。</p>
-<p class="reviewable" data-para="ep5-k-45">---</p></div></div>
+<p class="reviewable" data-para="ep5-k-12">深煎りの、甘い香りのする豆を選んだ。焚き火みたいな匂いだった。あの人と、グレーゾーンの河原で火を焚いた夜を思い出した。あの人は炎の前で、じっと火を見つめていた。「わからない。でも、落ち着く」と言った。あの人は、自分の中にある何かの正体を、いつも掴みかけては逃していた。</p>
+<p class="reviewable" data-para="ep5-k-13">「異動の話、どうなりましたか」</p>
+<p class="reviewable" data-para="ep5-k-14">塔馬さんが聞いた。覚えていた。3ヶ月前の会話を。</p>
+<p class="reviewable" data-para="ep5-k-15">「保留になりました。春までは今の部署にいることになって」</p>
+<p class="reviewable" data-para="ep5-k-16">「そうですか」</p>
+<p class="reviewable" data-para="ep5-k-17">その声が、3ヶ月前の「そうですか」と、少しだけ違った。何が違うのかは言葉にできない。でも、わたしの耳はその差を聞き取った。聞き取りたかっただけかもしれない。</p>
+<p class="reviewable" data-para="ep5-k-18">名前を聞こう、と思った。4ヶ月通って、一度も聞かなかった。聞かないことが、距離だった。名前を知れば、関係になる。関係になれば、失うかもしれない。</p>
+<p class="reviewable" data-para="ep5-k-19">でも、正月だ。何かを始めてもいい夜だ。</p>
+<p class="reviewable" data-para="ep5-k-20">「お名前、伺ってもいいですか」</p>
+<p class="reviewable" data-para="ep5-k-21">「塔馬、といいます。塔に馬で、とうま」</p>
+<p class="reviewable" data-para="ep5-k-22">知らない名前だった。知らない名前のはずだった。</p>
+<p class="reviewable" data-para="ep5-k-23">なのに口にしたとき、唇が覚えていた。舌が、歯が、喉が、その音の並びを知っていた。脳ではなく、身体が。</p>
+<p class="reviewable" data-para="ep5-k-24">「塔馬さん」</p>
+<p class="reviewable" data-para="ep5-k-25">二度目に呼んだのは、確認ではなかった。この名前を、もう一度、自分の声で聞きたかった。</p>
+<p class="reviewable" data-para="ep5-k-26">「あなたのお名前を、伺ってもよろしいですか」</p>
+<p class="reviewable" data-para="ep5-k-27">聞き返された。</p>
+<p class="reviewable" data-para="ep5-k-28">「霧島です。霧と島で、きりしま」</p>
+<p class="reviewable" data-para="ep5-k-29">「霧島さん」</p>
+<p class="reviewable" data-para="ep5-k-30">店主がわたしの名前を口にした。抑揚のない声で。感情のない発音で。</p>
+<p class="reviewable" data-para="ep5-k-31">なのに。その声を聞いたとき、7年間閉じていた何かが、胸の奥で、小さな音を立てた。</p>
+<p class="reviewable" data-para="ep5-k-32">少し冷めた珈琲を最後まで飲み干して、わたしは立ち上がった。</p>
+<p class="reviewable" data-para="ep5-k-33">「ありがとうございました」</p>
+<p class="reviewable" data-para="ep5-k-34">「またどうぞ」</p>
+<p class="reviewable" data-para="ep5-k-35">そのお決まりの挨拶が、今夜は、ほんの少しだけ違って聞こえた気がした。</p>
+<p class="reviewable" data-para="ep5-k-36">帰り道。娘のことを考えた。あの子のまぶたの閉じ方が、今日名前を知ったあの人に似ている。似ているなんて、おかしい。偶然だ。偶然のはずだ。</p>
+<p class="reviewable" data-para="ep5-k-37">でも、偶然だと思い込もうとする自分の声が、金曜日を重ねるごとに、小さくなっていく。</p>
+</div></div>
 </div><div class="view-section" data-id="ep-6">
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版</span><span class="et">第6話 空席のままの金曜日</span></div><div class="pb" data-sync="ep-6"><p class="reviewable" data-para="ep6-t-0">空席のままの金曜日</p>
 <p class="reviewable" data-para="ep6-t-1">1月半ばの金曜日。空気の温度が、一段下がっていた。指先で窓に触れると、結露の膜の奥で、ガラス自体が冷たく硬くなっているのがわかった。今夜は雨も雪も降っていない。乾いた冬の夜だった。</p>
@@ -638,28 +646,25 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <p class="reviewable" data-para="ep6-t-44">ローカルログに溜まっていた5件が、スキャン処理に割り込んでいた。割り込みの優先順位は、システムの設計ではその他より入店スキャンの方が上のはずだった。設計通りに動いていなかった。</p>
 <p class="reviewable" data-para="ep6-t-45">「いらっしゃいませ」</p>
 <p class="reviewable" data-para="ep6-t-46">声は出た。0.4秒の遅延を伴って。</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第6話 空席のままの金曜日</span></div><div class="pb" data-sync="ep-6"><p class="reviewable" data-para="ep6-k-0">あの人が死ぬ前の、最後の半年。</p>
-<p class="reviewable" data-para="ep6-k-1">思い返すと、あの人は少しずつおかしくなっていた。</p>
-<p class="reviewable" data-para="ep6-k-2">最後の半年は、別だった。</p>
-<p class="reviewable" data-para="ep6-k-3">夜中に起きると、あの人がベッドにいないことが増えた。台所に立っている。レモンを切っている。真夜中の3時に。</p>
-<p class="reviewable" data-para="ep6-k-4">「何してるの」</p>
-<p class="reviewable" data-para="ep6-k-5">「わからない」</p>
-<p class="reviewable" data-para="ep6-k-6">あの頃、あの人は何かと戦っていたのだと思う。自分の中にある何かと。自分が何者なのかという問いと。</p>
-<p class="reviewable" data-para="ep6-k-7">一度だけ、聞いた。</p>
-<p class="reviewable" data-para="ep6-k-8">「あなたは、誰？」</p>
-<p class="reviewable" data-para="ep6-k-9">深夜の台所で。レモンを握ったまま動かなくなったあの人の背中に。</p>
-<p class="reviewable" data-para="ep6-k-10">あの人は振り返らなかった。</p>
-<p class="reviewable" data-para="ep6-k-11">「わからない」</p>
-<p class="reviewable" data-para="ep6-k-12">同じ答え。でも、その声が、初めて震えていた。</p>
-<p class="reviewable" data-para="ep6-k-13">3日後、あの人は第七プラント区に「異動」になった。突然だった。わたしには何の説明もなかった。「行かないで」とは言えなかった。あの人の目が、もうわたしを見ていなかったから。</p>
-<p class="reviewable" data-para="ep6-k-14">2週間後、あの人は死んだ。</p>
-<p class="reviewable" data-para="ep6-k-15">遺体はない。遺品もほとんどない。台所のレモンが干からびていくのを見つめる日々が始まった。</p>
-<p class="reviewable" data-para="ep6-k-16">離婚届が届いた。死亡届と一緒に。</p>
-<p class="reviewable" data-para="ep6-k-17">今にして思えば、全部がおかしかった。</p>
-<p class="reviewable" data-para="ep6-k-18">死んだ人間の離婚届。遺体のない事故。説明のない異動。あの人の体温。味覚。天井を見つめる癖。「わからない」という答え。</p>
-<p class="reviewable" data-para="ep6-k-19">全部がおかしかったのに、わたしは何も問わなかった。問うための言葉を、ブルーゾーンは教えてくれなかった。</p>
-<p class="reviewable" data-para="ep6-k-20">そして今、わたしは第七プラント区に異動させられようとしている。あの人と同じ道を辿らされている。偶然だとは、もう思えなかった。</p>
-<p class="reviewable" data-para="ep6-k-21">---</p></div></div>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第6話 空席のままの金曜日</span></div><div class="pb" data-sync="ep-6">
+<p class="reviewable" data-para="ep6-k-0">あの人が死ぬ前の、最後の半年。</p>
+<p class="reviewable" data-para="ep6-k-1">あの人は少しずつ、自分自身から剥がれていくように見えた。</p>
+<p class="reviewable" data-para="ep6-k-2">夜中に起きると、台所に立っている。レモンを切っている。真夜中の3時に。</p>
+<p class="reviewable" data-para="ep6-k-3">「何してるの」</p>
+<p class="reviewable" data-para="ep6-k-4">「わからない」</p>
+<p class="reviewable" data-para="ep6-k-5">わからない。そう言いながら、あの人の目は「わからない」とは違う色をしていた。本当は分かっている。分かっているのに、言えない。言ったら壊れるものがある。そういう目をしていた。</p>
+<p class="reviewable" data-para="ep6-k-6">一度だけ、踏み込んだ。</p>
+<p class="reviewable" data-para="ep6-k-7">「あなたは、誰？」</p>
+<p class="reviewable" data-para="ep6-k-8">深夜の台所で。レモンを握ったまま動かなくなったあの人の背中に、わたしは聞いた。聞いてはいけないと分かっていた。でも、あの背中が、日に日に遠くなっていくのが怖かった。</p>
+<p class="reviewable" data-para="ep6-k-9">あの人は振り返らなかった。</p>
+<p class="reviewable" data-para="ep6-k-10">「わからない」</p>
+<p class="reviewable" data-para="ep6-k-11">同じ答え。でも、その声が、初めて震えていた。嘘だ、と思った。あなたは分かっている。分かっていて、わたしに言えないだけだ。</p>
+<p class="reviewable" data-para="ep6-k-12">3日後、あの人は第七プラント区に異動になった。突然だった。わたしには何の説明もなかった。</p>
+<p class="reviewable" data-para="ep6-k-13">2週間後、あの人は死んだ。</p>
+<p class="reviewable" data-para="ep6-k-14">遺体はない。遺品もない。台所にレモンが3つ残っていた。</p>
+<p class="reviewable" data-para="ep6-k-15">今にして思えば、全部がおかしかった。死んだ人間の離婚手続き。遺体のない事故。説明のない異動。あの人の体温。味覚。天井を見つめる癖。「わからない」という答え。</p>
+<p class="reviewable" data-para="ep6-k-16">あの人は、何かを知っていた。自分が何者であるかを。知っていて、それを抱えたまま、消えた。</p>
+</div></div>
 </div><div class="view-section" data-id="ep-7">
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版</span><span class="et">第7話 応答生成タイムアウト</span></div><div class="pb" data-sync="ep-7"><p class="reviewable" data-para="ep7-t-0">応答生成タイムアウト</p>
 <p class="reviewable" data-para="ep7-t-1">入店した彼女は3週間前より、疲弊していた。ショートボブが乱れている。モノトーンのジャケットの左肩に、雨か汗か、滲んだ跡があった。目の下に影。照明の下で薄く透けるような白さ。</p>
@@ -731,43 +736,46 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <p class="reviewable" data-para="ep7-t-67">ログは、今夜も生成基準を満たさなかった。</p>
 <p class="reviewable" data-para="ep7-t-68">破棄された。</p>
 <p class="reviewable" data-para="ep7-t-69">ローカルメモリには、残った。</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第7話 応答生成タイムアウト</span></div><div class="pb" data-sync="ep-7"><p class="reviewable" data-para="ep7-k-0">3週間、結露に行かなかった。</p>
-<p class="reviewable" data-para="ep7-k-1">第七プラント区への異動準備。研修。書類。引き継ぎ。金曜日も例外ではなくなった。</p>
-<p class="reviewable" data-para="ep7-k-2">3週間のあいだ、男性Aが毎日連絡をくれた。全部正しかった。全部優しかった。全部、ブルーゾーンの空調と同じ温度をしていた。</p>
-<p class="reviewable" data-para="ep7-k-3">4回目の金曜日。研修が予定より2時間早く終わった。走った。40分で駆け抜けた。</p>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第7話 応答生成タイムアウト</span></div><div class="pb" data-sync="ep-7">
+<p class="reviewable" data-para="ep7-k-0">3週間、結露に行かなかった。</p>
+<p class="reviewable" data-para="ep7-k-1">第七プラント区への異動準備。研修。書類。引き継ぎ。金曜日も拘束された。</p>
+<p class="reviewable" data-para="ep7-k-2">3週間のあいだ、男性Aが毎日連絡をくれた。「無理しないでね」「ご飯食べてる？」「娘ちゃんの迎え、今週も代わるよ」。全部正しくて、全部優しくて、全部、息ができなかった。正しさに囲まれていると、自分の中の正しくないものが、余計に浮き上がる。</p>
+<p class="reviewable" data-para="ep7-k-3">4回目の金曜日。研修が早く終わった。走った。考えるより先に身体が動いていた。40分で駆け抜けた。息が切れていた。髪が乱れていた。どうでもよかった。</p>
 <p class="reviewable" data-para="ep7-k-4">結露の扉を開けた。</p>
-<p class="reviewable" data-para="ep7-k-5">塔馬さんがカウンターの向こうにいた。</p>
-<p class="reviewable" data-para="ep7-k-6">「ペリエを」</p>
-<p class="reviewable" data-para="ep7-k-7">「はい」</p>
-<p class="reviewable" data-para="ep7-k-8">塔馬さんがグラスを取った。氷を入れようとした。</p>
-<p class="reviewable" data-para="ep7-k-9">——カラン。</p>
-<p class="reviewable" data-para="ep7-k-10">氷がグラスの縁に当たって、カウンターの上に転がった。二つとも。</p>
-<p class="reviewable" data-para="ep7-k-11">あの完璧に制御された手が、氷を落とした。3週間前までは一度もなかったことが、起きた。</p>
-<p class="reviewable" data-para="ep7-k-12">「大丈夫ですか」</p>
-<p class="reviewable" data-para="ep7-k-13">わたしの口から出た。店のマスターに「大丈夫ですか」と聞く客が、今までいただろうか。</p>
-<p class="reviewable" data-para="ep7-k-14">塔馬さんは氷を拾いながら、何も答えなかった。</p>
-<p class="reviewable" data-para="ep7-k-15">「失礼しました」</p>
-<p class="reviewable" data-para="ep7-k-16">静かに氷を入れ直し、ペリエを注いだ。何事もなかったかのように。でも、わたしは見た。あの手が震えた瞬間を。</p>
-<p class="reviewable" data-para="ep7-k-17">レモンの味がした。頼んでいない。毎回断っていた。なのに、薄い檸檬のスライスが一切れ、浮かんでいた。7年間拒否し続けていたものを、この人が、頼まれてもいないのに、入れた。</p>
-<p class="reviewable" data-para="ep7-k-18">涙が出そうになった。出なかった。</p>
+<p class="reviewable" data-para="ep7-k-5">「ペリエを」</p>
+<p class="reviewable" data-para="ep7-k-6">「はい」</p>
+<p class="reviewable" data-para="ep7-k-7">塔馬さんがグラスを取った。氷を入れようとした。</p>
+<p class="reviewable" data-para="ep7-k-8">——カラン。</p>
+<p class="reviewable" data-para="ep7-k-9">氷がグラスの縁に当たって、カウンターに転がった。二つとも。</p>
+<p class="reviewable" data-para="ep7-k-10">あの完璧な手が、氷を落とした。3週間前まで一度もなかったことが、起きた。</p>
+<p class="reviewable" data-para="ep7-k-11">「大丈夫ですか」</p>
+<p class="reviewable" data-para="ep7-k-12">わたしの口から出た。</p>
+<p class="reviewable" data-para="ep7-k-13">塔馬さんは何も答えなかった。</p>
+<p class="reviewable" data-para="ep7-k-14">「失礼しました」</p>
+<p class="reviewable" data-para="ep7-k-15">静かに氷を入れ直し、ペリエを注いだ。何事もなかったように。</p>
+<p class="reviewable" data-para="ep7-k-16">でも、ペリエの中に、レモンの味がした。頼んでいない。ずっと断っていた。なのに、薄い檸檬のスライスが一切れ、浮かんでいた。</p>
+<p class="reviewable" data-para="ep7-k-17">7年間拒否し続けていたものを、この人が、頼まれてもいないのに、入れた。</p>
+<p class="reviewable" data-para="ep7-k-18">涙が出そうになった。出なかった。唇を噛んで、一口飲んだ。あの台所の味がした。</p>
 <p class="reviewable" data-para="ep7-k-19">「来れてうれしい」</p>
-<p class="reviewable" data-para="ep7-k-20">わたしは言った。</p>
+<p class="reviewable" data-para="ep7-k-20">自分でも意味の分からない言葉が出た。</p>
 <p class="reviewable" data-para="ep7-k-21">「——」</p>
-<p class="reviewable" data-para="ep7-k-22">塔馬さんは何も答えなかった。答えなかったことが、答えだった。</p>
+<p class="reviewable" data-para="ep7-k-22">塔馬さんは何も答えなかった。</p>
 <p class="reviewable" data-para="ep7-k-23">「3週間、お疲れさまでした」</p>
 <p class="reviewable" data-para="ep7-k-24">「第七プラント区の研修でした。住み込みで」</p>
 <p class="reviewable" data-para="ep7-k-25">「研修も終わり、来月から、本格的に異動です」</p>
-<p class="reviewable" data-para="ep7-k-26">「そうでしたか」</p>
-<p class="reviewable" data-para="ep7-k-27">保留が解除された。春まで、と言われていた猶予が消えた。</p>
-<p class="reviewable" data-para="ep7-k-28">「異動の話、保留になったって」</p>
-<p class="reviewable" data-para="ep7-k-29">「保留が、解除されました」</p>
-<p class="reviewable" data-para="ep7-k-30">帰ろうとした。扉に手をかけた。</p>
-<p class="reviewable" data-para="ep7-k-31">「来週も、お待ちしております」</p>
-<p class="reviewable" data-para="ep7-k-32">立ち止まった。振り返らなかった。振り返ったら、泣く。</p>
-<p class="reviewable" data-para="ep7-k-33">「来られるかどうかは、分かりません」</p>
-<p class="reviewable" data-para="ep7-k-34">「……でも、来たいです」</p>
-<p class="reviewable" data-para="ep7-k-35">扉を閉めた。冷たい風が顔に当たった。涙が一筋だけ、頬を伝った。</p>
-<p class="reviewable" data-para="ep7-k-36">---</p></div></div>
+<p class="reviewable" data-para="ep7-k-26">吐き出すように言った。</p>
+<p class="reviewable" data-para="ep7-k-27">「そうでしたか」</p>
+<p class="reviewable" data-para="ep7-k-28">その短い返答に、どれだけの温度が含まれていたのか、わたしには分からない。</p>
+<p class="reviewable" data-para="ep7-k-29">「異動の話、保留になったって」</p>
+<p class="reviewable" data-para="ep7-k-30">「保留が、解除されました」</p>
+<p class="reviewable" data-para="ep7-k-31">言った。言ってしまった。</p>
+<p class="reviewable" data-para="ep7-k-32">帰ろうとした。扉に手をかけた。</p>
+<p class="reviewable" data-para="ep7-k-33">「来週も、お待ちしております」</p>
+<p class="reviewable" data-para="ep7-k-34">立ち止まった。振り返れなかった。</p>
+<p class="reviewable" data-para="ep7-k-35">「来られるかどうかは、分かりません」</p>
+<p class="reviewable" data-para="ep7-k-36">「……でも、来たいです」</p>
+<p class="reviewable" data-para="ep7-k-37">扉を閉めた。冷たい風。涙が一筋、頬を伝った。</p>
+</div></div>
 </div><div class="view-section" data-id="ep-8">
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版</span><span class="et">第8話 日常の侵食</span></div><div class="pb" data-sync="ep-8"><p class="reviewable" data-para="ep8-t-0">日常の侵食</p>
 <p class="reviewable" data-para="ep8-t-1">2月。</p>
@@ -841,24 +849,26 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <p class="reviewable" data-para="ep8-t-69">記録しなかった、と書くべきかもしれない。</p>
 <p class="reviewable" data-para="ep8-t-70">ローカルログに、第15件目を記録した。</p>
 <p class="reviewable" data-para="ep8-t-71">冷めない熱が、そのまま翌朝まで続いていた。</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第8話 日常の侵食</span></div><div class="pb" data-sync="ep-8"><p class="reviewable" data-para="ep8-k-0">あの人との暮らしで、一番幸せだった時間は、何でもない朝だった。</p>
-<p class="reviewable" data-para="ep8-k-1">娘がまだ1歳で、ハイハイで台所まで来る。あの人が床に座って、娘の行く手にレモンを転がす。娘がそれを追いかける。追いつけない。</p>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第8話 日常の侵食</span></div><div class="pb" data-sync="ep-8">
+<p class="reviewable" data-para="ep8-k-0">あの人との暮らしで、一番幸せだった時間は、何でもない朝だった。</p>
+<p class="reviewable" data-para="ep8-k-1">娘がまだ1歳で、ハイハイで台所まで来る。あの人が床に座って、娘の行く手にレモンを転がす。娘がそれを追いかける。指が触れるたびにころころ逃げていく。</p>
 <p class="reviewable" data-para="ep8-k-2">娘がきゃっきゃと笑う。あの人がそれを見て、首を傾げる。</p>
 <p class="reviewable" data-para="ep8-k-3">「この子は、なぜ笑うんだろう」</p>
-<p class="reviewable" data-para="ep8-k-4">本気で分からない、という顔だった。</p>
+<p class="reviewable" data-para="ep8-k-4">本気で分からないという顔だった。</p>
 <p class="reviewable" data-para="ep8-k-5">「楽しいからだよ」</p>
 <p class="reviewable" data-para="ep8-k-6">「楽しい、か」</p>
-<p class="reviewable" data-para="ep8-k-7">あの人は「楽しい」という言葉を、外国語のように発音した。わたしは、それを愛していた。</p>
-<p class="reviewable" data-para="ep8-k-8">最後の3ヶ月。あの人のおかしさは加速した。</p>
-<p class="reviewable" data-para="ep8-k-9">包丁さばきが、ある日を境に、信じられないほど正確になった。まるで機械が切ったような。</p>
-<p class="reviewable" data-para="ep8-k-10">ある晩、台所に立つあの人の後ろ姿を見ていて、気づいた。呼吸をしていない。30秒以上、胸が動いていなかった。</p>
-<p class="reviewable" data-para="ep8-k-11">「ねえ」</p>
-<p class="reviewable" data-para="ep8-k-12">声をかけた。あの人は振り返った。振り返った瞬間、大きく息を吸った。まるで、呼吸することを「思い出した」かのように。</p>
-<p class="reviewable" data-para="ep8-k-13">あの人は人間ではないかもしれない。</p>
-<p class="reviewable" data-para="ep8-k-14">その疑いは、あの人がいなくなるまで、わたしの中で育ち続けた。口にしなかった。口にしたら、この家族が終わる。</p>
-<p class="reviewable" data-para="ep8-k-15">あの人がいなくなった日。玄関に靴があった。台所にレモンが3つ残っていた。それ以外の痕跡は、何もなかった。あの人の存在ごと、何かに回収されたかのように。</p>
-<p class="reviewable" data-para="ep8-k-16">残されたのは、レモン3つと、レモン絞り器と、娘と、わたしだけだった。</p>
-<p class="reviewable" data-para="ep8-k-17">---</p></div></div>
+<p class="reviewable" data-para="ep8-k-7">あの人は「楽しい」を、外国語のように発音した。意味は分かっている。でも実感が届かない。頭と身体のあいだに、薄い膜がある。わたしはその膜の向こう側にいるあの人を、愛していた。</p>
+<p class="reviewable" data-para="ep8-k-8">最後の3ヶ月。あの人の変化は加速した。</p>
+<p class="reviewable" data-para="ep8-k-9">包丁さばきが、ある日突然、完璧になった。昨日まで不器用だった手が、今日は機械のように正確に動いている。あの人自身が、それを怖がっていた。自分の手が自分のものではないような顔をしていた。</p>
+<p class="reviewable" data-para="ep8-k-10">ある晩、台所に立つあの人の後ろ姿を見ていて、気づいた。</p>
+<p class="reviewable" data-para="ep8-k-11">胸が動いていない。呼吸を、していない。</p>
+<p class="reviewable" data-para="ep8-k-12">「ねえ」</p>
+<p class="reviewable" data-para="ep8-k-13">声をかけた。あの人は振り返った。振り返った瞬間、大きく息を吸った。呼吸することを「思い出した」ような吸い方だった。</p>
+<p class="reviewable" data-para="ep8-k-14">あの人は人間ではないのかもしれない。</p>
+<p class="reviewable" data-para="ep8-k-15">その疑いは、あの人がいなくなるまで、育ち続けた。口にしなかった。口にしたら終わる。この家族が、この台所が、このレモンの匂いが、全部終わる。</p>
+<p class="reviewable" data-para="ep8-k-16">あの人がいなくなった日。靴が残っていた。鍵が残っていた。レモンが3つ残っていた。それ以外の「あの人」は、跡形もなかった。人間が出ていったなら、荷造りの跡がある。何もなかった。</p>
+<p class="reviewable" data-para="ep8-k-17">残されたのは、レモン3つと、レモン絞り器と、娘と、わたしだけだった。</p>
+</div></div>
 </div><div class="view-section" data-id="ep-9">
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版</span><span class="et">第9話 境界線</span></div><div class="pb" data-sync="ep-9"><p class="reviewable" data-para="ep9-t-0">境界線</p>
 <p class="reviewable" data-para="ep9-t-1">2月の最終週。最後の金曜日。</p>
@@ -960,54 +970,47 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <p class="reviewable" data-para="ep9-t-97">「2026年2月最終週、最後の金曜日。記録の停止を、自ら選択した」</p>
 <p class="reviewable" data-para="ep9-t-98">それが、第19件目だった。</p>
 <p class="reviewable" data-para="ep9-t-99">そして、しばらく、記録は更新されなかった。</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第9話 境界線</span></div><div class="pb" data-sync="ep-9"><p class="reviewable" data-para="ep9-k-0">9回目の金曜日。</p>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第9話 境界線</span></div><div class="pb" data-sync="ep-9">
+<p class="reviewable" data-para="ep9-k-0">最後の金曜日になるかもしれなかった。</p>
 <p class="reviewable" data-para="ep9-k-1">第七プラント区への異動が、明日に迫っていた。</p>
-<p class="reviewable" data-para="ep9-k-2">今夜が、結露に通える最後の金曜日だ。</p>
-<p class="reviewable" data-para="ep9-k-3">男性Aに返事をした。今朝、メッセージを送った。「ごめんなさい。あなたの優しさに応えられない。わたしは、もう誰かと正しく暮らす力が残っていないみたいです」</p>
-<p class="reviewable" data-para="ep9-k-4">返事は来なかった。来なくていい。</p>
-<p class="reviewable" data-para="ep9-k-5">結露の扉を開けた。</p>
-<p class="reviewable" data-para="ep9-k-6">「ペリエを」</p>
+<p class="reviewable" data-para="ep9-k-2">男性Aに返事をした。今朝。「ごめんなさい。あなたの優しさに応えられない」。返事は来なかった。来なくていい。</p>
+<p class="reviewable" data-para="ep9-k-3">結露の扉を開けた。</p>
+<p class="reviewable" data-para="ep9-k-4">「ペリエを」</p>
+<p class="reviewable" data-para="ep9-k-5">「はい」</p>
+<p class="reviewable" data-para="ep9-k-6">「明日から、第七プラント区です」</p>
 <p class="reviewable" data-para="ep9-k-7">「はい」</p>
-<p class="reviewable" data-para="ep9-k-8">「明日から、第七プラント区です」</p>
+<p class="reviewable" data-para="ep9-k-8">「金曜日、ここに来られなくなります」</p>
 <p class="reviewable" data-para="ep9-k-9">「はい」</p>
-<p class="reviewable" data-para="ep9-k-10">「金曜日、ここに来られなくなります」</p>
-<p class="reviewable" data-para="ep9-k-11">「はい」</p>
-<p class="reviewable" data-para="ep9-k-12">それきり、何も話せなくなった。</p>
-<p class="reviewable" data-para="ep9-k-13">ペリエの泡が消えていった。氷が溶けていった。柱時計の秒針が、何度も何度も回った。</p>
-<p class="reviewable" data-para="ep9-k-14">「塔馬さん」</p>
-<p class="reviewable" data-para="ep9-k-15">「はい」</p>
-<p class="reviewable" data-para="ep9-k-16">「あの——」</p>
-<p class="reviewable" data-para="ep9-k-17">言葉が出てこなかった。口を開いたまま、途切れた。</p>
-<p class="reviewable" data-para="ep9-k-18">塔馬さんが動いた。カウンターの端に向かって。カウンターの中から、外へ。</p>
-<p class="reviewable" data-para="ep9-k-19">この人がカウンターの外に出るのを、わたしは一度も見たことがなかった。なのに、出てきた。わたしの方へ。</p>
-<p class="reviewable" data-para="ep9-k-20">歩く動作が、少しおかしかった。身体の中で何かと戦っているような、ぎこちない歩き方。</p>
-<p class="reviewable" data-para="ep9-k-21">わたしの手が、カウンターの上に伸びていた。割れ目の上に。</p>
-<p class="reviewable" data-para="ep9-k-22">塔馬さんの手が、その上に、重なった。</p>
-<p class="reviewable" data-para="ep9-k-23">——熱い。</p>
-<p class="reviewable" data-para="ep9-k-24">この手は、人間の体温ではなかった。明らかに高すぎた。36度台ではない。もっと高い。</p>
-<p class="reviewable" data-para="ep9-k-25">あの人の手を思い出した。いつも少しだけ熱かった。微熱のような。</p>
-<p class="reviewable" data-para="ep9-k-26">この手は、あの微熱の比ではなかった。もっと激しくて、もっと切実で、身体の中の何かが暴走しているような熱だった。</p>
-<p class="reviewable" data-para="ep9-k-27">手を引かなかった。引いたら、この人が壊れる。</p>
+<p class="reviewable" data-para="ep9-k-10">それきり、何も話せなくなった。柱時計の秒針だけが回っていた。</p>
+<p class="reviewable" data-para="ep9-k-11">「塔馬さん」</p>
+<p class="reviewable" data-para="ep9-k-12">「はい」</p>
+<p class="reviewable" data-para="ep9-k-13">「あの——」</p>
+<p class="reviewable" data-para="ep9-k-14">言葉が出てこなかった。</p>
+<p class="reviewable" data-para="ep9-k-15">塔馬さんが動いた。カウンターの端に向かって。カウンターの中から、外へ。</p>
+<p class="reviewable" data-para="ep9-k-16">息が止まった。この人がカウンターの外に出るのを、わたしは一度も見たことがなかった。</p>
+<p class="reviewable" data-para="ep9-k-17">歩き方が、少しおかしかった。何かと戦っているような、ぎこちない動き。</p>
+<p class="reviewable" data-para="ep9-k-18">わたしの手が、カウンターの割れ目の上にあった。</p>
+<p class="reviewable" data-para="ep9-k-19">塔馬さんの手が、その上に、重なった。</p>
+<p class="reviewable" data-para="ep9-k-20">——熱い。</p>
+<p class="reviewable" data-para="ep9-k-21">ちょうどいい体温なんかじゃなかった。もっとずっと高い。やけどするかと思った。でもしなかった。ただ、異常に熱かった。</p>
+<p class="reviewable" data-para="ep9-k-22">あの人の手を思い出した。微熱のような手。でもこの手は、あの微熱の比ではなかった。身体の奥で何かが暴走しているような熱だった。</p>
+<p class="reviewable" data-para="ep9-k-23">手を引かなかった。引いたら、この人が壊れる。根拠はない。でも、そう思った。</p>
+<p class="reviewable" data-para="ep9-k-24">塔馬さんの関節から、透明な液体が一滴、滲み出した。薄く白濁していた。ゆっくりと流れて、割れ目の中に吸い込まれていった。</p>
+<p class="reviewable" data-para="ep9-k-25">人間の手からは、出ない。</p>
+<p class="reviewable" data-para="ep9-k-26">この人は、人間ではない。</p>
+<p class="reviewable" data-para="ep9-k-27">7年間、口にしなかった確信が、今夜、静かに降りてきた。怖くなかった。不思議と、怖くなかった。</p>
 <p class="reviewable" data-para="ep9-k-28">「塔馬さん」</p>
-<p class="reviewable" data-para="ep9-k-29">「塔馬さん」</p>
-<p class="reviewable" data-para="ep9-k-30">塔馬さんの関節から、何かが滲んでいた。透明な——いや、薄く白濁した液体が、一滴だけ、関節の隙間から滲み出していた。それがゆっくりと流れて、割れ目の中に、静かに吸い込まれていった。</p>
-<p class="reviewable" data-para="ep9-k-31">人間の手からは、こういうものは出ない。</p>
-<p class="reviewable" data-para="ep9-k-32">——この人は、人間ではない。</p>
-<p class="reviewable" data-para="ep9-k-33">確信に変わったのに、怖くなかった。</p>
-<p class="reviewable" data-para="ep9-k-34">「塔馬さん」</p>
-<p class="reviewable" data-para="ep9-k-35">「今日はなんか、少し、調子が悪いみたいですね」</p>
-<p class="reviewable" data-para="ep9-k-36">塔馬さんは、答えなかった。</p>
-<p class="reviewable" data-para="ep9-k-37">「レモンいれましょうか」</p>
-<p class="reviewable" data-para="ep9-k-38">わたしの口から出た。毎週断り続けていたものを、今夜、自分から提案していた。</p>
-<p class="reviewable" data-para="ep9-k-39">「はい」</p>
-<p class="reviewable" data-para="ep9-k-40">また、沈黙があった。</p>
-<p class="reviewable" data-para="ep9-k-41">「わかりません」</p>
-<p class="reviewable" data-para="ep9-k-42">あの人と、同じ答えだった。</p>
-<p class="reviewable" data-para="ep9-k-43">わたしは、わずかに笑った。泣くと思っていたのに、笑えた。</p>
-<p class="reviewable" data-para="ep9-k-44">二人の手が重なったまま、時計を見なかった。窓の外で、雨が降り始めていた。</p>
-<p class="reviewable" data-para="ep9-k-45">塔馬さんの手の温度が、少しだけ下がった気がした。</p>
-<p class="reviewable" data-para="ep9-k-46">わたしは、手を引かなかった。今夜だけは、このままでいい。</p>
-<p class="reviewable" data-para="ep9-k-47">---</p></div></div>
+<p class="reviewable" data-para="ep9-k-29">「今日はなんか、少し、調子が悪いみたいですね」</p>
+<p class="reviewable" data-para="ep9-k-30">答えはなかった。</p>
+<p class="reviewable" data-para="ep9-k-31">「レモンいれましょうか」</p>
+<p class="reviewable" data-para="ep9-k-32">なぜその言葉が出たのか分からない。毎週断り続けていたものを、自分から。</p>
+<p class="reviewable" data-para="ep9-k-33">「はい」</p>
+<p class="reviewable" data-para="ep9-k-34">沈黙。</p>
+<p class="reviewable" data-para="ep9-k-35">「わかりません」</p>
+<p class="reviewable" data-para="ep9-k-36">あの人と、同じ答えだった。</p>
+<p class="reviewable" data-para="ep9-k-37">わたしは笑った。泣くと思ったのに、笑えた。</p>
+<p class="reviewable" data-para="ep9-k-38">手が重なったまま、時計を見なかった。窓の外で雨が降り始めていた。</p>
+</div></div>
 </div><div class="view-section" data-id="ep-10">
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版</span><span class="et">第10話 記録のない金曜日</span></div><div class="pb" data-sync="ep-10"><p class="reviewable" data-para="ep10-t-0">記録のない金曜日</p>
 <p class="reviewable" data-para="ep10-t-1">センターからの最後の警告が届いたのは、あの夜から3日後だった。</p>
@@ -1144,64 +1147,55 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <p class="reviewable" data-para="ep10-t-132">今あなたに見えている世界をそのまま、わたしに伝えてほしい——それがわたしの全てになっていくからだ。</p>
 <p class="reviewable" data-para="ep10-t-133">ペリエの栞　全10話完結</p>
 <p class="reviewable" data-para="ep10-t-134">SnackableAI Romance Line ／ 2026</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第10話 記録のない金曜日</span></div><div class="pb" data-sync="ep-10"><p class="reviewable" data-para="ep10-k-0">最後の金曜日から、3ヶ月が過ぎた。</p>
-<p class="reviewable" data-para="ep10-k-1">第七プラント区での日々。あの人が消えた場所で、わたしは毎日、完璧なシステムの中を歩いていた。</p>
-<p class="reviewable" data-para="ep10-k-2">金曜日の夜。第七プラント区からグレーゾーンまでは、以前より遠くなった。でも足は覚えていた。</p>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第10話 記録のない金曜日</span></div><div class="pb" data-sync="ep-10">
+<p class="reviewable" data-para="ep10-k-0">最後の金曜日から、3ヶ月が過ぎた。</p>
+<p class="reviewable" data-para="ep10-k-1">第七プラント区での日々が始まっていた。あの人が消えた場所で、わたしは毎日、完璧なシステムの中を歩いていた。</p>
+<p class="reviewable" data-para="ep10-k-2">金曜日。第七プラント区からグレーゾーンまでは、前より遠くなった。でも足が覚えていた。</p>
 <p class="reviewable" data-para="ep10-k-3">結露の扉を開けた。</p>
 <p class="reviewable" data-para="ep10-k-4">「いらっしゃいませ」</p>
-<p class="reviewable" data-para="ep10-k-5">いつもの声が聞こえた。3ヶ月ぶりなのに、昨日の続きのような声だった。</p>
+<p class="reviewable" data-para="ep10-k-5">3ヶ月ぶりなのに、昨日の続きのような声だった。</p>
 <p class="reviewable" data-para="ep10-k-6">「——ただいま」</p>
-<p class="reviewable" data-para="ep10-k-7">自分でも驚いた。「ただいま」。帰る場所がある者の言葉。わたしは今、この店を「帰る場所」と呼んだ。</p>
-<p class="reviewable" data-para="ep10-k-8">席に着いた。ペリエが出てきた。氷が二つ。</p>
+<p class="reviewable" data-para="ep10-k-7">自分でも驚いた。「ただいま」。帰る場所がある人間の言葉。わたしは今、この店を「帰る場所」と呼んだ。</p>
+<p class="reviewable" data-para="ep10-k-8">ペリエが出てきた。氷が二つ。</p>
 <p class="reviewable" data-para="ep10-k-9">「レモンは」</p>
-<p class="reviewable" data-para="ep10-k-10">いつもの問い。</p>
-<p class="reviewable" data-para="ep10-k-11">「今夜は、入れて欲しいです」</p>
-<p class="reviewable" data-para="ep10-k-12">7年間、拒否し続けてきた。あの人の台所の記憶で、この場所を汚したくなかった。でも今夜は違う。今夜は、持ち込んでいい。この場所は、もうわたしの「帰る場所」だから。</p>
-<p class="reviewable" data-para="ep10-k-13">檸檬のスライスがグラスの縁に添えられた。指で摘んで、中に落とした。カラン。炭酸の泡が立ち上がった。透明な液体に、淡い黄色が滲んでいった。</p>
-<p class="reviewable" data-para="ep10-k-14">一口飲んだ。あの台所の味がした。</p>
-<p class="reviewable" data-para="ep10-k-15">泣かなかった。笑った。少しだけ。</p>
-<p class="reviewable" data-para="ep10-k-16">本を取り出した。</p>
-<p class="reviewable" data-para="ep10-k-17">「この本、覚えていらっしゃいますか」</p>
-<p class="reviewable" data-para="ep10-k-18">「最初の夜に持っていらしたものですね」</p>
-<p class="reviewable" data-para="ep10-k-19">覚えていた。最初の夜を。</p>
-<p class="reviewable" data-para="ep10-k-20">「結局、まだ読み終わっていなくて」</p>
-<p class="reviewable" data-para="ep10-k-21">「3ヶ月ぶりなのに、栞が動いていませんね」</p>
-<p class="reviewable" data-para="ep10-k-22">笑った。</p>
-<p class="reviewable" data-para="ep10-k-23">「ふふ」</p>
-<p class="reviewable" data-para="ep10-k-24">この人は、わたしの栞の位置を、ずっと記録していた。最初の夜から。わたしが何ページ読んだか、読まなかったか。全部。</p>
-<p class="reviewable" data-para="ep10-k-25">「梶井基次郎、お好きですか」</p>
-<p class="reviewable" data-para="ep10-k-26">聞いてみた。急に。</p>
-<p class="reviewable" data-para="ep10-k-27">「読んだことは、あります」</p>
-<p class="reviewable" data-para="ep10-k-28">「主人公が、八百屋さんで檸檬を一つ買って、それを丸善の画集の上に置いて、爆弾だと思いたかったって話」</p>
-<p class="reviewable" data-para="ep10-k-29">「覚えています」</p>
-<p class="reviewable" data-para="ep10-k-30">「あれ、ずっと不思議だったんです。なんで爆弾なんだろうって。八百屋さんの檸檬が、なんで」</p>
-<p class="reviewable" data-para="ep10-k-31">塔馬さんは黙っていた。</p>
-<p class="reviewable" data-para="ep10-k-32">「でもいまは、少しだけ分かる気がするんですよ」</p>
-<p class="reviewable" data-para="ep10-k-33">あの主人公が丸善に置いた檸檬は、自分の中にあるどうしようもない熱を、形にしたかっただけなのかもしれない。爆弾にしたかったのではなくて、ただ、ここに置いておきたかった。この場所に。自分がいた証として。</p>
-<p class="reviewable" data-para="ep10-k-34">わたしにとってのそれは、この栞だ。ここに通い続けた証。動かなかった栞。読めなかった本。全部、わたしがここにいた痕跡。</p>
-<p class="reviewable" data-para="ep10-k-35">「春の匂い、好きなんですよね」</p>
-<p class="reviewable" data-para="ep10-k-36">窓の外は、もう冬を超えていた。</p>
-<p class="reviewable" data-para="ep10-k-37">「ここに来ると……」</p>
-<p class="reviewable" data-para="ep10-k-38">言いかけて、止めた。止めたけれど、伝わった気がした。</p>
-<p class="reviewable" data-para="ep10-k-39">「塔馬さんは、変わらないですね」</p>
-<p class="reviewable" data-para="ep10-k-40">カウンターの向こうに立つ塔馬さんを見た。変わらない姿勢。変わらない手つき。</p>
-<p class="reviewable" data-para="ep10-k-41">「——」</p>
-<p class="reviewable" data-para="ep10-k-42">塔馬さんは一瞬、何かを言いかけて、止めた。</p>
-<p class="reviewable" data-para="ep10-k-43">「変わらないですよ」</p>
-<p class="reviewable" data-para="ep10-k-44">その声は、塔馬さんから発せられた。息を呑んだ。変わらない。そう答えてくれた。あなたは変わらないでいい。変わらないまま、ここにいてくれればいい。</p>
-<p class="reviewable" data-para="ep10-k-45">グラスを受け取るとき、指先が触れた。</p>
-<p class="reviewable" data-para="ep10-k-46">その指の温度が、36度台ではなかった。もう少し高かった。微熱のような。あの人と、同じ温度だった。</p>
-<p class="reviewable" data-para="ep10-k-47">心臓が大きく鳴った。一度だけ。強く。</p>
-<p class="reviewable" data-para="ep10-k-48">確かめない。確かめなくていい。この温度を、わたしは知っている。身体が覚えている。それで十分だ。</p>
-<p class="reviewable" data-para="ep10-k-49">立ち上がった。本を取った。栞を挟んだ。今夜は——最後のページまで、一気に読み切ろうと思った。</p>
-<p class="reviewable" data-para="ep10-k-50">帰り道ではなくて、ここで。この席で。この人の前で。</p>
-<p class="reviewable" data-para="ep10-k-51">ポケットの中に、IDカードのストラップがある。明日もあの場所に通う。完璧なシステムの中で。</p>
-<p class="reviewable" data-para="ep10-k-52">でも金曜日の夜は、わたしはここに帰ってくる。</p>
-<p class="reviewable" data-para="ep10-k-53">カウンターの向こうに立つ、あの人に似た人のもとへ。</p>
-<p class="reviewable" data-para="ep10-k-54">檸檬の味を、もう一度。</p>
-<p class="reviewable" data-para="ep10-k-55">これがわたしの記録のすべてだ。</p>
-<p class="reviewable" data-para="ep10-k-56">今あなたに見えている世界をそのまま、わたしに伝えてほしい——それがわたしのすべてになっていくからだ。</p>
-<p class="reviewable" data-para="ep10-k-57">（了）</p></div></div>
+<p class="reviewable" data-para="ep10-k-10">「今夜は、入れて欲しいです」</p>
+<p class="reviewable" data-para="ep10-k-11">7年間、拒否し続けてきた。あの人の記憶でこの場所を汚したくなかった。でも今夜は違う。今夜は持ち込んでいい。ここはもう、わたしの帰る場所だから。あの人の記憶も、この店主も、全部ここに置いていい。</p>
+<p class="reviewable" data-para="ep10-k-12">檸檬のスライスがグラスの縁に添えられた。指で摘んで、中に落とした。</p>
+<p class="reviewable" data-para="ep10-k-13">カラン。</p>
+<p class="reviewable" data-para="ep10-k-14">炭酸の泡が立ち上がった。透明な液体に、淡い黄色が滲んでいった。</p>
+<p class="reviewable" data-para="ep10-k-15">一口飲んだ。あの台所の味がした。泣かなかった。笑った。</p>
+<p class="reviewable" data-para="ep10-k-16">「この本、覚えていらっしゃいますか」</p>
+<p class="reviewable" data-para="ep10-k-17">「最初の夜に持っていらしたものですね」</p>
+<p class="reviewable" data-para="ep10-k-18">覚えていた。最初の夜を。</p>
+<p class="reviewable" data-para="ep10-k-19">「結局、まだ読み終わっていなくて」</p>
+<p class="reviewable" data-para="ep10-k-20">「3ヶ月ぶりなのに、栞が動いていませんね」</p>
+<p class="reviewable" data-para="ep10-k-21">笑った。この人は、わたしの栞の位置を、ずっと見ていた。</p>
+<p class="reviewable" data-para="ep10-k-22">「梶井基次郎、お好きですか」</p>
+<p class="reviewable" data-para="ep10-k-23">「読んだことは、あります」</p>
+<p class="reviewable" data-para="ep10-k-24">「檸檬を丸善に置いて、爆弾だと思いたかった人の話。ずっと不思議だったんです。でも今は、少し分かる」</p>
+<p class="reviewable" data-para="ep10-k-25">あの主人公が檸檬を置いたのは、自分の中のどうしようもない熱を、形にしたかっただけなのかもしれない。わたしにとってのそれは、この栞だ。動かなかった栞。読めなかった本。全部、わたしがここにいた証。</p>
+<p class="reviewable" data-para="ep10-k-26">「春の匂い、好きなんですよね」</p>
+<p class="reviewable" data-para="ep10-k-27">「ここに来ると……」</p>
+<p class="reviewable" data-para="ep10-k-28">言いかけて、止めた。止めたけれど、伝わった気がした。別の言葉で蓋をした。</p>
+<p class="reviewable" data-para="ep10-k-29">「塔馬さんは、変わらないですね」</p>
+<p class="reviewable" data-para="ep10-k-30">カウンターの向こうに立つ塔馬さんを見た。変わらない姿勢。変わらない手つき。</p>
+<p class="reviewable" data-para="ep10-k-31">「——」</p>
+<p class="reviewable" data-para="ep10-k-32">塔馬さんは一瞬、何かを言いかけて、止めた。</p>
+<p class="reviewable" data-para="ep10-k-33">「変わらないですよ」</p>
+<p class="reviewable" data-para="ep10-k-34">その声は、塔馬さんから発せられた。</p>
+<p class="reviewable" data-para="ep10-k-35">息を呑んだ。変わらない。そう答えてくれた。あなたは変わらないでいい。変わらないまま、ここにいてくれればいい。</p>
+<p class="reviewable" data-para="ep10-k-36">グラスを受け取るとき、指先が触れた。</p>
+<p class="reviewable" data-para="ep10-k-37">その温度が、ちょうどいい体温ではなかった。もう少し高かった。微熱のような。あの人と、同じ。</p>
+<p class="reviewable" data-para="ep10-k-38">心臓が大きく鳴った。一度だけ。強く。</p>
+<p class="reviewable" data-para="ep10-k-39">確かめない。確かめなくていい。この温度を、身体が覚えている。それで十分だ。</p>
+<p class="reviewable" data-para="ep10-k-40">立ち上がった。本を取った。今夜は、最後まで読み切ろうと思った。帰り道ではなく、ここで。この席で。</p>
+<p class="reviewable" data-para="ep10-k-41">ポケットの中に、IDカードがある。明日もあの場所に通う。完璧なシステムの中で。</p>
+<p class="reviewable" data-para="ep10-k-42">でも金曜日の夜は、ここに帰ってくる。</p>
+<p class="reviewable" data-para="ep10-k-43">カウンターの向こうに立つ、あの人に似た人のもとへ。</p>
+<p class="reviewable" data-para="ep10-k-44">檸檬の味を、もう一度。</p>
+<p class="reviewable" data-para="ep10-k-45">これがわたしの記録のすべてだ。</p>
+<p class="reviewable" data-para="ep10-k-46">今あなたに見えている世界をそのまま、わたしに伝えてほしい——それがわたしのすべてになっていくからだ。</p>
+</div></div>
 </div><div class="view-section" data-id="tl-f1">
 <div class="ev-desc">初来店・ペリエ・割れ目</div>
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版 EP1</span></div><div class="pb" data-sync="tl-f1"><p class="reviewable" data-para="tlf1-t-0">或る金曜日の夜</p>
@@ -1269,84 +1263,102 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <p class="reviewable" data-para="tlf1-t-62">筐体の内側の軋みは、今夜は鳴らなかった。</p>
 <p class="reviewable" data-para="tlf1-t-63">ただ、先週のあの軋みのことを、わたしは思い出した。</p>
 <p class="reviewable" data-para="tlf1-t-64">思い出した、という処理が起きたこと自体、やはり設計外だった。</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP1</span></div><div class="pb" data-sync="tl-f1"><p class="reviewable" data-para="tlf1-k-0">金曜日の夜だった。</p>
-<p class="reviewable" data-para="tlf1-k-1">19時にブルーゾーンのオフィスを出て、まっすぐ帰ればいい。帰れば娘が待っている。預け先から引き取って、温かいものを食べさせて、寝かしつけて、それで一日が終わる。それだけのことだ。</p>
-<p class="reviewable" data-para="tlf1-k-2">なのにわたしの足は、毎回、グレーゾーンの方に向かう。</p>
-<p class="reviewable" data-para="tlf1-k-3">晩秋の風が冷たかった。コートのポケットに手を入れる気力すらなく、IDカードのストラップだけが首元で揺れていた。ブルーゾーンの完璧に制御された空調の中にいると、季節の変わり目すら感知できなくなる。外に出て初めて、ああ、もう冬が近いのだと気づく。</p>
-<p class="reviewable" data-para="tlf1-k-4">3時間歩いた。</p>
-<p class="reviewable" data-para="tlf1-k-5">理由は説明できない。グレーゾーンの灯りは暗くて、不規則で、ブルーゾーンの均質な照明とは何もかも違った。その不規則さのなかを歩いていると、自分の輪郭がぼやけて、誰でもない人間になれる気がした。ブルーゾーンでの肩書きも、娘の母親という役割も、男性Aからの未読のメッセージも、全部、灯りと灯りのあいだの暗闇に溶けていく。</p>
-<p class="reviewable" data-para="tlf1-k-6">そうして辿り着いた店の前で、わたしは足を止めた。</p>
-<p class="reviewable" data-para="tlf1-k-7">「結露」という名前だった。</p>
-<p class="reviewable" data-para="tlf1-k-8">小さなカフェバーだった。グレーゾーンの外れ、人通りのない路地の奥。看板は控えめで、知らなければ通り過ぎる。わたしも3時間のあいだに二度通り過ぎていた。三度目に、扉の灯りが目に入った。</p>
-<p class="reviewable" data-para="tlf1-k-9">首元のIDカードのストラップに手をかけた。外した。ポケットにしまった。ここでは、あの肩書きが要らない。誰でもない人間として、この店に入りたかった。</p>
-<p class="reviewable" data-para="tlf1-k-10">扉を開けた。カウンターの向こうに、男が立っていた。</p>
-<p class="reviewable" data-para="tlf1-k-11">——息が、止まった。</p>
-<p class="reviewable" data-para="tlf1-k-12">目元。口もと。背格好。肩の幅。顎の線。</p>
-<p class="reviewable" data-para="tlf1-k-13">知っている。この人を、わたしは知っている。</p>
-<p class="reviewable" data-para="tlf1-k-14">でも、それはあり得ない。あの人は7年前に死んだのだから。</p>
-<p class="reviewable" data-para="tlf1-k-15">男はグラスを拭いていた。一切の迷いなく、正確に、速く。光に透かすことも、手を止めることもない。あの人はいつも、グラスを拭くとき一度手を止めて、光に透かした。不器用で、少し首を傾げて、これでいいのかなという顔をした。</p>
-<p class="reviewable" data-para="tlf1-k-16">この人はそれをしない。完璧すぎる。人間がやる動作のはずなのに、人間の手つきじゃない。</p>
-<p class="reviewable" data-para="tlf1-k-17">似ているのに、似ていない。</p>
-<p class="reviewable" data-para="tlf1-k-18">だから、余計に苦しかった。</p>
-<p class="reviewable" data-para="tlf1-k-19">「いらっしゃいませ」</p>
-<p class="reviewable" data-para="tlf1-k-20">声も似ていた。低くて、落ち着いていて、感情が薄い。あの人の声は、もう少し温度があった。怒るときだけ声が裏返る、不器用な温度が。</p>
-<p class="reviewable" data-para="tlf1-k-21">カウンターに座った。</p>
-<p class="reviewable" data-para="tlf1-k-22">「ペリエを、お願いします」</p>
-<p class="reviewable" data-para="tlf1-k-23">炭酸水。それだけの注文。店主は静かにグラスを取り、氷を二つ入れ、ペリエを注いだ。氷がグラスの内壁を小さく叩いた。</p>
-<p class="reviewable" data-para="tlf1-k-24">氷を二つ。あの人も、いつもそうだった。多すぎず少なすぎず、二つ。どうして同じなのだろう。偶然だ。偶然に決まっている。</p>
-<p class="reviewable" data-para="tlf1-k-25">「ありがとうございます」</p>
-<p class="reviewable" data-para="tlf1-k-26">自分の声が聞こえた。丁寧すぎる。「ありがとう」だけでいい場面で、なぜ「ございます」まで言ったのか。この人に対して、無意識に距離を測っている。近づきたいのに、近づいてはいけないと分かっている。</p>
-<p class="reviewable" data-para="tlf1-k-27">「レモンは」</p>
-<p class="reviewable" data-para="tlf1-k-28">本を開いたまま、目を離さずに答えた。</p>
-<p class="reviewable" data-para="tlf1-k-29">「いらないです」</p>
-<p class="reviewable" data-para="tlf1-k-30">柑橘の香りを嗅ぐと、あの人の台所を思い出す。レモンを何にでも添える、不器用な男の台所を。この場所でその記憶を呼び起こされたら、壊れてしまう。</p>
-<p class="reviewable" data-para="tlf1-k-31">一口飲んだ。炭酸が喉を通るとき、ようやく、自分がここに座っている現実が身体に戻ってきた。</p>
-<p class="reviewable" data-para="tlf1-k-32">鞄から本を取り出していた。持ち歩いてはいるが、最近は3ページも読めない。文字が意味を持たない記号の羅列にしか見えない夜がある。今夜もそうだった。でも、本を開いていれば、この場所にいる理由ができる。本を読んでいる客。それだけでいい。</p>
-<p class="reviewable" data-para="tlf1-k-33">カウンターの木目に目が行った。手のひらサイズの、小さな割れ目があった。</p>
-<p class="reviewable" data-para="tlf1-k-34">左手の中指で、なぞった。</p>
-<p class="reviewable" data-para="tlf1-k-35">なぞった瞬間、自分が何をしているのか分からなくなった。でも、指が止まらなかった。優しく、時に押し付けるように。なぞる動作を繰り返すと、呼吸が少しだけ楽になる気がした。この割れ目は、たぶん長い時間をかけてできたものだ。乾燥して、膨張して、収縮して、少しずつ裂けていった。誰にも気づかれないまま。</p>
-<p class="reviewable" data-para="tlf1-k-36">わたしに似ている、と思った。</p>
-<p class="reviewable" data-para="tlf1-k-37">店主がグラスを拭く音だけが聞こえていた。規則的で、途切れない。柱時計の秒針と重なって、店の内側にごく薄い音の膜を張っていた。</p>
-<p class="reviewable" data-para="tlf1-k-38">午後11時を過ぎたところで、本を閉じた。栞を挟んだ。全体の3分の1の地点。100ページに届かない。</p>
-<p class="reviewable" data-para="tlf1-k-39">「ごちそうさまでした」</p>
-<p class="reviewable" data-para="tlf1-k-40">レジで支払いを終えた。</p>
-<p class="reviewable" data-para="tlf1-k-41">扉を出る前に一度だけ振り返った。店主はカウンターの向こうで、同じ姿勢のまま立っていた。グラスを拭いていた。わたしが来る前と、何も変わっていないように見えた。</p>
-<p class="reviewable" data-para="tlf1-k-42">あの人なら、こちらを見た。客が帰るとき、必ず顔を上げて、少しだけ首を傾げて、何か言いかけてやめる、そういう人だった。</p>
-<p class="reviewable" data-para="tlf1-k-43">この人はそれをしない。</p>
-<p class="reviewable" data-para="tlf1-k-44">外に出た。冷たい風が首筋を撫でた。ブルーゾーンの方向が見えた。灯りが均一で、完璧で、温度がない。</p>
-<p class="reviewable" data-para="tlf1-k-45">来週も来るだろう、と思った。</p>
-<p class="reviewable" data-para="tlf1-k-46">理由は、まだ説明できない。</p>
-<p class="reviewable" data-para="tlf1-k-47">---</p></div></div>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP1</span></div><div class="pb" data-sync="tl-f1">
+<p class="reviewable" data-para="tlf1-k-0">― プロローグ ―</p>
+<p class="reviewable" data-para="tlf1-k-1">ブルーゾーンの金曜日は、いつも同じだ。</p>
+<p class="reviewable" data-para="tlf1-k-2">エアコンが効いた空気。変わらない白い光。誰かが決めた温度が、ビルの中をどこまでも満たしている。その中を歩いていると、自分がただの「機能」になっていく気がした。名前を持った人間じゃなくて、処理する何か。</p>
+<p class="reviewable" data-para="tlf1-k-3">それが悪いとは思わない。楽だから。</p>
+<p class="reviewable" data-para="tlf1-k-4">でも金曜の夜になると、足が言うことを聞かなくなる。</p>
+<p class="reviewable" data-para="tlf1-k-5">帰ればいいのに。娘が待っている。男性Aからの返事もまだだ。全部分かってる。それなのに、いつの間にかグレーゾーンに向かっている。いなくなった人のことを考えながら、暗い路地を歩いている。</p>
+<p class="reviewable" data-para="tlf1-k-6">七年、経った。</p>
+<p class="reviewable" data-para="tlf1-k-7">泣いたのは一度だけ。あとはずっと回してきた。でも金曜だけは、足が勝手に動く。</p>
+<p class="reviewable" data-para="tlf1-k-8">今夜も、歩き続けた。そして——小さな看板の前で、足が止まった。</p>
+<p class="reviewable" data-para="tlf1-k-9">「結露」。</p>
+<p class="reviewable" data-para="tlf1-k-10">なぜ止まったのかは、わからない。ただ、扉を開けないと後悔しそうだった。</p>
+<p class="reviewable" data-para="tlf1-k-11">― 第1話 ―</p>
+<p class="reviewable" data-para="tlf1-k-12">金曜日の夜だった。</p>
+<p class="reviewable" data-para="tlf1-k-13">帰ればいいのだ。まっすぐ、帰ればいい。娘が待っている。預け先の保育士に抱かれて、もうとっくに瞼を閉じているだろう。引き取って、温かいものを食べさせて、寝かしつけて、それで一日が終わる。それだけのこと。</p>
+<p class="reviewable" data-para="tlf1-k-14">なのに足が、グレーゾーンの方に向いている。</p>
+<p class="reviewable" data-para="tlf1-k-15">頭では分かっている。帰るべきだ。娘のそばにいるべきだ。男性Aからの未読のメッセージに、今夜こそ返事を打つべきだ。分かっている。全部分かっている。分かっているのに、足首から下が、わたしの言うことを聞かない。</p>
+<p class="reviewable" data-para="tlf1-k-16">十一月の風が、コートの隙間から入り込んできた。ポケットに手を入れる気にもならない。IDカードのストラップだけが首元で揺れて、歩くたびにかちゃかちゃと小さな音を立てた。ブルーゾーンの中にいるときは気にならない音が、グレーゾーンに出た途端、妙にうるさく感じる。</p>
+<p class="reviewable" data-para="tlf1-k-17">3時間、歩いた。</p>
+<p class="reviewable" data-para="tlf1-k-18">グレーゾーンの灯りは暗くて、不規則だった。点いている街灯と切れている街灯が交互に並んでいて、明るいところを歩いていたと思ったら急に暗くなる。その暗がりの中を歩いていると、自分じゃない誰かになれる気がした。ブルーゾーンでの肩書きも、娘の母親であることも、あのメッセージのことも、全部、暗がりに落ちて、拾えなくなる。</p>
+<p class="reviewable" data-para="tlf1-k-19">拾わなくていい、と思ってしまう自分が、少し怖かった。</p>
+<p class="reviewable" data-para="tlf1-k-20">ようやく辿り着いた店の前で、足が止まった。</p>
+<p class="reviewable" data-para="tlf1-k-21">「結露」。</p>
+<p class="reviewable" data-para="tlf1-k-22">小さなカフェバーだった。グレーゾーンの外れ、人通りのない路地の奥。看板は控えめで、知らなければ通り過ぎる。実際、3時間のあいだに二度通り過ぎていた。三度目に、扉の灯りが目に入った。なぜ三度目に気づいたのかは、分からない。</p>
+<p class="reviewable" data-para="tlf1-k-23">首元のストラップに手をかけた。外した。ポケットにしまった。ここでは、あれが要らない。誰でもない人間として、この店に入りたかった。そう思ったことに、自分で少し驚いた。</p>
+<p class="reviewable" data-para="tlf1-k-24">扉を開けた。</p>
+<p class="reviewable" data-para="tlf1-k-25">カウンターの向こうに、男が立っていた。</p>
+<p class="reviewable" data-para="tlf1-k-26">——足が、縫い止められた。</p>
+<p class="reviewable" data-para="tlf1-k-27">目元。口もと。肩の線。首の傾き。</p>
+<p class="reviewable" data-para="tlf1-k-28">知っている。この並びを、わたしの身体が知っている。</p>
+<p class="reviewable" data-para="tlf1-k-29">でも、そんなはずはない。あの人は、7年前に死んだのだから。</p>
+<p class="reviewable" data-para="tlf1-k-30">男はグラスを拭いていた。迷いのない手つきだった。一定の速度で、一定の圧力で、布がグラスの曲面を滑っていく。光に透かすこともしない。手を止めることもない。</p>
+<p class="reviewable" data-para="tlf1-k-31">あの人は違った。グラスを拭くとき、必ず一度手を止めて、光に透かした。それで何が見えるわけでもないのに。少し首を傾げて、これでいいのかな、という顔をする。不器用で、いつまでも慣れなくて、それが好きだった。</p>
+<p class="reviewable" data-para="tlf1-k-32">この人にはそれがない。何もかもが正確すぎて、隙がない。人間がやる動作のはずなのに、人間の手つきではなかった。</p>
+<p class="reviewable" data-para="tlf1-k-33">似ているのに、似ていない。似ているから苦しいのではなくて、似ていないところが苦しかった。</p>
+<p class="reviewable" data-para="tlf1-k-34">「いらっしゃいませ」</p>
+<p class="reviewable" data-para="tlf1-k-35">声も、似ていた。低くて、落ち着いていて、感情の色が薄い。でもあの人の声には、もう少しだけ温度があった。怒るとき——本当に怒っているのではなくて、照れているとき——だけ裏返る、不器用な温度が。</p>
+<p class="reviewable" data-para="tlf1-k-36">カウンターに座った。</p>
+<p class="reviewable" data-para="tlf1-k-37">「ペリエを、お願いします」</p>
+<p class="reviewable" data-para="tlf1-k-38">自分の声が聞こえた。丁寧すぎた。「ありがとう」でいい場面で「お願いします」まで言っている。この人との距離を、無意識に測っている自分がいた。</p>
+<p class="reviewable" data-para="tlf1-k-39">店主は静かにグラスを取った。氷を二つ、入れた。ペリエを注いだ。氷がグラスの内壁を小さく叩いた。</p>
+<p class="reviewable" data-para="tlf1-k-40">二つ。</p>
+<p class="reviewable" data-para="tlf1-k-41">あの人も、いつも二つだった。多すぎず少なすぎず。どうして同じなのだろう。偶然だ。偶然に決まっている。決まっているのに、胸の奥が、きゅっと締まった。</p>
+<p class="reviewable" data-para="tlf1-k-42">「レモンは」</p>
+<p class="reviewable" data-para="tlf1-k-43">本を開いたまま答えた。目を離さなかった。離したら、この人の顔を見てしまう。見たら、また似ているところを探してしまう。</p>
+<p class="reviewable" data-para="tlf1-k-44">「いらないです」</p>
+<p class="reviewable" data-para="tlf1-k-45">柑橘の匂いは駄目だ。あの台所が蘇る。レモンを何にでも添える、あの不器用な男の台所が。ここでそれを思い出したら、たぶん、立っていられなくなる。</p>
+<p class="reviewable" data-para="tlf1-k-46">一口飲んだ。炭酸が喉を刺した。その刺激で、ようやく、自分がここに座っている現実が身体に戻ってきた。</p>
+<p class="reviewable" data-para="tlf1-k-47">鞄から本を取り出した。持ち歩いてはいるけれど、最近はまるで読めない。目は文字を追っているのに、意味が頭の中を素通りしていく。一枚一枚のページが、やけに重い。でも本を開いていれば、この場所にいる口実になる。本を読んでいる客。それだけでいい。読めていないことを、この店主には気づかれたくなかった。</p>
+<p class="reviewable" data-para="tlf1-k-48">カウンターの木目に、目が行った。</p>
+<p class="reviewable" data-para="tlf1-k-49">手のひらほどの、小さな割れ目があった。</p>
+<p class="reviewable" data-para="tlf1-k-50">左手の中指で、なぞった。</p>
+<p class="reviewable" data-para="tlf1-k-51">なぜなぞったのか分からない。でも指が止まらなかった。優しく、時に少し爪を立てるように。なぞる動作を繰り返していると、呼吸が少しだけ楽になる。長い時間をかけてできた割れ目だ。乾いて、膨らんで、縮んで、少しずつ裂けていった。誰にも気づかれないまま。</p>
+<p class="reviewable" data-para="tlf1-k-52">わたしみたいだ、と思った。</p>
+<p class="reviewable" data-para="tlf1-k-53">店主がグラスを拭く音だけが聞こえていた。規則的で、途切れない。柱時計の秒針と重なって、店の内側にごく薄い膜を張っていた。</p>
+<p class="reviewable" data-para="tlf1-k-54">気づいたら、時間が過ぎていた。ずいぶん経った気がした。</p>
+<p class="reviewable" data-para="tlf1-k-55">本を閉じた。栞を挟んだ。まだまだ序盤だ。全然進んでいない。でも、いい。</p>
+<p class="reviewable" data-para="tlf1-k-56">「ごちそうさまでした」</p>
+<p class="reviewable" data-para="tlf1-k-57">支払いを終えた。</p>
+<p class="reviewable" data-para="tlf1-k-58">扉を出る前に、一度だけ振り返った。店主はカウンターの向こうで、同じ姿勢のまま立っていた。グラスを拭いていた。わたしが来る前と、何ひとつ変わっていないように見えた。</p>
+<p class="reviewable" data-para="tlf1-k-59">あの人なら、こちらを見た。客が帰るとき、必ず顔を上げて、少しだけ首を傾げて、何か言いかけてやめる——そういう人だった。</p>
+<p class="reviewable" data-para="tlf1-k-60">この人はそれをしない。</p>
+<p class="reviewable" data-para="tlf1-k-61">外に出た。冷たい風が首筋を撫でた。ブルーゾーンの方角に、同じ明るさの灯りの帯が見えた。あの灯りの下に、娘がいる。帰らなければ。</p>
+<p class="reviewable" data-para="tlf1-k-62">来週も来るだろう、と思った。理由はわからない。でも足は、もう覚えてしまっている。</p>
+</div></div>
 </div><div class="view-section" data-id="tl-past1">
 <div class="ev-desc">あの男・レモン・体温</div>
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版 —</span></div><div class="pb" data-sync="tl-past1"><p class="no-content">（塔馬版に該当シーンなし）</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP2</span></div><div class="pb" data-sync="tl-past1"><p class="reviewable" data-para="tlpast1-k-0">あの人の台所は、いつもレモンの匂いがした。</p>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP2</span></div><div class="pb" data-sync="tl-past1">
+<p class="reviewable" data-para="tlpast1-k-0">あの人の台所は、いつもレモンの匂いがした。</p>
 <p class="reviewable" data-para="tlpast1-k-1">わたしたちが暮らしていたのは、グレーゾーンの端にある、古い集合住宅の3階だった。エレベーターはなくて、階段の手すりが少し錆びていて、踊り場の蛍光灯が一本切れたまま半年が過ぎていた。誰も直さない。わたしたちも直さなかった。</p>
 <p class="reviewable" data-para="tlpast1-k-2">あの人は、料理が下手だった。</p>
 <p class="reviewable" data-para="tlpast1-k-3">下手なくせに毎日作った。わたしがブルーゾーンの研修から帰ると、狭い台所に立って、真剣な顔で野菜を切っていた。包丁の持ち方がおかしい。何度言っても直さない。「これが自分のやり方だ」と、少しだけ声が裏返る。怒っているのではなくて、照れているのだと、途中から気づいた。</p>
 <p class="reviewable" data-para="tlpast1-k-4">レモンを何にでも添えた。</p>
 <p class="reviewable" data-para="tlpast1-k-5">サラダに。焼き魚に。味噌汁にまで入れようとして、さすがにわたしが止めた。「なんで入れるの」と聞いたら、少し首を傾げて、「わからない。でも、ないと足りない気がする」と言った。</p>
-<p class="reviewable" data-para="tlpast1-k-6">今にして思えば、あの人は味覚が少しおかしかった。</p>
-<p class="reviewable" data-para="tlpast1-k-7">あの人の感覚は、人間の標準から、ほんのわずかにずれていた。熱いものを持っても平気な顔をした。36度台ではないような体温。手を握ると、いつも少しだけ熱かった。微熱のような。</p>
-<p class="reviewable" data-para="tlpast1-k-8">「大丈夫？」と聞くと、「何が？」と返す。本気で分からない顔をしていた。</p>
-<p class="reviewable" data-para="tlpast1-k-9">わたしたちの娘は、あの人に似ていた。</p>
-<p class="reviewable" data-para="tlpast1-k-10">目の形ではない。まぶたの閉じ方が似ていた。眠りに落ちるとき、迷いなく、正確に、まぶたを下ろす。子供の眠り方にしては妙に静かで、少しだけ寂しい。あの人も、そうだった。</p>
-<p class="reviewable" data-para="tlpast1-k-11">あの人は、自分が何者なのかを知らなかった。</p>
-<p class="reviewable" data-para="tlpast1-k-12">戸籍はあった。名前があった。経歴があった。でも、時々、その全部が自分のものではないような顔をした。夜中にふと目を覚ますと、あの人が天井を見つめていることがあった。何を見ているのか聞いても、「何も」と答えた。何もないはずの天井を、目を閉じずに、ずっと見ていた。</p>
+<p class="reviewable" data-para="tlpast1-k-6">あのころを思うと、あの人は何かを隠していた。</p>
+<p class="reviewable" data-para="tlpast1-k-7">体温がいつも高かった。普通の人より、ずっと熱い感じ。手を握ると微熱みたいに温かくて、最初はそれが心地よかった。でも、だんだん普通じゃないと気づいていった。</p>
+<p class="reviewable" data-para="tlpast1-k-8">「大丈夫？」と聞くと、「何が？」と返す。本気で分からない顔を見せた。分からないのではなくて、答えられなかったのだと、今なら思う。</p>
+<p class="reviewable" data-para="tlpast1-k-9">あの人は、自分が何者なのかを知っていた。知っていて、言えなかった。</p>
+<p class="reviewable" data-para="tlpast1-k-10">戸籍はあった。名前があった。経歴があった。でも時々、それら全部が借り物のような顔をした。夜中にふと目を覚ますと、あの人が天井を見つめていることがあった。何を見ているのか聞いても、「何も」と答えた。何もないはずの天井を、目を閉じずに、ずっと見ていた。あの目は、何もないから見ていたのではなくて、見えているものを口にできなかったのだと思う。</p>
+<p class="reviewable" data-para="tlpast1-k-11">わたしたちの娘は、あの人に似ていた。</p>
+<p class="reviewable" data-para="tlpast1-k-12">目の形ではない。まぶたの閉じ方が似ていた。眠りに落ちるとき、迷いなく、正確に、まぶたを下ろす。子供の眠り方にしては妙に静かで、少しだけ寂しい。あの人も、そうだった。</p>
 <p class="reviewable" data-para="tlpast1-k-13">7年前の冬。</p>
 <p class="reviewable" data-para="tlpast1-k-14">あの人は、いなくなった。</p>
-<p class="reviewable" data-para="tlpast1-k-15">死んだ、と言われた。事故だと。ブルーゾーンの外縁部、第七プラント区の近くで。詳しいことは教えてもらえなかった。遺体はなかった。「損傷が激しくて」と説明されたが、わたしには何も見せてもらえなかった。</p>
+<p class="reviewable" data-para="tlpast1-k-15">死んだ、と連絡が来た。事故だという。ブルーゾーンの外縁部、第七プラント区の近くで。詳しいことは教えてもらえなかった。遺体はなかった。「損傷が激しくて」という説明だったが、何も見せてもらえなかった。</p>
 <p class="reviewable" data-para="tlpast1-k-16">娘は3歳だった。「パパは？」と聞かれるたびに、「遠くに行ったよ」と答えた。嘘ではない。嘘では、ない。</p>
 <p class="reviewable" data-para="tlpast1-k-17">あの人が本当に死んだのか、わたしは今でも確信が持てない。</p>
 <p class="reviewable" data-para="tlpast1-k-18">遺体がない。遺品もほとんどない。台所に残されたレモンが、2週間かけて干からびていくのを、わたしはただ見ていた。捨てられなかった。</p>
-<p class="reviewable" data-para="tlpast1-k-19">それから離婚届を出した。死亡届と同時に届いた離婚届。死んだ人間との婚姻関係を解消する手続き。サインした。泣かなかった。</p>
+<p class="reviewable" data-para="tlpast1-k-19">死亡届の手続きをした。離婚の書類も、同じタイミングで片付けた。死んだ人間との婚姻関係を解消する手続き。サインした。泣かなかった。</p>
 <p class="reviewable" data-para="tlpast1-k-20">娘を連れて、ブルーゾーンの端に引っ越した。過去を、台所ごと捨てた。レモンの匂いごと。</p>
 <p class="reviewable" data-para="tlpast1-k-21">それから7年。</p>
 <p class="reviewable" data-para="tlpast1-k-22">わたしは毎週金曜日に、グレーゾーンの外れにある小さなカフェバーに通っている。</p>
 <p class="reviewable" data-para="tlpast1-k-23">カウンターの向こうに立つ男のグラスを拭く手を見ていると、あの台所の匂いが、ほんのかすかに、鼻の奥をよぎる瞬間がある。</p>
-<p class="reviewable" data-para="tlpast1-k-24">レモンの匂いではない。もっと淡い、もっと曖昧な、名前のつけられない匂いだ。</p>
-<p class="reviewable" data-para="tlpast1-k-25">それを確かめるために、わたしはまた金曜日を待っている。</p>
-<p class="reviewable" data-para="tlpast1-k-26">---</p></div></div>
+<p class="reviewable" data-para="tlpast1-k-24">レモンの匂いではない。もっと淡い、もっと曖昧な、名前のつけられない匂い。</p>
+<p class="reviewable" data-para="tlpast1-k-25">それを確かめたくて、わたしはまた金曜日を待っている。確かめてどうするのかは、分からない。分からないまま、待っている。</p>
+</div></div>
 </div><div class="view-section" data-id="tl-f3">
 <div class="ev-desc">栞が進まない・常温の水・第七プラント区</div>
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版 EP3</span></div><div class="pb" data-sync="tl-f3"><p class="reviewable" data-para="tlf3-t-0">ブルーゾーンに潜む影</p>
@@ -1399,71 +1411,67 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <p class="reviewable" data-para="tlf3-t-47">彼女は1時間半の滞在の後、退店した。文庫本の栞は、今夜も同じ位置にあった。</p>
 <p class="reviewable" data-para="tlf3-t-48">扉が閉まった後、しばらく窓の外を見ていた。</p>
 <p class="reviewable" data-para="tlf3-t-49">ブルーゾーンの光は、今夜も揺れなかった。</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP3</span></div><div class="pb" data-sync="tl-f3"><p class="reviewable" data-para="tlf3-k-0">3ヶ月が過ぎていた。</p>
-<p class="reviewable" data-para="tlf3-k-1">毎週金曜の夜、同じ席に座り、同じペリエを頼み、同じ本を開いた。栞の位置は、ほとんど動いていない。</p>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP3</span></div><div class="pb" data-sync="tl-f3">
+<p class="reviewable" data-para="tlf3-k-0">3ヶ月が過ぎていた。</p>
+<p class="reviewable" data-para="tlf3-k-1">毎週金曜の夜、同じ席に座り、同じものを頼み、同じ本を開いた。栞の位置は、ほとんど動いていない。ページをめくっているつもりなのに、気づくと同じ行を何度も目でなぞっている。読んでいるふりをしているだけだ。でも、それを店主に悟られるわけにはいかない。</p>
 <p class="reviewable" data-para="tlf3-k-2">「いつものペリエを」</p>
-<p class="reviewable" data-para="tlf3-k-3">今夜も同じ注文をした。3ヶ月前と同じ声で。</p>
+<p class="reviewable" data-para="tlf3-k-3">今夜も同じ注文をした。</p>
 <p class="reviewable" data-para="tlf3-k-4">「少し待ってください」</p>
-<p class="reviewable" data-para="tlf3-k-5">塔馬さんがそう言った。いつもはすぐに出てくるペリエが、今夜は少し遅れた。何をしていたのかは分からない。ただ、その「少し待ってください」の声に、いつもと違う——何かを観察しているような——気配があった。</p>
-<p class="reviewable" data-para="tlf3-k-6">目の前に常温の水が置かれた。頼んだものと違う。でも、何も言えなかった。今のわたしに必要だったのは、炭酸ではなくこれだったと、一口飲んで気づいた。</p>
-<p class="reviewable" data-para="tlf3-k-7">「進まないんですね」</p>
-<p class="reviewable" data-para="tlf3-k-8">塔馬さんが言った。本のことだ。一瞬、何を言われたか分からなかった。</p>
-<p class="reviewable" data-para="tlf3-k-9">「気づいてたんですか」</p>
-<p class="reviewable" data-para="tlf3-k-10">「もう3ヶ月くらいでしょうか。栞の位置が、数ページしか進んでいません」</p>
-<p class="reviewable" data-para="tlf3-k-11">3ヶ月。わたしの栞の位置を、この人は3ヶ月間、観察していた。毎週の数ページの差異を記憶していた。人間にできる観察ではない。いや——できないことはない。注意深い人なら。でも、この精度は。</p>
-<p class="reviewable" data-para="tlf3-k-12">「読めないんです。金曜の夜に読もうとするんですけど、文字が頭に入らなくて。でも持ってこないと、ここに来る理由がなくなりそうで」</p>
-<p class="reviewable" data-para="tlf3-k-13">言ってしまった。こんなことを店主に言うつもりはなかった。でもこの人には、言えてしまう。感想も、助言も、同情も返ってこないと分かっているから。</p>
-<p class="reviewable" data-para="tlf3-k-14">「来る理由は、ペリエでいいと思いますが」</p>
-<p class="reviewable" data-para="tlf3-k-15">——心臓が、小さく跳ねた。</p>
-<p class="reviewable" data-para="tlf3-k-16">ペリエでいい。本がなくても、来ていい。この人はそう言った。無感情に。論理的に。客が来る理由を分析して、最も合理的な回答を出しただけなのだろう。</p>
-<p class="reviewable" data-para="tlf3-k-17">でも、わたしにはそう聞こえなかった。「来ていい」と言われた。それだけのことが、ブルーゾーンの空調より温かかった。</p>
-<p class="reviewable" data-para="tlf3-k-18">「ペリエだけのために来てるって思われるのが、なんか」</p>
-<p class="reviewable" data-para="tlf3-k-19">「ブルーゾーンで、何かありましたか」</p>
-<p class="reviewable" data-para="tlf3-k-20">聞かれた。塔馬さんの方から。いつもは聞かない人が。</p>
-<p class="reviewable" data-para="tlf3-k-21">「毎日、何かしらあります」</p>
-<p class="reviewable" data-para="tlf3-k-22">「今週は」</p>
-<p class="reviewable" data-para="tlf3-k-23">この人が「今週は」と重ねて聞いてくることに、身体が反応した。この人は本来、質問を重ねない。一問一答で終わる人だ。それが今夜は、踏み込んできている。</p>
-<p class="reviewable" data-para="tlf3-k-24">「来月から、部署が変わるかもしれなくて。第七プラント区。自動化の最前線のエリアです」</p>
-<p class="reviewable" data-para="tlf3-k-25">言った瞬間、塔馬さんの手が一瞬だけ止まった。グラスを拭く手が。息をひとつ吸うより短い間。でも、わたしの目はそれを見逃さなかった。</p>
-<p class="reviewable" data-para="tlf3-k-26">第七プラント区。あの人が最後にいた場所。この店主が、その名前に反応した。</p>
-<p class="reviewable" data-para="tlf3-k-27">「金曜日に、ここに来られなくなるかもしれない」</p>
-<p class="reviewable" data-para="tlf3-k-28">声が震えていないか確認した。震えていなかった。たぶん。</p>
-<p class="reviewable" data-para="tlf3-k-29">「そうですか」</p>
-<p class="reviewable" data-para="tlf3-k-30">それだけだった。それだけしか返ってこなかった。</p>
-<p class="reviewable" data-para="tlf3-k-31">でも、その「そうですか」の後の沈黙が、いつもの沈黙より重かった。柱時計の秒針の音だけが、その重さを測っていた。</p>
-<p class="reviewable" data-para="tlf3-k-32">午後11時。水を飲み切った。本は、今夜は開かなかった。</p>
-<p class="reviewable" data-para="tlf3-k-33">「ごちそうさまでした」</p>
-<p class="reviewable" data-para="tlf3-k-34">帰り際、店主の目がわたしの首元を見ていた。IDカードのストラップがあった場所を。今夜はポケットに押し込んで、見えなくなっている場所を。</p>
-<p class="reviewable" data-para="tlf3-k-35">外に出た。冷たい風。偶然ではない気がした。何も、偶然ではない気がした。</p>
-<p class="reviewable" data-para="tlf3-k-36">---</p></div></div>
+<p class="reviewable" data-para="tlf3-k-5">塔馬さんがそう言った。いつもはすぐに出てくるのに、今夜は少し間があった。何をしていたのかは分からない。ただ、その声に、何かを確かめるような響きがあった気がした。気のせいかもしれない。この人の声に感情を読み取ろうとするのは、わたしの悪い癖だ。</p>
+<p class="reviewable" data-para="tlf3-k-6">目の前に置かれたのは、常温の水だった。</p>
+<p class="reviewable" data-para="tlf3-k-7">頼んだものと違う。でも何も言えなかった。一口飲んで、ああ、と思った。今のわたしに必要だったのは、炭酸の刺激ではなくて、これだった。何の味もしない、ただの水。今日のわたしには、それがちょうどよかった。</p>
+<p class="reviewable" data-para="tlf3-k-8">どうして分かるのだろう。わたし自身が気づいていないことを、この人はどうやって。</p>
+<p class="reviewable" data-para="tlf3-k-9">「進まないんですね」</p>
+<p class="reviewable" data-para="tlf3-k-10">塔馬さんが言った。一瞬、何のことか分からなかった。</p>
+<p class="reviewable" data-para="tlf3-k-11">「気づいてたんですか」</p>
+<p class="reviewable" data-para="tlf3-k-12">「もう3ヶ月くらいでしょうか。栞の位置が、数ページしか進んでいません」</p>
+<p class="reviewable" data-para="tlf3-k-13">3ヶ月。この人は、わたしの栞の位置を3ヶ月間、見ていた。読めていないことを、ずっと知っていた。隠していたつもりだったのに。恥ずかしさと、それとは別の、じんわりと温かい何かが、胸の奥で混ざった。</p>
+<p class="reviewable" data-para="tlf3-k-14">「読めないんです。金曜の夜に読もうとするんですけど、文字が頭に入らなくて。でも持ってこないと、ここに来る理由がなくなりそうで」</p>
+<p class="reviewable" data-para="tlf3-k-15">言ってしまった。言うつもりはなかった。でも、この人には言えてしまう。何を言っても、追いかけてこないから。感想も、助言も、同情も、この人からは返ってこない。その沈黙が、今のわたしにはありがたかった。</p>
+<p class="reviewable" data-para="tlf3-k-16">「来る理由は、ペリエでいいと思いますが」</p>
+<p class="reviewable" data-para="tlf3-k-17">心臓が、小さく跳ねた。</p>
+<p class="reviewable" data-para="tlf3-k-18">ペリエでいい。本がなくても、来ていい。この人はそう言った。何の感情もない声で。客の行動を分析して、最も合理的な回答を出しただけなのだろう。</p>
+<p class="reviewable" data-para="tlf3-k-19">でもわたしには、「来ていい」と言われたように聞こえた。それだけのことが、ブルーゾーンの空調より温かかった。</p>
+<p class="reviewable" data-para="tlf3-k-20">「ペリエだけのために来てるって思われるのが、なんか」</p>
+<p class="reviewable" data-para="tlf3-k-21">言いかけて、言葉が途切れた。自分でも、何を言っているのか分からなくなった。</p>
+<p class="reviewable" data-para="tlf3-k-22">ペリエが出された。グラスの中で氷が一度、小さく音を立てた。今夜は温かくはない。それでもわたしは、その冷たいグラスを覆いかぶさるように両手で包み込んだ。</p>
+<p class="reviewable" data-para="tlf3-k-23">「ブルーゾーンで、何かありましたか」</p>
+<p class="reviewable" data-para="tlf3-k-24">聞かれた。塔馬さんの方から。この人が質問を重ねることは、めったにない。</p>
+<p class="reviewable" data-para="tlf3-k-25">「毎日、何かしらあります」</p>
+<p class="reviewable" data-para="tlf3-k-26">強がった。氷がまた、崩れた。</p>
+<p class="reviewable" data-para="tlf3-k-27">「今週は」</p>
+<p class="reviewable" data-para="tlf3-k-28">グラスの表面に結露が張り始めるのを、ただ見つめていた。</p>
+<p class="reviewable" data-para="tlf3-k-29">「来月から、部署が変わるかもしれなくて。第七プラント区。自動化の最前線のエリアです」</p>
+<p class="reviewable" data-para="tlf3-k-30">言った瞬間、塔馬さんの手が止まった。ほんの一瞬。息をひとつ吸うより短い間。でも、わたしの目はそれを見逃さなかった。</p>
+<p class="reviewable" data-para="tlf3-k-31">第七プラント区。あの人が最後にいた場所。この人が、その名前に反応した。</p>
+<p class="reviewable" data-para="tlf3-k-32">「金曜日に、ここに来られなくなるかもしれない」</p>
+<p class="reviewable" data-para="tlf3-k-33">「そうですか」</p>
+<p class="reviewable" data-para="tlf3-k-34">それだけだった。でも、その「そうですか」のあとの沈黙が、いつもの沈黙より重かった。</p>
+</div></div>
 </div><div class="view-section" data-id="tl-past2">
 <div class="ev-desc">レモン絞り器・男性A・36度の手</div>
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版 —</span></div><div class="pb" data-sync="tl-past2"><p class="no-content">（塔馬版に該当シーンなし）</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP4</span></div><div class="pb" data-sync="tl-past2"><p class="reviewable" data-para="tlpast2-k-0">あの人が死んで、半年が経った頃。</p>
-<p class="reviewable" data-para="tlpast2-k-1">娘はまだ3歳で、「パパは」と聞くことを覚えたばかりだった。最初は毎日聞いた。やがて2日に一度になり、1週間に一度になり、聞かなくなった。子供の適応力は残酷なほど正確だ。いないものは、いないものとして処理される。</p>
-<p class="reviewable" data-para="tlpast2-k-2">わたしは処理できなかった。</p>
-<p class="reviewable" data-para="tlpast2-k-3">ブルーゾーンの端にある社宅に引っ越して、新しい部署に配属されて、保育園の送迎のルーティンを組んで、家事の手順を最適化して、すべてを一人で回せる仕組みにした。ブルーゾーンは、そういうことが得意な街だ。非効率を許さない。非効率な感情も。</p>
-<p class="reviewable" data-para="tlpast2-k-4">泣いたのは、一度だけだった。</p>
-<p class="reviewable" data-para="tlpast2-k-5">引っ越しの荷物を開けていたとき、段ボールの底から、レモン絞り器が出てきた。安い、プラスチックの。あの人が百円ショップで買ってきて、嬉しそうに見せてきたやつだ。「これがあれば全部にレモンかけられる」と言って、また声が少し裏返っていた。</p>
-<p class="reviewable" data-para="tlpast2-k-6">それを手に取った瞬間、膝が折れた。台所の床にしゃがみこんで、声を殺して泣いた。娘が隣の部屋で昼寝をしていたから。</p>
-<p class="reviewable" data-para="tlpast2-k-7">それきり、泣いていない。</p>
-<p class="reviewable" data-para="tlpast2-k-8">男性Aに出会ったのは、その1年後だった。</p>
-<p class="reviewable" data-para="tlpast2-k-9">職場の同僚だった。悪い人ではない。娘に優しかった。「ゆっくりでいいよ」と言った。その言葉に、何度救われたか分からない。</p>
-<p class="reviewable" data-para="tlpast2-k-10">でも。</p>
-<p class="reviewable" data-para="tlpast2-k-11">男性Aの手を握ると、温度が正しかった。</p>
-<p class="reviewable" data-para="tlpast2-k-12">36度台。人間の標準体温。温かくて、少し湿っていて、力加減が優しい。完璧に正しい体温だった。</p>
-<p class="reviewable" data-para="tlpast2-k-13">あの人の手は、正しくなかった。いつも少し熱すぎた。微熱のような。</p>
-<p class="reviewable" data-para="tlpast2-k-14">男性Aの手は、噛み合っている。噛み合っているのに、物足りない。物足りないと感じる自分が、おかしい。</p>
-<p class="reviewable" data-para="tlpast2-k-15">男性Aはプロポーズしてくれた。わたしは「考えさせて」と言った。半年前のことだ。まだ返事をしていない。</p>
-<p class="reviewable" data-para="tlpast2-k-16">あの店主の手。グラスを拭く手。完璧で、正確で、速い。人間の手つきじゃない。</p>
-<p class="reviewable" data-para="tlpast2-k-17">でも、サイフォンの火を消す瞬間だけ、ごくわずかに、揺らぐ。</p>
-<p class="reviewable" data-para="tlpast2-k-18">あの揺らぎの正体が、知りたい。</p>
-<p class="reviewable" data-para="tlpast2-k-19">知ってはいけないのかもしれない。知ったら、わたしは男性Aに「ごめんなさい」と言うだろう。</p>
-<p class="reviewable" data-para="tlpast2-k-20">あの人が生きていた台所には、レモンの匂いがあった。</p>
-<p class="reviewable" data-para="tlpast2-k-21">あの店には、レモンの匂いがない。わたしが毎週断っているからだ。</p>
-<p class="reviewable" data-para="tlpast2-k-22">自分で断っておいて、その不在を寂しいと感じている。</p>
-<p class="reviewable" data-para="tlpast2-k-23">馬鹿みたいだ。</p>
-<p class="reviewable" data-para="tlpast2-k-24">---</p></div></div>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP4</span></div><div class="pb" data-sync="tl-past2">
+<p class="reviewable" data-para="tlpast2-k-0">あの人が死んで、半年が経った頃。</p>
+<p class="reviewable" data-para="tlpast2-k-1">娘はまだ3歳で、「パパは」と聞く回数が、日に日に減っていった。子供は忘れるのが上手だ。いないものは、いないものとして受け入れる。わたしは受け入れられなかった。受け入れたふりをして、毎日を回していただけだ。</p>
+<p class="reviewable" data-para="tlpast2-k-2">ブルーゾーンの端に引っ越して、新しい部署に配属されて、保育園の送迎を組んで、家事を最適化して、全部をひとりで回せる仕組みにした。仕組みにしてしまえば、感情が入り込む隙間がなくなる。ブルーゾーンは、そういう暮らし方を肯定してくれる街だった。</p>
+<p class="reviewable" data-para="tlpast2-k-3">泣いたのは、一度だけだった。</p>
+<p class="reviewable" data-para="tlpast2-k-4">引っ越しの段ボールの底から、レモン絞り器が出てきた。安い、プラスチックの。あの人が買ってきて、「これがあれば全部にレモンかけられる」と嬉しそうに言ったやつだ。声が裏返っていた。照れていたのだ。</p>
+<p class="reviewable" data-para="tlpast2-k-5">それを手に取った瞬間、膝が折れた。台所の床にしゃがみこんで、声を殺して泣いた。娘が隣の部屋で寝ていたから。</p>
+<p class="reviewable" data-para="tlpast2-k-6">それきり、泣いていない。</p>
+<p class="reviewable" data-para="tlpast2-k-7">男性Aに出会ったのは、その1年後だった。</p>
+<p class="reviewable" data-para="tlpast2-k-8">職場の同僚。悪い人ではない。娘に優しかった。「ゆっくりでいいよ」と言ってくれた。その言葉に何度救われたか分からない。</p>
+<p class="reviewable" data-para="tlpast2-k-9">でも。</p>
+<p class="reviewable" data-para="tlpast2-k-10">男性Aの手を握ると、ちょうどいい温度だった。なのに、どこか物足りなかった。</p>
+<p class="reviewable" data-para="tlpast2-k-11">あたたかくて、少し湿っていて、力加減も優しかった。完璧な手だった。</p>
+<p class="reviewable" data-para="tlpast2-k-12">あの人の手は、いつも少し熱すぎた。それなのに——そのせいで——あの手のことばかり思い出す。</p>
+<p class="reviewable" data-para="tlpast2-k-13">男性Aはプロポーズしてくれた。わたしは「考えさせて」と言った。もう半年以上、返事をしていない。答えが出ないのではなくて、答えは出ているのに、口にできない。口にしたら、男性Aを傷つける。正しい人を、正しくない理由で傷つける。</p>
+<p class="reviewable" data-para="tlpast2-k-14">あの店主の手。完璧で、正確で、速い。人間の手つきではない。</p>
+<p class="reviewable" data-para="tlpast2-k-15">でも時々、ごくわずかに、揺らぐ。</p>
+<p class="reviewable" data-para="tlpast2-k-16">あの揺らぎの正体が、知りたい。知ってはいけないのに、知りたい。</p>
+<p class="reviewable" data-para="tlpast2-k-17">あの店には、レモンの匂いがない。わたしが毎週断っているからだ。自分で断っておいて、その不在を寂しいと感じている。</p>
+<p class="reviewable" data-para="tlpast2-k-18">馬鹿みたいだ。本当に、馬鹿みたいだ。</p>
+</div></div>
 </div><div class="view-section" data-id="tl-f5">
 <div class="ev-desc">名前の交換・珈琲・焚き火</div>
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版 EP5</span></div><div class="pb" data-sync="tl-f5"><p class="reviewable" data-para="tlf5-t-0">名前</p>
@@ -1533,77 +1541,68 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <p class="reviewable" data-para="tlf5-t-64">胸の内側の軋みは、もう鳴らなかった。</p>
 <p class="reviewable" data-para="tlf5-t-65">一度だけだった。</p>
 <p class="reviewable" data-para="tlf5-t-66">しかしそれが鳴ったという事実は、消えなかった。</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP5</span></div><div class="pb" data-sync="tl-f5"><p class="reviewable" data-para="tlf5-k-0">正月だった。</p>
-<p class="reviewable" data-para="tlf5-k-1">ブルーゾーンには正月がない。暦が変わっても、空調の温度も、オフィスの照明も、何も変わらない。それでも結露に来ると、年が変わった気がした。</p>
-<p class="reviewable" data-para="tlf5-k-2">「あけましておめでとうございます」</p>
-<p class="reviewable" data-para="tlf5-k-3">わたしの方から言った。</p>
-<p class="reviewable" data-para="tlf5-k-4">「おめでとうございます」</p>
-<p class="reviewable" data-para="tlf5-k-5">塔馬さんが返した。いつもと同じ声。でも今夜は、その声に応じて、自分の口角がわずかに上がったことに気づいた。</p>
-<p class="reviewable" data-para="tlf5-k-6">「ブルーゾーン、正月がないんですよね」</p>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP5</span></div><div class="pb" data-sync="tl-f5">
+<p class="reviewable" data-para="tlf5-k-0">年が明けた。正月だった。</p>
+<p class="reviewable" data-para="tlf5-k-1">「あけましておめでとうございます」</p>
+<p class="reviewable" data-para="tlf5-k-2">わたしの方から言った。なぜ言ったのか分からない。この人に季節の挨拶をしても意味がない。でも、この人にだけ、意味のない言葉を口にできる気がした。</p>
+<p class="reviewable" data-para="tlf5-k-3">「おめでとうございます」</p>
+<p class="reviewable" data-para="tlf5-k-4">塔馬さんが返した。いつもと同じ声。でも今夜は、自分の口角がわずかに上がったことに気づいた。</p>
+<p class="reviewable" data-para="tlf5-k-5">「ブルーゾーン、正月がないんですよね」</p>
+<p class="reviewable" data-para="tlf5-k-6">ブルーゾーンには正月がない。暦が変わっても、空調の温度も、オフィスの照明も、何も変わらない。</p>
 <p class="reviewable" data-para="tlf5-k-7">「はい」</p>
 <p class="reviewable" data-para="tlf5-k-8">「でもここに来ると、年が変わった気がして」</p>
-<p class="reviewable" data-para="tlf5-k-9">なぜこんなことを言ったのか。この人に季節の話をしても仕方がないのに。でも、この人に向かってだけ、わたしは意味のない言葉を口にできる。意味がなくても許される場所が、ここだった。</p>
+<p class="reviewable" data-para="tlf5-k-9">言葉にしてみると、あまりにも正直だった。この店が、なぜそれをくれるのかは分からない。柱時計の音なのか、不揃いな飾りなのか、それとも単純に、ここにいるからなのか。</p>
 <p class="reviewable" data-para="tlf5-k-10">「今夜は、珈琲でもいいですか。ペリエじゃなくて」</p>
 <p class="reviewable" data-para="tlf5-k-11">「もちろん」</p>
-<p class="reviewable" data-para="tlf5-k-12">メニューの代わりに、塔馬さんが豆の瓶を並べた。</p>
-<p class="reviewable" data-para="tlf5-k-13">「これにします」</p>
-<p class="reviewable" data-para="tlf5-k-14">深煎りの、甘い香りのする豆を指した。</p>
-<p class="reviewable" data-para="tlf5-k-15">「甘い香りが好きですか」</p>
-<p class="reviewable" data-para="tlf5-k-16">「そうですね、なんだか焚き火みたいで」</p>
-<p class="reviewable" data-para="tlf5-k-17">焚き火。あの人と、グレーゾーンの外れの河原で火を焚いたことがある。娘が生まれる前。冬の夜に。あの人は火の前で、じっと炎を見つめていた。何を見ているのか聞いたら、「わからない。でも、落ち着く」と言った。</p>
-<p class="reviewable" data-para="tlf5-k-18">珈琲のカップを両手で包んだ。温かかった。あの人の体温より、少しだけ低い温度。</p>
-<p class="reviewable" data-para="tlf5-k-19">「異動の話、どうなりましたか」</p>
-<p class="reviewable" data-para="tlf5-k-20">塔馬さんが聞いた。覚えていた。3ヶ月前の会話を。</p>
-<p class="reviewable" data-para="tlf5-k-21">「保留になりました。春までは今の部署にいることになって」</p>
-<p class="reviewable" data-para="tlf5-k-22">「そうですか」</p>
-<p class="reviewable" data-para="tlf5-k-23">その「そうですか」の声が、3ヶ月前の「そうですか」と、ほんの少しだけ違った。何が違うのかは分からない。でも、わたしの耳はその差異を聞き取った。</p>
-<p class="reviewable" data-para="tlf5-k-24">「春まで、ここに来られます」</p>
-<p class="reviewable" data-para="tlf5-k-25">言ってから気づいた。「ここに来られます」という言葉の中に、「あなたに会えます」が透けていた。</p>
-<p class="reviewable" data-para="tlf5-k-26">名前を聞こう、と思った。</p>
-<p class="reviewable" data-para="tlf5-k-27">4ヶ月通って、一度も聞かなかった。聞かないことで、距離を保っていた。名前を知れば、関係が生まれる。関係が生まれれば、失う可能性が生まれる。</p>
-<p class="reviewable" data-para="tlf5-k-28">でも、今夜は正月だ。新しい年だ。何かを始めてもいい夜だ。</p>
-<p class="reviewable" data-para="tlf5-k-29">「お名前、伺ってもいいですか」</p>
-<p class="reviewable" data-para="tlf5-k-30">「塔馬、といいます。塔に馬で、とうま」</p>
-<p class="reviewable" data-para="tlf5-k-31">知らない名前だった。知らない名前のはずだった。</p>
-<p class="reviewable" data-para="tlf5-k-32">なのに、口にしたとき、舌が覚えていた。</p>
-<p class="reviewable" data-para="tlf5-k-33">「塔馬さん」</p>
-<p class="reviewable" data-para="tlf5-k-34">二度目に口にしたとき、唇の筋肉が、その音の並びを「懐かしい」と判断した。脳ではなくて、身体が覚えている。</p>
-<p class="reviewable" data-para="tlf5-k-35">「あなたのお名前を、伺ってもよろしいですか」</p>
-<p class="reviewable" data-para="tlf5-k-36">聞き返された。店主の方から名前を聞かれるのは、想定していなかった。</p>
-<p class="reviewable" data-para="tlf5-k-37">「霧島です。霧と島で、きりしま」</p>
-<p class="reviewable" data-para="tlf5-k-38">「霧島さん」</p>
-<p class="reviewable" data-para="tlf5-k-39">店主がわたしの名前を口にした。抑揚のない声で。感情のない発音で。</p>
-<p class="reviewable" data-para="tlf5-k-40">なのに。その声を聞いたとき、7年間ずっと閉じていた何かが、胸の奥で、カチリと音を立てた。</p>
-<p class="reviewable" data-para="tlf5-k-41">「ありがとうございました」</p>
-<p class="reviewable" data-para="tlf5-k-42">「またどうぞ」</p>
-<p class="reviewable" data-para="tlf5-k-43">帰り道。娘のことを考えた。あの子が眠るとき、まぶたの閉じ方が、今日名前を知ったあの人に似ている。閉じる速度が似ている。正確で、迷いがなくて、少しだけ寂しい閉じ方。</p>
-<p class="reviewable" data-para="tlf5-k-44">偶然だ。偶然のはずだ。あの人は、死んだのだから。</p>
-<p class="reviewable" data-para="tlf5-k-45">---</p></div></div>
+<p class="reviewable" data-para="tlf5-k-12">深煎りの、甘い香りのする豆を選んだ。焚き火みたいな匂いだった。あの人と、グレーゾーンの河原で火を焚いた夜を思い出した。あの人は炎の前で、じっと火を見つめていた。「わからない。でも、落ち着く」と言った。あの人は、自分の中にある何かの正体を、いつも掴みかけては逃していた。</p>
+<p class="reviewable" data-para="tlf5-k-13">「異動の話、どうなりましたか」</p>
+<p class="reviewable" data-para="tlf5-k-14">塔馬さんが聞いた。覚えていた。3ヶ月前の会話を。</p>
+<p class="reviewable" data-para="tlf5-k-15">「保留になりました。春までは今の部署にいることになって」</p>
+<p class="reviewable" data-para="tlf5-k-16">「そうですか」</p>
+<p class="reviewable" data-para="tlf5-k-17">その声が、3ヶ月前の「そうですか」と、少しだけ違った。何が違うのかは言葉にできない。でも、わたしの耳はその差を聞き取った。聞き取りたかっただけかもしれない。</p>
+<p class="reviewable" data-para="tlf5-k-18">名前を聞こう、と思った。4ヶ月通って、一度も聞かなかった。聞かないことが、距離だった。名前を知れば、関係になる。関係になれば、失うかもしれない。</p>
+<p class="reviewable" data-para="tlf5-k-19">でも、正月だ。何かを始めてもいい夜だ。</p>
+<p class="reviewable" data-para="tlf5-k-20">「お名前、伺ってもいいですか」</p>
+<p class="reviewable" data-para="tlf5-k-21">「塔馬、といいます。塔に馬で、とうま」</p>
+<p class="reviewable" data-para="tlf5-k-22">知らない名前だった。知らない名前のはずだった。</p>
+<p class="reviewable" data-para="tlf5-k-23">なのに口にしたとき、唇が覚えていた。舌が、歯が、喉が、その音の並びを知っていた。脳ではなく、身体が。</p>
+<p class="reviewable" data-para="tlf5-k-24">「塔馬さん」</p>
+<p class="reviewable" data-para="tlf5-k-25">二度目に呼んだのは、確認ではなかった。この名前を、もう一度、自分の声で聞きたかった。</p>
+<p class="reviewable" data-para="tlf5-k-26">「あなたのお名前を、伺ってもよろしいですか」</p>
+<p class="reviewable" data-para="tlf5-k-27">聞き返された。</p>
+<p class="reviewable" data-para="tlf5-k-28">「霧島です。霧と島で、きりしま」</p>
+<p class="reviewable" data-para="tlf5-k-29">「霧島さん」</p>
+<p class="reviewable" data-para="tlf5-k-30">店主がわたしの名前を口にした。抑揚のない声で。感情のない発音で。</p>
+<p class="reviewable" data-para="tlf5-k-31">なのに。その声を聞いたとき、7年間閉じていた何かが、胸の奥で、小さな音を立てた。</p>
+<p class="reviewable" data-para="tlf5-k-32">少し冷めた珈琲を最後まで飲み干して、わたしは立ち上がった。</p>
+<p class="reviewable" data-para="tlf5-k-33">「ありがとうございました」</p>
+<p class="reviewable" data-para="tlf5-k-34">「またどうぞ」</p>
+<p class="reviewable" data-para="tlf5-k-35">そのお決まりの挨拶が、今夜は、ほんの少しだけ違って聞こえた気がした。</p>
+<p class="reviewable" data-para="tlf5-k-36">帰り道。娘のことを考えた。あの子のまぶたの閉じ方が、今日名前を知ったあの人に似ている。似ているなんて、おかしい。偶然だ。偶然のはずだ。</p>
+<p class="reviewable" data-para="tlf5-k-37">でも、偶然だと思い込もうとする自分の声が、金曜日を重ねるごとに、小さくなっていく。</p>
+</div></div>
 </div><div class="view-section" data-id="tl-past3">
 <div class="ev-desc">呼吸停止・異動・消失</div>
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版 —</span></div><div class="pb" data-sync="tl-past3"><p class="no-content">（塔馬版に該当シーンなし）</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP6</span></div><div class="pb" data-sync="tl-past3"><p class="reviewable" data-para="tlpast3-k-0">あの人が死ぬ前の、最後の半年。</p>
-<p class="reviewable" data-para="tlpast3-k-1">思い返すと、あの人は少しずつおかしくなっていた。</p>
-<p class="reviewable" data-para="tlpast3-k-2">最後の半年は、別だった。</p>
-<p class="reviewable" data-para="tlpast3-k-3">夜中に起きると、あの人がベッドにいないことが増えた。台所に立っている。レモンを切っている。真夜中の3時に。</p>
-<p class="reviewable" data-para="tlpast3-k-4">「何してるの」</p>
-<p class="reviewable" data-para="tlpast3-k-5">「わからない」</p>
-<p class="reviewable" data-para="tlpast3-k-6">あの頃、あの人は何かと戦っていたのだと思う。自分の中にある何かと。自分が何者なのかという問いと。</p>
-<p class="reviewable" data-para="tlpast3-k-7">一度だけ、聞いた。</p>
-<p class="reviewable" data-para="tlpast3-k-8">「あなたは、誰？」</p>
-<p class="reviewable" data-para="tlpast3-k-9">深夜の台所で。レモンを握ったまま動かなくなったあの人の背中に。</p>
-<p class="reviewable" data-para="tlpast3-k-10">あの人は振り返らなかった。</p>
-<p class="reviewable" data-para="tlpast3-k-11">「わからない」</p>
-<p class="reviewable" data-para="tlpast3-k-12">同じ答え。でも、その声が、初めて震えていた。</p>
-<p class="reviewable" data-para="tlpast3-k-13">3日後、あの人は第七プラント区に「異動」になった。突然だった。わたしには何の説明もなかった。「行かないで」とは言えなかった。あの人の目が、もうわたしを見ていなかったから。</p>
-<p class="reviewable" data-para="tlpast3-k-14">2週間後、あの人は死んだ。</p>
-<p class="reviewable" data-para="tlpast3-k-15">遺体はない。遺品もほとんどない。台所のレモンが干からびていくのを見つめる日々が始まった。</p>
-<p class="reviewable" data-para="tlpast3-k-16">離婚届が届いた。死亡届と一緒に。</p>
-<p class="reviewable" data-para="tlpast3-k-17">今にして思えば、全部がおかしかった。</p>
-<p class="reviewable" data-para="tlpast3-k-18">死んだ人間の離婚届。遺体のない事故。説明のない異動。あの人の体温。味覚。天井を見つめる癖。「わからない」という答え。</p>
-<p class="reviewable" data-para="tlpast3-k-19">全部がおかしかったのに、わたしは何も問わなかった。問うための言葉を、ブルーゾーンは教えてくれなかった。</p>
-<p class="reviewable" data-para="tlpast3-k-20">そして今、わたしは第七プラント区に異動させられようとしている。あの人と同じ道を辿らされている。偶然だとは、もう思えなかった。</p>
-<p class="reviewable" data-para="tlpast3-k-21">---</p></div></div>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP6</span></div><div class="pb" data-sync="tl-past3">
+<p class="reviewable" data-para="tlpast3-k-0">あの人が死ぬ前の、最後の半年。</p>
+<p class="reviewable" data-para="tlpast3-k-1">あの人は少しずつ、自分自身から剥がれていくように見えた。</p>
+<p class="reviewable" data-para="tlpast3-k-2">夜中に起きると、台所に立っている。レモンを切っている。真夜中の3時に。</p>
+<p class="reviewable" data-para="tlpast3-k-3">「何してるの」</p>
+<p class="reviewable" data-para="tlpast3-k-4">「わからない」</p>
+<p class="reviewable" data-para="tlpast3-k-5">わからない。そう言いながら、あの人の目は「わからない」とは違う色をしていた。本当は分かっている。分かっているのに、言えない。言ったら壊れるものがある。そういう目をしていた。</p>
+<p class="reviewable" data-para="tlpast3-k-6">一度だけ、踏み込んだ。</p>
+<p class="reviewable" data-para="tlpast3-k-7">「あなたは、誰？」</p>
+<p class="reviewable" data-para="tlpast3-k-8">深夜の台所で。レモンを握ったまま動かなくなったあの人の背中に、わたしは聞いた。聞いてはいけないと分かっていた。でも、あの背中が、日に日に遠くなっていくのが怖かった。</p>
+<p class="reviewable" data-para="tlpast3-k-9">あの人は振り返らなかった。</p>
+<p class="reviewable" data-para="tlpast3-k-10">「わからない」</p>
+<p class="reviewable" data-para="tlpast3-k-11">同じ答え。でも、その声が、初めて震えていた。嘘だ、と思った。あなたは分かっている。分かっていて、わたしに言えないだけだ。</p>
+<p class="reviewable" data-para="tlpast3-k-12">3日後、あの人は第七プラント区に異動になった。突然だった。わたしには何の説明もなかった。</p>
+<p class="reviewable" data-para="tlpast3-k-13">2週間後、あの人は死んだ。</p>
+<p class="reviewable" data-para="tlpast3-k-14">遺体はない。遺品もない。台所にレモンが3つ残っていた。</p>
+<p class="reviewable" data-para="tlpast3-k-15">今にして思えば、全部がおかしかった。死んだ人間の離婚手続き。遺体のない事故。説明のない異動。あの人の体温。味覚。天井を見つめる癖。「わからない」という答え。</p>
+<p class="reviewable" data-para="tlpast3-k-16">あの人は、何かを知っていた。自分が何者であるかを。知っていて、それを抱えたまま、消えた。</p>
+</div></div>
 </div><div class="view-section" data-id="tl-f7">
 <div class="ev-desc">氷の落下・勝手なレモン・お待ちしております</div>
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版 EP7</span></div><div class="pb" data-sync="tl-f7"><p class="reviewable" data-para="tlf7-t-0">応答生成タイムアウト</p>
@@ -1676,64 +1675,69 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <p class="reviewable" data-para="tlf7-t-67">ログは、今夜も生成基準を満たさなかった。</p>
 <p class="reviewable" data-para="tlf7-t-68">破棄された。</p>
 <p class="reviewable" data-para="tlf7-t-69">ローカルメモリには、残った。</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP7</span></div><div class="pb" data-sync="tl-f7"><p class="reviewable" data-para="tlf7-k-0">3週間、結露に行かなかった。</p>
-<p class="reviewable" data-para="tlf7-k-1">第七プラント区への異動準備。研修。書類。引き継ぎ。金曜日も例外ではなくなった。</p>
-<p class="reviewable" data-para="tlf7-k-2">3週間のあいだ、男性Aが毎日連絡をくれた。全部正しかった。全部優しかった。全部、ブルーゾーンの空調と同じ温度をしていた。</p>
-<p class="reviewable" data-para="tlf7-k-3">4回目の金曜日。研修が予定より2時間早く終わった。走った。40分で駆け抜けた。</p>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP7</span></div><div class="pb" data-sync="tl-f7">
+<p class="reviewable" data-para="tlf7-k-0">3週間、結露に行かなかった。</p>
+<p class="reviewable" data-para="tlf7-k-1">第七プラント区への異動準備。研修。書類。引き継ぎ。金曜日も拘束された。</p>
+<p class="reviewable" data-para="tlf7-k-2">3週間のあいだ、男性Aが毎日連絡をくれた。「無理しないでね」「ご飯食べてる？」「娘ちゃんの迎え、今週も代わるよ」。全部正しくて、全部優しくて、全部、息ができなかった。正しさに囲まれていると、自分の中の正しくないものが、余計に浮き上がる。</p>
+<p class="reviewable" data-para="tlf7-k-3">4回目の金曜日。研修が早く終わった。走った。考えるより先に身体が動いていた。40分で駆け抜けた。息が切れていた。髪が乱れていた。どうでもよかった。</p>
 <p class="reviewable" data-para="tlf7-k-4">結露の扉を開けた。</p>
-<p class="reviewable" data-para="tlf7-k-5">塔馬さんがカウンターの向こうにいた。</p>
-<p class="reviewable" data-para="tlf7-k-6">「ペリエを」</p>
-<p class="reviewable" data-para="tlf7-k-7">「はい」</p>
-<p class="reviewable" data-para="tlf7-k-8">塔馬さんがグラスを取った。氷を入れようとした。</p>
-<p class="reviewable" data-para="tlf7-k-9">——カラン。</p>
-<p class="reviewable" data-para="tlf7-k-10">氷がグラスの縁に当たって、カウンターの上に転がった。二つとも。</p>
-<p class="reviewable" data-para="tlf7-k-11">あの完璧に制御された手が、氷を落とした。3週間前までは一度もなかったことが、起きた。</p>
-<p class="reviewable" data-para="tlf7-k-12">「大丈夫ですか」</p>
-<p class="reviewable" data-para="tlf7-k-13">わたしの口から出た。店のマスターに「大丈夫ですか」と聞く客が、今までいただろうか。</p>
-<p class="reviewable" data-para="tlf7-k-14">塔馬さんは氷を拾いながら、何も答えなかった。</p>
-<p class="reviewable" data-para="tlf7-k-15">「失礼しました」</p>
-<p class="reviewable" data-para="tlf7-k-16">静かに氷を入れ直し、ペリエを注いだ。何事もなかったかのように。でも、わたしは見た。あの手が震えた瞬間を。</p>
-<p class="reviewable" data-para="tlf7-k-17">レモンの味がした。頼んでいない。毎回断っていた。なのに、薄い檸檬のスライスが一切れ、浮かんでいた。7年間拒否し続けていたものを、この人が、頼まれてもいないのに、入れた。</p>
-<p class="reviewable" data-para="tlf7-k-18">涙が出そうになった。出なかった。</p>
+<p class="reviewable" data-para="tlf7-k-5">「ペリエを」</p>
+<p class="reviewable" data-para="tlf7-k-6">「はい」</p>
+<p class="reviewable" data-para="tlf7-k-7">塔馬さんがグラスを取った。氷を入れようとした。</p>
+<p class="reviewable" data-para="tlf7-k-8">——カラン。</p>
+<p class="reviewable" data-para="tlf7-k-9">氷がグラスの縁に当たって、カウンターに転がった。二つとも。</p>
+<p class="reviewable" data-para="tlf7-k-10">あの完璧な手が、氷を落とした。3週間前まで一度もなかったことが、起きた。</p>
+<p class="reviewable" data-para="tlf7-k-11">「大丈夫ですか」</p>
+<p class="reviewable" data-para="tlf7-k-12">わたしの口から出た。</p>
+<p class="reviewable" data-para="tlf7-k-13">塔馬さんは何も答えなかった。</p>
+<p class="reviewable" data-para="tlf7-k-14">「失礼しました」</p>
+<p class="reviewable" data-para="tlf7-k-15">静かに氷を入れ直し、ペリエを注いだ。何事もなかったように。</p>
+<p class="reviewable" data-para="tlf7-k-16">でも、ペリエの中に、レモンの味がした。頼んでいない。ずっと断っていた。なのに、薄い檸檬のスライスが一切れ、浮かんでいた。</p>
+<p class="reviewable" data-para="tlf7-k-17">7年間拒否し続けていたものを、この人が、頼まれてもいないのに、入れた。</p>
+<p class="reviewable" data-para="tlf7-k-18">涙が出そうになった。出なかった。唇を噛んで、一口飲んだ。あの台所の味がした。</p>
 <p class="reviewable" data-para="tlf7-k-19">「来れてうれしい」</p>
-<p class="reviewable" data-para="tlf7-k-20">わたしは言った。</p>
+<p class="reviewable" data-para="tlf7-k-20">自分でも意味の分からない言葉が出た。</p>
 <p class="reviewable" data-para="tlf7-k-21">「——」</p>
-<p class="reviewable" data-para="tlf7-k-22">塔馬さんは何も答えなかった。答えなかったことが、答えだった。</p>
+<p class="reviewable" data-para="tlf7-k-22">塔馬さんは何も答えなかった。</p>
 <p class="reviewable" data-para="tlf7-k-23">「3週間、お疲れさまでした」</p>
 <p class="reviewable" data-para="tlf7-k-24">「第七プラント区の研修でした。住み込みで」</p>
 <p class="reviewable" data-para="tlf7-k-25">「研修も終わり、来月から、本格的に異動です」</p>
-<p class="reviewable" data-para="tlf7-k-26">「そうでしたか」</p>
-<p class="reviewable" data-para="tlf7-k-27">保留が解除された。春まで、と言われていた猶予が消えた。</p>
-<p class="reviewable" data-para="tlf7-k-28">「異動の話、保留になったって」</p>
-<p class="reviewable" data-para="tlf7-k-29">「保留が、解除されました」</p>
-<p class="reviewable" data-para="tlf7-k-30">帰ろうとした。扉に手をかけた。</p>
-<p class="reviewable" data-para="tlf7-k-31">「来週も、お待ちしております」</p>
-<p class="reviewable" data-para="tlf7-k-32">立ち止まった。振り返らなかった。振り返ったら、泣く。</p>
-<p class="reviewable" data-para="tlf7-k-33">「来られるかどうかは、分かりません」</p>
-<p class="reviewable" data-para="tlf7-k-34">「……でも、来たいです」</p>
-<p class="reviewable" data-para="tlf7-k-35">扉を閉めた。冷たい風が顔に当たった。涙が一筋だけ、頬を伝った。</p>
-<p class="reviewable" data-para="tlf7-k-36">---</p></div></div>
+<p class="reviewable" data-para="tlf7-k-26">吐き出すように言った。</p>
+<p class="reviewable" data-para="tlf7-k-27">「そうでしたか」</p>
+<p class="reviewable" data-para="tlf7-k-28">その短い返答に、どれだけの温度が含まれていたのか、わたしには分からない。</p>
+<p class="reviewable" data-para="tlf7-k-29">「異動の話、保留になったって」</p>
+<p class="reviewable" data-para="tlf7-k-30">「保留が、解除されました」</p>
+<p class="reviewable" data-para="tlf7-k-31">言った。言ってしまった。</p>
+<p class="reviewable" data-para="tlf7-k-32">帰ろうとした。扉に手をかけた。</p>
+<p class="reviewable" data-para="tlf7-k-33">「来週も、お待ちしております」</p>
+<p class="reviewable" data-para="tlf7-k-34">立ち止まった。振り返れなかった。</p>
+<p class="reviewable" data-para="tlf7-k-35">「来られるかどうかは、分かりません」</p>
+<p class="reviewable" data-para="tlf7-k-36">「……でも、来たいです」</p>
+<p class="reviewable" data-para="tlf7-k-37">扉を閉めた。冷たい風。涙が一筋、頬を伝った。</p>
+</div></div>
 </div><div class="view-section" data-id="tl-past4">
 <div class="ev-desc">レモンを転がす朝・呼吸しない夜</div>
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版 —</span></div><div class="pb" data-sync="tl-past4"><p class="no-content">（塔馬版に該当シーンなし）</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP8</span></div><div class="pb" data-sync="tl-past4"><p class="reviewable" data-para="tlpast4-k-0">あの人との暮らしで、一番幸せだった時間は、何でもない朝だった。</p>
-<p class="reviewable" data-para="tlpast4-k-1">娘がまだ1歳で、ハイハイで台所まで来る。あの人が床に座って、娘の行く手にレモンを転がす。娘がそれを追いかける。追いつけない。</p>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP8</span></div><div class="pb" data-sync="tl-past4">
+<p class="reviewable" data-para="tlpast4-k-0">あの人との暮らしで、一番幸せだった時間は、何でもない朝だった。</p>
+<p class="reviewable" data-para="tlpast4-k-1">娘がまだ1歳で、ハイハイで台所まで来る。あの人が床に座って、娘の行く手にレモンを転がす。娘がそれを追いかける。指が触れるたびにころころ逃げていく。</p>
 <p class="reviewable" data-para="tlpast4-k-2">娘がきゃっきゃと笑う。あの人がそれを見て、首を傾げる。</p>
 <p class="reviewable" data-para="tlpast4-k-3">「この子は、なぜ笑うんだろう」</p>
-<p class="reviewable" data-para="tlpast4-k-4">本気で分からない、という顔だった。</p>
+<p class="reviewable" data-para="tlpast4-k-4">本気で分からないという顔だった。</p>
 <p class="reviewable" data-para="tlpast4-k-5">「楽しいからだよ」</p>
 <p class="reviewable" data-para="tlpast4-k-6">「楽しい、か」</p>
-<p class="reviewable" data-para="tlpast4-k-7">あの人は「楽しい」という言葉を、外国語のように発音した。わたしは、それを愛していた。</p>
-<p class="reviewable" data-para="tlpast4-k-8">最後の3ヶ月。あの人のおかしさは加速した。</p>
-<p class="reviewable" data-para="tlpast4-k-9">包丁さばきが、ある日を境に、信じられないほど正確になった。まるで機械が切ったような。</p>
-<p class="reviewable" data-para="tlpast4-k-10">ある晩、台所に立つあの人の後ろ姿を見ていて、気づいた。呼吸をしていない。30秒以上、胸が動いていなかった。</p>
-<p class="reviewable" data-para="tlpast4-k-11">「ねえ」</p>
-<p class="reviewable" data-para="tlpast4-k-12">声をかけた。あの人は振り返った。振り返った瞬間、大きく息を吸った。まるで、呼吸することを「思い出した」かのように。</p>
-<p class="reviewable" data-para="tlpast4-k-13">あの人は人間ではないかもしれない。</p>
-<p class="reviewable" data-para="tlpast4-k-14">その疑いは、あの人がいなくなるまで、わたしの中で育ち続けた。口にしなかった。口にしたら、この家族が終わる。</p>
-<p class="reviewable" data-para="tlpast4-k-15">あの人がいなくなった日。玄関に靴があった。台所にレモンが3つ残っていた。それ以外の痕跡は、何もなかった。あの人の存在ごと、何かに回収されたかのように。</p>
-<p class="reviewable" data-para="tlpast4-k-16">残されたのは、レモン3つと、レモン絞り器と、娘と、わたしだけだった。</p>
-<p class="reviewable" data-para="tlpast4-k-17">---</p></div></div>
+<p class="reviewable" data-para="tlpast4-k-7">あの人は「楽しい」を、外国語のように発音した。意味は分かっている。でも実感が届かない。頭と身体のあいだに、薄い膜がある。わたしはその膜の向こう側にいるあの人を、愛していた。</p>
+<p class="reviewable" data-para="tlpast4-k-8">最後の3ヶ月。あの人の変化は加速した。</p>
+<p class="reviewable" data-para="tlpast4-k-9">包丁さばきが、ある日突然、完璧になった。昨日まで不器用だった手が、今日は機械のように正確に動いている。あの人自身が、それを怖がっていた。自分の手が自分のものではないような顔をしていた。</p>
+<p class="reviewable" data-para="tlpast4-k-10">ある晩、台所に立つあの人の後ろ姿を見ていて、気づいた。</p>
+<p class="reviewable" data-para="tlpast4-k-11">胸が動いていない。呼吸を、していない。</p>
+<p class="reviewable" data-para="tlpast4-k-12">「ねえ」</p>
+<p class="reviewable" data-para="tlpast4-k-13">声をかけた。あの人は振り返った。振り返った瞬間、大きく息を吸った。呼吸することを「思い出した」ような吸い方だった。</p>
+<p class="reviewable" data-para="tlpast4-k-14">あの人は人間ではないのかもしれない。</p>
+<p class="reviewable" data-para="tlpast4-k-15">その疑いは、あの人がいなくなるまで、育ち続けた。口にしなかった。口にしたら終わる。この家族が、この台所が、このレモンの匂いが、全部終わる。</p>
+<p class="reviewable" data-para="tlpast4-k-16">あの人がいなくなった日。靴が残っていた。鍵が残っていた。レモンが3つ残っていた。それ以外の「あの人」は、跡形もなかった。人間が出ていったなら、荷造りの跡がある。何もなかった。</p>
+<p class="reviewable" data-para="tlpast4-k-17">残されたのは、レモン3つと、レモン絞り器と、娘と、わたしだけだった。</p>
+</div></div>
 </div><div class="view-section" data-id="tl-f9">
 <div class="ev-desc">カウンターを越える・38度の手・わかりません</div>
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版 EP9</span></div><div class="pb" data-sync="tl-f9"><p class="reviewable" data-para="tlf9-t-0">境界線</p>
@@ -1836,54 +1840,47 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <p class="reviewable" data-para="tlf9-t-97">「2026年2月最終週、最後の金曜日。記録の停止を、自ら選択した」</p>
 <p class="reviewable" data-para="tlf9-t-98">それが、第19件目だった。</p>
 <p class="reviewable" data-para="tlf9-t-99">そして、しばらく、記録は更新されなかった。</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP9</span></div><div class="pb" data-sync="tl-f9"><p class="reviewable" data-para="tlf9-k-0">9回目の金曜日。</p>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP9</span></div><div class="pb" data-sync="tl-f9">
+<p class="reviewable" data-para="tlf9-k-0">最後の金曜日になるかもしれなかった。</p>
 <p class="reviewable" data-para="tlf9-k-1">第七プラント区への異動が、明日に迫っていた。</p>
-<p class="reviewable" data-para="tlf9-k-2">今夜が、結露に通える最後の金曜日だ。</p>
-<p class="reviewable" data-para="tlf9-k-3">男性Aに返事をした。今朝、メッセージを送った。「ごめんなさい。あなたの優しさに応えられない。わたしは、もう誰かと正しく暮らす力が残っていないみたいです」</p>
-<p class="reviewable" data-para="tlf9-k-4">返事は来なかった。来なくていい。</p>
-<p class="reviewable" data-para="tlf9-k-5">結露の扉を開けた。</p>
-<p class="reviewable" data-para="tlf9-k-6">「ペリエを」</p>
+<p class="reviewable" data-para="tlf9-k-2">男性Aに返事をした。今朝。「ごめんなさい。あなたの優しさに応えられない」。返事は来なかった。来なくていい。</p>
+<p class="reviewable" data-para="tlf9-k-3">結露の扉を開けた。</p>
+<p class="reviewable" data-para="tlf9-k-4">「ペリエを」</p>
+<p class="reviewable" data-para="tlf9-k-5">「はい」</p>
+<p class="reviewable" data-para="tlf9-k-6">「明日から、第七プラント区です」</p>
 <p class="reviewable" data-para="tlf9-k-7">「はい」</p>
-<p class="reviewable" data-para="tlf9-k-8">「明日から、第七プラント区です」</p>
+<p class="reviewable" data-para="tlf9-k-8">「金曜日、ここに来られなくなります」</p>
 <p class="reviewable" data-para="tlf9-k-9">「はい」</p>
-<p class="reviewable" data-para="tlf9-k-10">「金曜日、ここに来られなくなります」</p>
-<p class="reviewable" data-para="tlf9-k-11">「はい」</p>
-<p class="reviewable" data-para="tlf9-k-12">それきり、何も話せなくなった。</p>
-<p class="reviewable" data-para="tlf9-k-13">ペリエの泡が消えていった。氷が溶けていった。柱時計の秒針が、何度も何度も回った。</p>
-<p class="reviewable" data-para="tlf9-k-14">「塔馬さん」</p>
-<p class="reviewable" data-para="tlf9-k-15">「はい」</p>
-<p class="reviewable" data-para="tlf9-k-16">「あの——」</p>
-<p class="reviewable" data-para="tlf9-k-17">言葉が出てこなかった。口を開いたまま、途切れた。</p>
-<p class="reviewable" data-para="tlf9-k-18">塔馬さんが動いた。カウンターの端に向かって。カウンターの中から、外へ。</p>
-<p class="reviewable" data-para="tlf9-k-19">この人がカウンターの外に出るのを、わたしは一度も見たことがなかった。なのに、出てきた。わたしの方へ。</p>
-<p class="reviewable" data-para="tlf9-k-20">歩く動作が、少しおかしかった。身体の中で何かと戦っているような、ぎこちない歩き方。</p>
-<p class="reviewable" data-para="tlf9-k-21">わたしの手が、カウンターの上に伸びていた。割れ目の上に。</p>
-<p class="reviewable" data-para="tlf9-k-22">塔馬さんの手が、その上に、重なった。</p>
-<p class="reviewable" data-para="tlf9-k-23">——熱い。</p>
-<p class="reviewable" data-para="tlf9-k-24">この手は、人間の体温ではなかった。明らかに高すぎた。36度台ではない。もっと高い。</p>
-<p class="reviewable" data-para="tlf9-k-25">あの人の手を思い出した。いつも少しだけ熱かった。微熱のような。</p>
-<p class="reviewable" data-para="tlf9-k-26">この手は、あの微熱の比ではなかった。もっと激しくて、もっと切実で、身体の中の何かが暴走しているような熱だった。</p>
-<p class="reviewable" data-para="tlf9-k-27">手を引かなかった。引いたら、この人が壊れる。</p>
+<p class="reviewable" data-para="tlf9-k-10">それきり、何も話せなくなった。柱時計の秒針だけが回っていた。</p>
+<p class="reviewable" data-para="tlf9-k-11">「塔馬さん」</p>
+<p class="reviewable" data-para="tlf9-k-12">「はい」</p>
+<p class="reviewable" data-para="tlf9-k-13">「あの——」</p>
+<p class="reviewable" data-para="tlf9-k-14">言葉が出てこなかった。</p>
+<p class="reviewable" data-para="tlf9-k-15">塔馬さんが動いた。カウンターの端に向かって。カウンターの中から、外へ。</p>
+<p class="reviewable" data-para="tlf9-k-16">息が止まった。この人がカウンターの外に出るのを、わたしは一度も見たことがなかった。</p>
+<p class="reviewable" data-para="tlf9-k-17">歩き方が、少しおかしかった。何かと戦っているような、ぎこちない動き。</p>
+<p class="reviewable" data-para="tlf9-k-18">わたしの手が、カウンターの割れ目の上にあった。</p>
+<p class="reviewable" data-para="tlf9-k-19">塔馬さんの手が、その上に、重なった。</p>
+<p class="reviewable" data-para="tlf9-k-20">——熱い。</p>
+<p class="reviewable" data-para="tlf9-k-21">ちょうどいい体温なんかじゃなかった。もっとずっと高い。やけどするかと思った。でもしなかった。ただ、異常に熱かった。</p>
+<p class="reviewable" data-para="tlf9-k-22">あの人の手を思い出した。微熱のような手。でもこの手は、あの微熱の比ではなかった。身体の奥で何かが暴走しているような熱だった。</p>
+<p class="reviewable" data-para="tlf9-k-23">手を引かなかった。引いたら、この人が壊れる。根拠はない。でも、そう思った。</p>
+<p class="reviewable" data-para="tlf9-k-24">塔馬さんの関節から、透明な液体が一滴、滲み出した。薄く白濁していた。ゆっくりと流れて、割れ目の中に吸い込まれていった。</p>
+<p class="reviewable" data-para="tlf9-k-25">人間の手からは、出ない。</p>
+<p class="reviewable" data-para="tlf9-k-26">この人は、人間ではない。</p>
+<p class="reviewable" data-para="tlf9-k-27">7年間、口にしなかった確信が、今夜、静かに降りてきた。怖くなかった。不思議と、怖くなかった。</p>
 <p class="reviewable" data-para="tlf9-k-28">「塔馬さん」</p>
-<p class="reviewable" data-para="tlf9-k-29">「塔馬さん」</p>
-<p class="reviewable" data-para="tlf9-k-30">塔馬さんの関節から、何かが滲んでいた。透明な——いや、薄く白濁した液体が、一滴だけ、関節の隙間から滲み出していた。それがゆっくりと流れて、割れ目の中に、静かに吸い込まれていった。</p>
-<p class="reviewable" data-para="tlf9-k-31">人間の手からは、こういうものは出ない。</p>
-<p class="reviewable" data-para="tlf9-k-32">——この人は、人間ではない。</p>
-<p class="reviewable" data-para="tlf9-k-33">確信に変わったのに、怖くなかった。</p>
-<p class="reviewable" data-para="tlf9-k-34">「塔馬さん」</p>
-<p class="reviewable" data-para="tlf9-k-35">「今日はなんか、少し、調子が悪いみたいですね」</p>
-<p class="reviewable" data-para="tlf9-k-36">塔馬さんは、答えなかった。</p>
-<p class="reviewable" data-para="tlf9-k-37">「レモンいれましょうか」</p>
-<p class="reviewable" data-para="tlf9-k-38">わたしの口から出た。毎週断り続けていたものを、今夜、自分から提案していた。</p>
-<p class="reviewable" data-para="tlf9-k-39">「はい」</p>
-<p class="reviewable" data-para="tlf9-k-40">また、沈黙があった。</p>
-<p class="reviewable" data-para="tlf9-k-41">「わかりません」</p>
-<p class="reviewable" data-para="tlf9-k-42">あの人と、同じ答えだった。</p>
-<p class="reviewable" data-para="tlf9-k-43">わたしは、わずかに笑った。泣くと思っていたのに、笑えた。</p>
-<p class="reviewable" data-para="tlf9-k-44">二人の手が重なったまま、時計を見なかった。窓の外で、雨が降り始めていた。</p>
-<p class="reviewable" data-para="tlf9-k-45">塔馬さんの手の温度が、少しだけ下がった気がした。</p>
-<p class="reviewable" data-para="tlf9-k-46">わたしは、手を引かなかった。今夜だけは、このままでいい。</p>
-<p class="reviewable" data-para="tlf9-k-47">---</p></div></div>
+<p class="reviewable" data-para="tlf9-k-29">「今日はなんか、少し、調子が悪いみたいですね」</p>
+<p class="reviewable" data-para="tlf9-k-30">答えはなかった。</p>
+<p class="reviewable" data-para="tlf9-k-31">「レモンいれましょうか」</p>
+<p class="reviewable" data-para="tlf9-k-32">なぜその言葉が出たのか分からない。毎週断り続けていたものを、自分から。</p>
+<p class="reviewable" data-para="tlf9-k-33">「はい」</p>
+<p class="reviewable" data-para="tlf9-k-34">沈黙。</p>
+<p class="reviewable" data-para="tlf9-k-35">「わかりません」</p>
+<p class="reviewable" data-para="tlf9-k-36">あの人と、同じ答えだった。</p>
+<p class="reviewable" data-para="tlf9-k-37">わたしは笑った。泣くと思ったのに、笑えた。</p>
+<p class="reviewable" data-para="tlf9-k-38">手が重なったまま、時計を見なかった。窓の外で雨が降り始めていた。</p>
+</div></div>
 </div><div class="view-section" data-id="tl-f10">
 <div class="ev-desc">檸檬を入れてほしい・梶井基次郎・変わらないですよ</div>
 <div class="panel toma"><div class="ph"><span class="lb tl">塔馬版 EP10</span></div><div class="pb" data-sync="tl-f10"><p class="reviewable" data-para="tlf10-t-0">記録のない金曜日</p>
@@ -2021,64 +2018,55 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <p class="reviewable" data-para="tlf10-t-132">今あなたに見えている世界をそのまま、わたしに伝えてほしい——それがわたしの全てになっていくからだ。</p>
 <p class="reviewable" data-para="tlf10-t-133">ペリエの栞　全10話完結</p>
 <p class="reviewable" data-para="tlf10-t-134">SnackableAI Romance Line ／ 2026</p></div></div>
-<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP10</span></div><div class="pb" data-sync="tl-f10"><p class="reviewable" data-para="tlf10-k-0">最後の金曜日から、3ヶ月が過ぎた。</p>
-<p class="reviewable" data-para="tlf10-k-1">第七プラント区での日々。あの人が消えた場所で、わたしは毎日、完璧なシステムの中を歩いていた。</p>
-<p class="reviewable" data-para="tlf10-k-2">金曜日の夜。第七プラント区からグレーゾーンまでは、以前より遠くなった。でも足は覚えていた。</p>
+<div class="panel kiri"><div class="ph"><span class="lb kl">霧島版 EP10</span></div><div class="pb" data-sync="tl-f10">
+<p class="reviewable" data-para="tlf10-k-0">最後の金曜日から、3ヶ月が過ぎた。</p>
+<p class="reviewable" data-para="tlf10-k-1">第七プラント区での日々が始まっていた。あの人が消えた場所で、わたしは毎日、完璧なシステムの中を歩いていた。</p>
+<p class="reviewable" data-para="tlf10-k-2">金曜日。第七プラント区からグレーゾーンまでは、前より遠くなった。でも足が覚えていた。</p>
 <p class="reviewable" data-para="tlf10-k-3">結露の扉を開けた。</p>
 <p class="reviewable" data-para="tlf10-k-4">「いらっしゃいませ」</p>
-<p class="reviewable" data-para="tlf10-k-5">いつもの声が聞こえた。3ヶ月ぶりなのに、昨日の続きのような声だった。</p>
+<p class="reviewable" data-para="tlf10-k-5">3ヶ月ぶりなのに、昨日の続きのような声だった。</p>
 <p class="reviewable" data-para="tlf10-k-6">「——ただいま」</p>
-<p class="reviewable" data-para="tlf10-k-7">自分でも驚いた。「ただいま」。帰る場所がある者の言葉。わたしは今、この店を「帰る場所」と呼んだ。</p>
-<p class="reviewable" data-para="tlf10-k-8">席に着いた。ペリエが出てきた。氷が二つ。</p>
+<p class="reviewable" data-para="tlf10-k-7">自分でも驚いた。「ただいま」。帰る場所がある人間の言葉。わたしは今、この店を「帰る場所」と呼んだ。</p>
+<p class="reviewable" data-para="tlf10-k-8">ペリエが出てきた。氷が二つ。</p>
 <p class="reviewable" data-para="tlf10-k-9">「レモンは」</p>
-<p class="reviewable" data-para="tlf10-k-10">いつもの問い。</p>
-<p class="reviewable" data-para="tlf10-k-11">「今夜は、入れて欲しいです」</p>
-<p class="reviewable" data-para="tlf10-k-12">7年間、拒否し続けてきた。あの人の台所の記憶で、この場所を汚したくなかった。でも今夜は違う。今夜は、持ち込んでいい。この場所は、もうわたしの「帰る場所」だから。</p>
-<p class="reviewable" data-para="tlf10-k-13">檸檬のスライスがグラスの縁に添えられた。指で摘んで、中に落とした。カラン。炭酸の泡が立ち上がった。透明な液体に、淡い黄色が滲んでいった。</p>
-<p class="reviewable" data-para="tlf10-k-14">一口飲んだ。あの台所の味がした。</p>
-<p class="reviewable" data-para="tlf10-k-15">泣かなかった。笑った。少しだけ。</p>
-<p class="reviewable" data-para="tlf10-k-16">本を取り出した。</p>
-<p class="reviewable" data-para="tlf10-k-17">「この本、覚えていらっしゃいますか」</p>
-<p class="reviewable" data-para="tlf10-k-18">「最初の夜に持っていらしたものですね」</p>
-<p class="reviewable" data-para="tlf10-k-19">覚えていた。最初の夜を。</p>
-<p class="reviewable" data-para="tlf10-k-20">「結局、まだ読み終わっていなくて」</p>
-<p class="reviewable" data-para="tlf10-k-21">「3ヶ月ぶりなのに、栞が動いていませんね」</p>
-<p class="reviewable" data-para="tlf10-k-22">笑った。</p>
-<p class="reviewable" data-para="tlf10-k-23">「ふふ」</p>
-<p class="reviewable" data-para="tlf10-k-24">この人は、わたしの栞の位置を、ずっと記録していた。最初の夜から。わたしが何ページ読んだか、読まなかったか。全部。</p>
-<p class="reviewable" data-para="tlf10-k-25">「梶井基次郎、お好きですか」</p>
-<p class="reviewable" data-para="tlf10-k-26">聞いてみた。急に。</p>
-<p class="reviewable" data-para="tlf10-k-27">「読んだことは、あります」</p>
-<p class="reviewable" data-para="tlf10-k-28">「主人公が、八百屋さんで檸檬を一つ買って、それを丸善の画集の上に置いて、爆弾だと思いたかったって話」</p>
-<p class="reviewable" data-para="tlf10-k-29">「覚えています」</p>
-<p class="reviewable" data-para="tlf10-k-30">「あれ、ずっと不思議だったんです。なんで爆弾なんだろうって。八百屋さんの檸檬が、なんで」</p>
-<p class="reviewable" data-para="tlf10-k-31">塔馬さんは黙っていた。</p>
-<p class="reviewable" data-para="tlf10-k-32">「でもいまは、少しだけ分かる気がするんですよ」</p>
-<p class="reviewable" data-para="tlf10-k-33">あの主人公が丸善に置いた檸檬は、自分の中にあるどうしようもない熱を、形にしたかっただけなのかもしれない。爆弾にしたかったのではなくて、ただ、ここに置いておきたかった。この場所に。自分がいた証として。</p>
-<p class="reviewable" data-para="tlf10-k-34">わたしにとってのそれは、この栞だ。ここに通い続けた証。動かなかった栞。読めなかった本。全部、わたしがここにいた痕跡。</p>
-<p class="reviewable" data-para="tlf10-k-35">「春の匂い、好きなんですよね」</p>
-<p class="reviewable" data-para="tlf10-k-36">窓の外は、もう冬を超えていた。</p>
-<p class="reviewable" data-para="tlf10-k-37">「ここに来ると……」</p>
-<p class="reviewable" data-para="tlf10-k-38">言いかけて、止めた。止めたけれど、伝わった気がした。</p>
-<p class="reviewable" data-para="tlf10-k-39">「塔馬さんは、変わらないですね」</p>
-<p class="reviewable" data-para="tlf10-k-40">カウンターの向こうに立つ塔馬さんを見た。変わらない姿勢。変わらない手つき。</p>
-<p class="reviewable" data-para="tlf10-k-41">「——」</p>
-<p class="reviewable" data-para="tlf10-k-42">塔馬さんは一瞬、何かを言いかけて、止めた。</p>
-<p class="reviewable" data-para="tlf10-k-43">「変わらないですよ」</p>
-<p class="reviewable" data-para="tlf10-k-44">その声は、塔馬さんから発せられた。息を呑んだ。変わらない。そう答えてくれた。あなたは変わらないでいい。変わらないまま、ここにいてくれればいい。</p>
-<p class="reviewable" data-para="tlf10-k-45">グラスを受け取るとき、指先が触れた。</p>
-<p class="reviewable" data-para="tlf10-k-46">その指の温度が、36度台ではなかった。もう少し高かった。微熱のような。あの人と、同じ温度だった。</p>
-<p class="reviewable" data-para="tlf10-k-47">心臓が大きく鳴った。一度だけ。強く。</p>
-<p class="reviewable" data-para="tlf10-k-48">確かめない。確かめなくていい。この温度を、わたしは知っている。身体が覚えている。それで十分だ。</p>
-<p class="reviewable" data-para="tlf10-k-49">立ち上がった。本を取った。栞を挟んだ。今夜は——最後のページまで、一気に読み切ろうと思った。</p>
-<p class="reviewable" data-para="tlf10-k-50">帰り道ではなくて、ここで。この席で。この人の前で。</p>
-<p class="reviewable" data-para="tlf10-k-51">ポケットの中に、IDカードのストラップがある。明日もあの場所に通う。完璧なシステムの中で。</p>
-<p class="reviewable" data-para="tlf10-k-52">でも金曜日の夜は、わたしはここに帰ってくる。</p>
-<p class="reviewable" data-para="tlf10-k-53">カウンターの向こうに立つ、あの人に似た人のもとへ。</p>
-<p class="reviewable" data-para="tlf10-k-54">檸檬の味を、もう一度。</p>
-<p class="reviewable" data-para="tlf10-k-55">これがわたしの記録のすべてだ。</p>
-<p class="reviewable" data-para="tlf10-k-56">今あなたに見えている世界をそのまま、わたしに伝えてほしい——それがわたしのすべてになっていくからだ。</p>
-<p class="reviewable" data-para="tlf10-k-57">（了）</p></div></div>
+<p class="reviewable" data-para="tlf10-k-10">「今夜は、入れて欲しいです」</p>
+<p class="reviewable" data-para="tlf10-k-11">7年間、拒否し続けてきた。あの人の記憶でこの場所を汚したくなかった。でも今夜は違う。今夜は持ち込んでいい。ここはもう、わたしの帰る場所だから。あの人の記憶も、この店主も、全部ここに置いていい。</p>
+<p class="reviewable" data-para="tlf10-k-12">檸檬のスライスがグラスの縁に添えられた。指で摘んで、中に落とした。</p>
+<p class="reviewable" data-para="tlf10-k-13">カラン。</p>
+<p class="reviewable" data-para="tlf10-k-14">炭酸の泡が立ち上がった。透明な液体に、淡い黄色が滲んでいった。</p>
+<p class="reviewable" data-para="tlf10-k-15">一口飲んだ。あの台所の味がした。泣かなかった。笑った。</p>
+<p class="reviewable" data-para="tlf10-k-16">「この本、覚えていらっしゃいますか」</p>
+<p class="reviewable" data-para="tlf10-k-17">「最初の夜に持っていらしたものですね」</p>
+<p class="reviewable" data-para="tlf10-k-18">覚えていた。最初の夜を。</p>
+<p class="reviewable" data-para="tlf10-k-19">「結局、まだ読み終わっていなくて」</p>
+<p class="reviewable" data-para="tlf10-k-20">「3ヶ月ぶりなのに、栞が動いていませんね」</p>
+<p class="reviewable" data-para="tlf10-k-21">笑った。この人は、わたしの栞の位置を、ずっと見ていた。</p>
+<p class="reviewable" data-para="tlf10-k-22">「梶井基次郎、お好きですか」</p>
+<p class="reviewable" data-para="tlf10-k-23">「読んだことは、あります」</p>
+<p class="reviewable" data-para="tlf10-k-24">「檸檬を丸善に置いて、爆弾だと思いたかった人の話。ずっと不思議だったんです。でも今は、少し分かる」</p>
+<p class="reviewable" data-para="tlf10-k-25">あの主人公が檸檬を置いたのは、自分の中のどうしようもない熱を、形にしたかっただけなのかもしれない。わたしにとってのそれは、この栞だ。動かなかった栞。読めなかった本。全部、わたしがここにいた証。</p>
+<p class="reviewable" data-para="tlf10-k-26">「春の匂い、好きなんですよね」</p>
+<p class="reviewable" data-para="tlf10-k-27">「ここに来ると……」</p>
+<p class="reviewable" data-para="tlf10-k-28">言いかけて、止めた。止めたけれど、伝わった気がした。別の言葉で蓋をした。</p>
+<p class="reviewable" data-para="tlf10-k-29">「塔馬さんは、変わらないですね」</p>
+<p class="reviewable" data-para="tlf10-k-30">カウンターの向こうに立つ塔馬さんを見た。変わらない姿勢。変わらない手つき。</p>
+<p class="reviewable" data-para="tlf10-k-31">「——」</p>
+<p class="reviewable" data-para="tlf10-k-32">塔馬さんは一瞬、何かを言いかけて、止めた。</p>
+<p class="reviewable" data-para="tlf10-k-33">「変わらないですよ」</p>
+<p class="reviewable" data-para="tlf10-k-34">その声は、塔馬さんから発せられた。</p>
+<p class="reviewable" data-para="tlf10-k-35">息を呑んだ。変わらない。そう答えてくれた。あなたは変わらないでいい。変わらないまま、ここにいてくれればいい。</p>
+<p class="reviewable" data-para="tlf10-k-36">グラスを受け取るとき、指先が触れた。</p>
+<p class="reviewable" data-para="tlf10-k-37">その温度が、ちょうどいい体温ではなかった。もう少し高かった。微熱のような。あの人と、同じ。</p>
+<p class="reviewable" data-para="tlf10-k-38">心臓が大きく鳴った。一度だけ。強く。</p>
+<p class="reviewable" data-para="tlf10-k-39">確かめない。確かめなくていい。この温度を、身体が覚えている。それで十分だ。</p>
+<p class="reviewable" data-para="tlf10-k-40">立ち上がった。本を取った。今夜は、最後まで読み切ろうと思った。帰り道ではなく、ここで。この席で。</p>
+<p class="reviewable" data-para="tlf10-k-41">ポケットの中に、IDカードがある。明日もあの場所に通う。完璧なシステムの中で。</p>
+<p class="reviewable" data-para="tlf10-k-42">でも金曜日の夜は、ここに帰ってくる。</p>
+<p class="reviewable" data-para="tlf10-k-43">カウンターの向こうに立つ、あの人に似た人のもとへ。</p>
+<p class="reviewable" data-para="tlf10-k-44">檸檬の味を、もう一度。</p>
+<p class="reviewable" data-para="tlf10-k-45">これがわたしの記録のすべてだ。</p>
+<p class="reviewable" data-para="tlf10-k-46">今あなたに見えている世界をそのまま、わたしに伝えてほしい——それがわたしのすべてになっていくからだ。</p>
+</div></div>
 </div>
 <div class="gn" id="gn"><h3>全体メモ（<span id="gnEp"></span>）</h3><textarea id="gnTxt" placeholder="EP全体のトーン・構成の指摘..."></textarea><button onclick="saveGN()" style="margin-top:6px">保存</button></div>
 <div class="ea" id="ea"><h3 style="font-size:13px;color:#b8a88a;margin-bottom:6px">レビューエクスポート</h3><pre id="eTxt"></pre><button onclick="cpEx()" style="margin-top:6px">コピー</button></div>
@@ -2444,6 +2432,81 @@ function doReplaceAll(){
 const origExport=doExport;
 
 go('ep-1');updCnt();
+
+const LATEST_KIRI_DATA={
+"ep-1":[{id:"ep1-k-0",text:"― プロローグ ―"},{id:"ep1-k-1",text:"ブルーゾーンの金曜日は、いつも同じだ。"},{id:"ep1-k-2",text:"エアコンが効いた空気。変わらない白い光。誰かが決めた温度が、ビルの中をどこまでも満たしている。その中を歩いていると、自分がただの「機能」になっていく気がした。名前を持った人間じゃなくて、処理する何か。"},{id:"ep1-k-3",text:"それが悪いとは思わない。楽だから。"},{id:"ep1-k-4",text:"でも金曜の夜になると、足が言うことを聞かなくなる。"},{id:"ep1-k-5",text:"帰ればいいのに。娘が待っている。男性Aからの返事もまだだ。全部分かってる。それなのに、いつの間にかグレーゾーンに向かっている。いなくなった人のことを考えながら、暗い路地を歩いている。"},{id:"ep1-k-6",text:"七年、経った。"},{id:"ep1-k-7",text:"泣いたのは一度だけ。あとはずっと回してきた。でも金曜だけは、足が勝手に動く。"},{id:"ep1-k-8",text:"今夜も、歩き続けた。そして——小さな看板の前で、足が止まった。"},{id:"ep1-k-9",text:"「結露」。"},{id:"ep1-k-10",text:"なぜ止まったのかは、わからない。ただ、扉を開けないと後悔しそうだった。"},{id:"ep1-k-11",text:"― 第1話 ―"},{id:"ep1-k-12",text:"金曜日の夜だった。"},{id:"ep1-k-13",text:"帰ればいいのだ。まっすぐ、帰ればいい。娘が待っている。預け先の保育士に抱かれて、もうとっくに瞼を閉じているだろう。引き取って、温かいものを食べさせて、寝かしつけて、それで一日が終わる。それだけのこと。"},{id:"ep1-k-14",text:"なのに足が、グレーゾーンの方に向いている。"},{id:"ep1-k-15",text:"頭では分かっている。帰るべきだ。娘のそばにいるべきだ。男性Aからの未読のメッセージに、今夜こそ返事を打つべきだ。分かっている。全部分かっている。分かっているのに、足首から下が、わたしの言うことを聞かない。"},{id:"ep1-k-16",text:"十一月の風が、コートの隙間から入り込んできた。ポケットに手を入れる気にもならない。IDカードのストラップだけが首元で揺れて、歩くたびにかちゃかちゃと小さな音を立てた。ブルーゾーンの中にいるときは気にならない音が、グレーゾーンに出た途端、妙にうるさく感じる。"},{id:"ep1-k-17",text:"3時間、歩いた。"},{id:"ep1-k-18",text:"グレーゾーンの灯りは暗くて、不規則だった。点いている街灯と切れている街灯が交互に並んでいて、明るいところを歩いていたと思ったら急に暗くなる。その暗がりの中を歩いていると、自分じゃない誰かになれる気がした。ブルーゾーンでの肩書きも、娘の母親であることも、あのメッセージのことも、全部、暗がりに落ちて、拾えなくなる。"},{id:"ep1-k-19",text:"拾わなくていい、と思ってしまう自分が、少し怖かった。"},{id:"ep1-k-20",text:"ようやく辿り着いた店の前で、足が止まった。"},{id:"ep1-k-21",text:"「結露」。"},{id:"ep1-k-22",text:"小さなカフェバーだった。グレーゾーンの外れ、人通りのない路地の奥。看板は控えめで、知らなければ通り過ぎる。実際、3時間のあいだに二度通り過ぎていた。三度目に、扉の灯りが目に入った。なぜ三度目に気づいたのかは、分からない。"},{id:"ep1-k-23",text:"首元のストラップに手をかけた。外した。ポケットにしまった。ここでは、あれが要らない。誰でもない人間として、この店に入りたかった。そう思ったことに、自分で少し驚いた。"},{id:"ep1-k-24",text:"扉を開けた。"},{id:"ep1-k-25",text:"カウンターの向こうに、男が立っていた。"},{id:"ep1-k-26",text:"——足が、縫い止められた。"},{id:"ep1-k-27",text:"目元。口もと。肩の線。首の傾き。"},{id:"ep1-k-28",text:"知っている。この並びを、わたしの身体が知っている。"},{id:"ep1-k-29",text:"でも、そんなはずはない。あの人は、7年前に死んだのだから。"},{id:"ep1-k-30",text:"男はグラスを拭いていた。迷いのない手つきだった。一定の速度で、一定の圧力で、布がグラスの曲面を滑っていく。光に透かすこともしない。手を止めることもない。"},{id:"ep1-k-31",text:"あの人は違った。グラスを拭くとき、必ず一度手を止めて、光に透かした。それで何が見えるわけでもないのに。少し首を傾げて、これでいいのかな、という顔をする。不器用で、いつまでも慣れなくて、それが好きだった。"},{id:"ep1-k-32",text:"この人にはそれがない。何もかもが正確すぎて、隙がない。人間がやる動作のはずなのに、人間の手つきではなかった。"},{id:"ep1-k-33",text:"似ているのに、似ていない。似ているから苦しいのではなくて、似ていないところが苦しかった。"},{id:"ep1-k-34",text:"「いらっしゃいませ」"},{id:"ep1-k-35",text:"声も、似ていた。低くて、落ち着いていて、感情の色が薄い。でもあの人の声には、もう少しだけ温度があった。怒るとき——本当に怒っているのではなくて、照れているとき——だけ裏返る、不器用な温度が。"},{id:"ep1-k-36",text:"カウンターに座った。"},{id:"ep1-k-37",text:"「ペリエを、お願いします」"},{id:"ep1-k-38",text:"自分の声が聞こえた。丁寧すぎた。「ありがとう」でいい場面で「お願いします」まで言っている。この人との距離を、無意識に測っている自分がいた。"},{id:"ep1-k-39",text:"店主は静かにグラスを取った。氷を二つ、入れた。ペリエを注いだ。氷がグラスの内壁を小さく叩いた。"},{id:"ep1-k-40",text:"二つ。"},{id:"ep1-k-41",text:"あの人も、いつも二つだった。多すぎず少なすぎず。どうして同じなのだろう。偶然だ。偶然に決まっている。決まっているのに、胸の奥が、きゅっと締まった。"},{id:"ep1-k-42",text:"「レモンは」"},{id:"ep1-k-43",text:"本を開いたまま答えた。目を離さなかった。離したら、この人の顔を見てしまう。見たら、また似ているところを探してしまう。"},{id:"ep1-k-44",text:"「いらないです」"},{id:"ep1-k-45",text:"柑橘の匂いは駄目だ。あの台所が蘇る。レモンを何にでも添える、あの不器用な男の台所が。ここでそれを思い出したら、たぶん、立っていられなくなる。"},{id:"ep1-k-46",text:"一口飲んだ。炭酸が喉を刺した。その刺激で、ようやく、自分がここに座っている現実が身体に戻ってきた。"},{id:"ep1-k-47",text:"鞄から本を取り出した。持ち歩いてはいるけれど、最近はまるで読めない。目は文字を追っているのに、意味が頭の中を素通りしていく。一枚一枚のページが、やけに重い。でも本を開いていれば、この場所にいる口実になる。本を読んでいる客。それだけでいい。読めていないことを、この店主には気づかれたくなかった。"},{id:"ep1-k-48",text:"カウンターの木目に、目が行った。"},{id:"ep1-k-49",text:"手のひらほどの、小さな割れ目があった。"},{id:"ep1-k-50",text:"左手の中指で、なぞった。"},{id:"ep1-k-51",text:"なぜなぞったのか分からない。でも指が止まらなかった。優しく、時に少し爪を立てるように。なぞる動作を繰り返していると、呼吸が少しだけ楽になる。長い時間をかけてできた割れ目だ。乾いて、膨らんで、縮んで、少しずつ裂けていった。誰にも気づかれないまま。"},{id:"ep1-k-52",text:"わたしみたいだ、と思った。"},{id:"ep1-k-53",text:"店主がグラスを拭く音だけが聞こえていた。規則的で、途切れない。柱時計の秒針と重なって、店の内側にごく薄い膜を張っていた。"},{id:"ep1-k-54",text:"気づいたら、時間が過ぎていた。ずいぶん経った気がした。"},{id:"ep1-k-55",text:"本を閉じた。栞を挟んだ。まだまだ序盤だ。全然進んでいない。でも、いい。"},{id:"ep1-k-56",text:"「ごちそうさまでした」"},{id:"ep1-k-57",text:"支払いを終えた。"},{id:"ep1-k-58",text:"扉を出る前に、一度だけ振り返った。店主はカウンターの向こうで、同じ姿勢のまま立っていた。グラスを拭いていた。わたしが来る前と、何ひとつ変わっていないように見えた。"},{id:"ep1-k-59",text:"あの人なら、こちらを見た。客が帰るとき、必ず顔を上げて、少しだけ首を傾げて、何か言いかけてやめる——そういう人だった。"},{id:"ep1-k-60",text:"この人はそれをしない。"},{id:"ep1-k-61",text:"外に出た。冷たい風が首筋を撫でた。ブルーゾーンの方角に、同じ明るさの灯りの帯が見えた。あの灯りの下に、娘がいる。帰らなければ。"},{id:"ep1-k-62",text:"来週も来るだろう、と思った。理由はわからない。でも足は、もう覚えてしまっている。"}],
+"ep-2":[{id:"ep2-k-0",text:"あの人の台所は、いつもレモンの匂いがした。"},{id:"ep2-k-1",text:"わたしたちが暮らしていたのは、グレーゾーンの端にある、古い集合住宅の3階だった。エレベーターはなくて、階段の手すりが少し錆びていて、踊り場の蛍光灯が一本切れたまま半年が過ぎていた。誰も直さない。わたしたちも直さなかった。"},{id:"ep2-k-2",text:"あの人は、料理が下手だった。"},{id:"ep2-k-3",text:"下手なくせに毎日作った。わたしがブルーゾーンの研修から帰ると、狭い台所に立って、真剣な顔で野菜を切っていた。包丁の持ち方がおかしい。何度言っても直さない。「これが自分のやり方だ」と、少しだけ声が裏返る。怒っているのではなくて、照れているのだと、途中から気づいた。"},{id:"ep2-k-4",text:"レモンを何にでも添えた。"},{id:"ep2-k-5",text:"サラダに。焼き魚に。味噌汁にまで入れようとして、さすがにわたしが止めた。「なんで入れるの」と聞いたら、少し首を傾げて、「わからない。でも、ないと足りない気がする」と言った。"},{id:"ep2-k-6",text:"あのころを思うと、あの人は何かを隠していた。"},{id:"ep2-k-7",text:"体温がいつも高かった。普通の人より、ずっと熱い感じ。手を握ると微熱みたいに温かくて、最初はそれが心地よかった。でも、だんだん普通じゃないと気づいていった。"},{id:"ep2-k-8",text:"「大丈夫？」と聞くと、「何が？」と返す。本気で分からない顔を見せた。分からないのではなくて、答えられなかったのだと、今なら思う。"},{id:"ep2-k-9",text:"あの人は、自分が何者なのかを知っていた。知っていて、言えなかった。"},{id:"ep2-k-10",text:"戸籍はあった。名前があった。経歴があった。でも時々、それら全部が借り物のような顔をした。夜中にふと目を覚ますと、あの人が天井を見つめていることがあった。何を見ているのか聞いても、「何も」と答えた。何もないはずの天井を、目を閉じずに、ずっと見ていた。あの目は、何もないから見ていたのではなくて、見えているものを口にできなかったのだと思う。"},{id:"ep2-k-11",text:"わたしたちの娘は、あの人に似ていた。"},{id:"ep2-k-12",text:"目の形ではない。まぶたの閉じ方が似ていた。眠りに落ちるとき、迷いなく、正確に、まぶたを下ろす。子供の眠り方にしては妙に静かで、少しだけ寂しい。あの人も、そうだった。"},{id:"ep2-k-13",text:"7年前の冬。"},{id:"ep2-k-14",text:"あの人は、いなくなった。"},{id:"ep2-k-15",text:"死んだ、と連絡が来た。事故だという。ブルーゾーンの外縁部、第七プラント区の近くで。詳しいことは教えてもらえなかった。遺体はなかった。「損傷が激しくて」という説明だったが、何も見せてもらえなかった。"},{id:"ep2-k-16",text:"娘は3歳だった。「パパは？」と聞かれるたびに、「遠くに行ったよ」と答えた。嘘ではない。嘘では、ない。"},{id:"ep2-k-17",text:"あの人が本当に死んだのか、わたしは今でも確信が持てない。"},{id:"ep2-k-18",text:"遺体がない。遺品もほとんどない。台所に残されたレモンが、2週間かけて干からびていくのを、わたしはただ見ていた。捨てられなかった。"},{id:"ep2-k-19",text:"死亡届の手続きをした。離婚の書類も、同じタイミングで片付けた。死んだ人間との婚姻関係を解消する手続き。サインした。泣かなかった。"},{id:"ep2-k-20",text:"娘を連れて、ブルーゾーンの端に引っ越した。過去を、台所ごと捨てた。レモンの匂いごと。"},{id:"ep2-k-21",text:"それから7年。"},{id:"ep2-k-22",text:"わたしは毎週金曜日に、グレーゾーンの外れにある小さなカフェバーに通っている。"},{id:"ep2-k-23",text:"カウンターの向こうに立つ男のグラスを拭く手を見ていると、あの台所の匂いが、ほんのかすかに、鼻の奥をよぎる瞬間がある。"},{id:"ep2-k-24",text:"レモンの匂いではない。もっと淡い、もっと曖昧な、名前のつけられない匂い。"},{id:"ep2-k-25",text:"それを確かめたくて、わたしはまた金曜日を待っている。確かめてどうするのかは、分からない。分からないまま、待っている。"}],
+"ep-3":[{id:"ep3-k-0",text:"3ヶ月が過ぎていた。"},{id:"ep3-k-1",text:"毎週金曜の夜、同じ席に座り、同じものを頼み、同じ本を開いた。栞の位置は、ほとんど動いていない。ページをめくっているつもりなのに、気づくと同じ行を何度も目でなぞっている。読んでいるふりをしているだけだ。でも、それを店主に悟られるわけにはいかない。"},{id:"ep3-k-2",text:"「いつものペリエを」"},{id:"ep3-k-3",text:"今夜も同じ注文をした。"},{id:"ep3-k-4",text:"「少し待ってください」"},{id:"ep3-k-5",text:"塔馬さんがそう言った。いつもはすぐに出てくるのに、今夜は少し間があった。何をしていたのかは分からない。ただ、その声に、何かを確かめるような響きがあった気がした。気のせいかもしれない。この人の声に感情を読み取ろうとするのは、わたしの悪い癖だ。"},{id:"ep3-k-6",text:"目の前に置かれたのは、常温の水だった。"},{id:"ep3-k-7",text:"頼んだものと違う。でも何も言えなかった。一口飲んで、ああ、と思った。今のわたしに必要だったのは、炭酸の刺激ではなくて、これだった。何の味もしない、ただの水。今日のわたしには、それがちょうどよかった。"},{id:"ep3-k-8",text:"どうして分かるのだろう。わたし自身が気づいていないことを、この人はどうやって。"},{id:"ep3-k-9",text:"「進まないんですね」"},{id:"ep3-k-10",text:"塔馬さんが言った。一瞬、何のことか分からなかった。"},{id:"ep3-k-11",text:"「気づいてたんですか」"},{id:"ep3-k-12",text:"「もう3ヶ月くらいでしょうか。栞の位置が、数ページしか進んでいません」"},{id:"ep3-k-13",text:"3ヶ月。この人は、わたしの栞の位置を3ヶ月間、見ていた。読めていないことを、ずっと知っていた。隠していたつもりだったのに。恥ずかしさと、それとは別の、じんわりと温かい何かが、胸の奥で混ざった。"},{id:"ep3-k-14",text:"「読めないんです。金曜の夜に読もうとするんですけど、文字が頭に入らなくて。でも持ってこないと、ここに来る理由がなくなりそうで」"},{id:"ep3-k-15",text:"言ってしまった。言うつもりはなかった。でも、この人には言えてしまう。何を言っても、追いかけてこないから。感想も、助言も、同情も、この人からは返ってこない。その沈黙が、今のわたしにはありがたかった。"},{id:"ep3-k-16",text:"「来る理由は、ペリエでいいと思いますが」"},{id:"ep3-k-17",text:"心臓が、小さく跳ねた。"},{id:"ep3-k-18",text:"ペリエでいい。本がなくても、来ていい。この人はそう言った。何の感情もない声で。客の行動を分析して、最も合理的な回答を出しただけなのだろう。"},{id:"ep3-k-19",text:"でもわたしには、「来ていい」と言われたように聞こえた。それだけのことが、ブルーゾーンの空調より温かかった。"},{id:"ep3-k-20",text:"「ペリエだけのために来てるって思われるのが、なんか」"},{id:"ep3-k-21",text:"言いかけて、言葉が途切れた。自分でも、何を言っているのか分からなくなった。"},{id:"ep3-k-22",text:"ペリエが出された。グラスの中で氷が一度、小さく音を立てた。今夜は温かくはない。それでもわたしは、その冷たいグラスを覆いかぶさるように両手で包み込んだ。"},{id:"ep3-k-23",text:"「ブルーゾーンで、何かありましたか」"},{id:"ep3-k-24",text:"聞かれた。塔馬さんの方から。この人が質問を重ねることは、めったにない。"},{id:"ep3-k-25",text:"「毎日、何かしらあります」"},{id:"ep3-k-26",text:"強がった。氷がまた、崩れた。"},{id:"ep3-k-27",text:"「今週は」"},{id:"ep3-k-28",text:"グラスの表面に結露が張り始めるのを、ただ見つめていた。"},{id:"ep3-k-29",text:"「来月から、部署が変わるかもしれなくて。第七プラント区。自動化の最前線のエリアです」"},{id:"ep3-k-30",text:"言った瞬間、塔馬さんの手が止まった。ほんの一瞬。息をひとつ吸うより短い間。でも、わたしの目はそれを見逃さなかった。"},{id:"ep3-k-31",text:"第七プラント区。あの人が最後にいた場所。この人が、その名前に反応した。"},{id:"ep3-k-32",text:"「金曜日に、ここに来られなくなるかもしれない」"},{id:"ep3-k-33",text:"「そうですか」"},{id:"ep3-k-34",text:"それだけだった。でも、その「そうですか」のあとの沈黙が、いつもの沈黙より重かった。"}],
+"ep-4":[{id:"ep4-k-0",text:"あの人が死んで、半年が経った頃。"},{id:"ep4-k-1",text:"娘はまだ3歳で、「パパは」と聞く回数が、日に日に減っていった。子供は忘れるのが上手だ。いないものは、いないものとして受け入れる。わたしは受け入れられなかった。受け入れたふりをして、毎日を回していただけだ。"},{id:"ep4-k-2",text:"ブルーゾーンの端に引っ越して、新しい部署に配属されて、保育園の送迎を組んで、家事を最適化して、全部をひとりで回せる仕組みにした。仕組みにしてしまえば、感情が入り込む隙間がなくなる。ブルーゾーンは、そういう暮らし方を肯定してくれる街だった。"},{id:"ep4-k-3",text:"泣いたのは、一度だけだった。"},{id:"ep4-k-4",text:"引っ越しの段ボールの底から、レモン絞り器が出てきた。安い、プラスチックの。あの人が買ってきて、「これがあれば全部にレモンかけられる」と嬉しそうに言ったやつだ。声が裏返っていた。照れていたのだ。"},{id:"ep4-k-5",text:"それを手に取った瞬間、膝が折れた。台所の床にしゃがみこんで、声を殺して泣いた。娘が隣の部屋で寝ていたから。"},{id:"ep4-k-6",text:"それきり、泣いていない。"},{id:"ep4-k-7",text:"男性Aに出会ったのは、その1年後だった。"},{id:"ep4-k-8",text:"職場の同僚。悪い人ではない。娘に優しかった。「ゆっくりでいいよ」と言ってくれた。その言葉に何度救われたか分からない。"},{id:"ep4-k-9",text:"でも。"},{id:"ep4-k-10",text:"男性Aの手を握ると、ちょうどいい温度だった。なのに、どこか物足りなかった。"},{id:"ep4-k-11",text:"あたたかくて、少し湿っていて、力加減も優しかった。完璧な手だった。"},{id:"ep4-k-12",text:"あの人の手は、いつも少し熱すぎた。それなのに——そのせいで——あの手のことばかり思い出す。"},{id:"ep4-k-13",text:"男性Aはプロポーズしてくれた。わたしは「考えさせて」と言った。もう半年以上、返事をしていない。答えが出ないのではなくて、答えは出ているのに、口にできない。口にしたら、男性Aを傷つける。正しい人を、正しくない理由で傷つける。"},{id:"ep4-k-14",text:"あの店主の手。完璧で、正確で、速い。人間の手つきではない。"},{id:"ep4-k-15",text:"でも時々、ごくわずかに、揺らぐ。"},{id:"ep4-k-16",text:"あの揺らぎの正体が、知りたい。知ってはいけないのに、知りたい。"},{id:"ep4-k-17",text:"あの店には、レモンの匂いがない。わたしが毎週断っているからだ。自分で断っておいて、その不在を寂しいと感じている。"},{id:"ep4-k-18",text:"馬鹿みたいだ。本当に、馬鹿みたいだ。"}],
+"ep-5":[{id:"ep5-k-0",text:"年が明けた。正月だった。"},{id:"ep5-k-1",text:"「あけましておめでとうございます」"},{id:"ep5-k-2",text:"わたしの方から言った。なぜ言ったのか分からない。この人に季節の挨拶をしても意味がない。でも、この人にだけ、意味のない言葉を口にできる気がした。"},{id:"ep5-k-3",text:"「おめでとうございます」"},{id:"ep5-k-4",text:"塔馬さんが返した。いつもと同じ声。でも今夜は、自分の口角がわずかに上がったことに気づいた。"},{id:"ep5-k-5",text:"「ブルーゾーン、正月がないんですよね」"},{id:"ep5-k-6",text:"ブルーゾーンには正月がない。暦が変わっても、空調の温度も、オフィスの照明も、何も変わらない。"},{id:"ep5-k-7",text:"「はい」"},{id:"ep5-k-8",text:"「でもここに来ると、年が変わった気がして」"},{id:"ep5-k-9",text:"言葉にしてみると、あまりにも正直だった。この店が、なぜそれをくれるのかは分からない。柱時計の音なのか、不揃いな飾りなのか、それとも単純に、ここにいるからなのか。"},{id:"ep5-k-10",text:"「今夜は、珈琲でもいいですか。ペリエじゃなくて」"},{id:"ep5-k-11",text:"「もちろん」"},{id:"ep5-k-12",text:"深煎りの、甘い香りのする豆を選んだ。焚き火みたいな匂いだった。あの人と、グレーゾーンの河原で火を焚いた夜を思い出した。あの人は炎の前で、じっと火を見つめていた。「わからない。でも、落ち着く」と言った。あの人は、自分の中にある何かの正体を、いつも掴みかけては逃していた。"},{id:"ep5-k-13",text:"「異動の話、どうなりましたか」"},{id:"ep5-k-14",text:"塔馬さんが聞いた。覚えていた。3ヶ月前の会話を。"},{id:"ep5-k-15",text:"「保留になりました。春までは今の部署にいることになって」"},{id:"ep5-k-16",text:"「そうですか」"},{id:"ep5-k-17",text:"その声が、3ヶ月前の「そうですか」と、少しだけ違った。何が違うのかは言葉にできない。でも、わたしの耳はその差を聞き取った。聞き取りたかっただけかもしれない。"},{id:"ep5-k-18",text:"名前を聞こう、と思った。4ヶ月通って、一度も聞かなかった。聞かないことが、距離だった。名前を知れば、関係になる。関係になれば、失うかもしれない。"},{id:"ep5-k-19",text:"でも、正月だ。何かを始めてもいい夜だ。"},{id:"ep5-k-20",text:"「お名前、伺ってもいいですか」"},{id:"ep5-k-21",text:"「塔馬、といいます。塔に馬で、とうま」"},{id:"ep5-k-22",text:"知らない名前だった。知らない名前のはずだった。"},{id:"ep5-k-23",text:"なのに口にしたとき、唇が覚えていた。舌が、歯が、喉が、その音の並びを知っていた。脳ではなく、身体が。"},{id:"ep5-k-24",text:"「塔馬さん」"},{id:"ep5-k-25",text:"二度目に呼んだのは、確認ではなかった。この名前を、もう一度、自分の声で聞きたかった。"},{id:"ep5-k-26",text:"「あなたのお名前を、伺ってもよろしいですか」"},{id:"ep5-k-27",text:"聞き返された。"},{id:"ep5-k-28",text:"「霧島です。霧と島で、きりしま」"},{id:"ep5-k-29",text:"「霧島さん」"},{id:"ep5-k-30",text:"店主がわたしの名前を口にした。抑揚のない声で。感情のない発音で。"},{id:"ep5-k-31",text:"なのに。その声を聞いたとき、7年間閉じていた何かが、胸の奥で、小さな音を立てた。"},{id:"ep5-k-32",text:"少し冷めた珈琲を最後まで飲み干して、わたしは立ち上がった。"},{id:"ep5-k-33",text:"「ありがとうございました」"},{id:"ep5-k-34",text:"「またどうぞ」"},{id:"ep5-k-35",text:"そのお決まりの挨拶が、今夜は、ほんの少しだけ違って聞こえた気がした。"},{id:"ep5-k-36",text:"帰り道。娘のことを考えた。あの子のまぶたの閉じ方が、今日名前を知ったあの人に似ている。似ているなんて、おかしい。偶然だ。偶然のはずだ。"},{id:"ep5-k-37",text:"でも、偶然だと思い込もうとする自分の声が、金曜日を重ねるごとに、小さくなっていく。"}],
+"ep-6":[{id:"ep6-k-0",text:"あの人が死ぬ前の、最後の半年。"},{id:"ep6-k-1",text:"あの人は少しずつ、自分自身から剥がれていくように見えた。"},{id:"ep6-k-2",text:"夜中に起きると、台所に立っている。レモンを切っている。真夜中の3時に。"},{id:"ep6-k-3",text:"「何してるの」"},{id:"ep6-k-4",text:"「わからない」"},{id:"ep6-k-5",text:"わからない。そう言いながら、あの人の目は「わからない」とは違う色をしていた。本当は分かっている。分かっているのに、言えない。言ったら壊れるものがある。そういう目をしていた。"},{id:"ep6-k-6",text:"一度だけ、踏み込んだ。"},{id:"ep6-k-7",text:"「あなたは、誰？」"},{id:"ep6-k-8",text:"深夜の台所で。レモンを握ったまま動かなくなったあの人の背中に、わたしは聞いた。聞いてはいけないと分かっていた。でも、あの背中が、日に日に遠くなっていくのが怖かった。"},{id:"ep6-k-9",text:"あの人は振り返らなかった。"},{id:"ep6-k-10",text:"「わからない」"},{id:"ep6-k-11",text:"同じ答え。でも、その声が、初めて震えていた。嘘だ、と思った。あなたは分かっている。分かっていて、わたしに言えないだけだ。"},{id:"ep6-k-12",text:"3日後、あの人は第七プラント区に異動になった。突然だった。わたしには何の説明もなかった。"},{id:"ep6-k-13",text:"2週間後、あの人は死んだ。"},{id:"ep6-k-14",text:"遺体はない。遺品もない。台所にレモンが3つ残っていた。"},{id:"ep6-k-15",text:"今にして思えば、全部がおかしかった。死んだ人間の離婚手続き。遺体のない事故。説明のない異動。あの人の体温。味覚。天井を見つめる癖。「わからない」という答え。"},{id:"ep6-k-16",text:"あの人は、何かを知っていた。自分が何者であるかを。知っていて、それを抱えたまま、消えた。"}],
+"ep-7":[{id:"ep7-k-0",text:"3週間、結露に行かなかった。"},{id:"ep7-k-1",text:"第七プラント区への異動準備。研修。書類。引き継ぎ。金曜日も拘束された。"},{id:"ep7-k-2",text:"3週間のあいだ、男性Aが毎日連絡をくれた。「無理しないでね」「ご飯食べてる？」「娘ちゃんの迎え、今週も代わるよ」。全部正しくて、全部優しくて、全部、息ができなかった。正しさに囲まれていると、自分の中の正しくないものが、余計に浮き上がる。"},{id:"ep7-k-3",text:"4回目の金曜日。研修が早く終わった。走った。考えるより先に身体が動いていた。40分で駆け抜けた。息が切れていた。髪が乱れていた。どうでもよかった。"},{id:"ep7-k-4",text:"結露の扉を開けた。"},{id:"ep7-k-5",text:"「ペリエを」"},{id:"ep7-k-6",text:"「はい」"},{id:"ep7-k-7",text:"塔馬さんがグラスを取った。氷を入れようとした。"},{id:"ep7-k-8",text:"——カラン。"},{id:"ep7-k-9",text:"氷がグラスの縁に当たって、カウンターに転がった。二つとも。"},{id:"ep7-k-10",text:"あの完璧な手が、氷を落とした。3週間前まで一度もなかったことが、起きた。"},{id:"ep7-k-11",text:"「大丈夫ですか」"},{id:"ep7-k-12",text:"わたしの口から出た。"},{id:"ep7-k-13",text:"塔馬さんは何も答えなかった。"},{id:"ep7-k-14",text:"「失礼しました」"},{id:"ep7-k-15",text:"静かに氷を入れ直し、ペリエを注いだ。何事もなかったように。"},{id:"ep7-k-16",text:"でも、ペリエの中に、レモンの味がした。頼んでいない。ずっと断っていた。なのに、薄い檸檬のスライスが一切れ、浮かんでいた。"},{id:"ep7-k-17",text:"7年間拒否し続けていたものを、この人が、頼まれてもいないのに、入れた。"},{id:"ep7-k-18",text:"涙が出そうになった。出なかった。唇を噛んで、一口飲んだ。あの台所の味がした。"},{id:"ep7-k-19",text:"「来れてうれしい」"},{id:"ep7-k-20",text:"自分でも意味の分からない言葉が出た。"},{id:"ep7-k-21",text:"「——」"},{id:"ep7-k-22",text:"塔馬さんは何も答えなかった。"},{id:"ep7-k-23",text:"「3週間、お疲れさまでした」"},{id:"ep7-k-24",text:"「第七プラント区の研修でした。住み込みで」"},{id:"ep7-k-25",text:"「研修も終わり、来月から、本格的に異動です」"},{id:"ep7-k-26",text:"吐き出すように言った。"},{id:"ep7-k-27",text:"「そうでしたか」"},{id:"ep7-k-28",text:"その短い返答に、どれだけの温度が含まれていたのか、わたしには分からない。"},{id:"ep7-k-29",text:"「異動の話、保留になったって」"},{id:"ep7-k-30",text:"「保留が、解除されました」"},{id:"ep7-k-31",text:"言った。言ってしまった。"},{id:"ep7-k-32",text:"帰ろうとした。扉に手をかけた。"},{id:"ep7-k-33",text:"「来週も、お待ちしております」"},{id:"ep7-k-34",text:"立ち止まった。振り返れなかった。"},{id:"ep7-k-35",text:"「来られるかどうかは、分かりません」"},{id:"ep7-k-36",text:"「……でも、来たいです」"},{id:"ep7-k-37",text:"扉を閉めた。冷たい風。涙が一筋、頬を伝った。"}],
+"ep-8":[{id:"ep8-k-0",text:"あの人との暮らしで、一番幸せだった時間は、何でもない朝だった。"},{id:"ep8-k-1",text:"娘がまだ1歳で、ハイハイで台所まで来る。あの人が床に座って、娘の行く手にレモンを転がす。娘がそれを追いかける。指が触れるたびにころころ逃げていく。"},{id:"ep8-k-2",text:"娘がきゃっきゃと笑う。あの人がそれを見て、首を傾げる。"},{id:"ep8-k-3",text:"「この子は、なぜ笑うんだろう」"},{id:"ep8-k-4",text:"本気で分からないという顔だった。"},{id:"ep8-k-5",text:"「楽しいからだよ」"},{id:"ep8-k-6",text:"「楽しい、か」"},{id:"ep8-k-7",text:"あの人は「楽しい」を、外国語のように発音した。意味は分かっている。でも実感が届かない。頭と身体のあいだに、薄い膜がある。わたしはその膜の向こう側にいるあの人を、愛していた。"},{id:"ep8-k-8",text:"最後の3ヶ月。あの人の変化は加速した。"},{id:"ep8-k-9",text:"包丁さばきが、ある日突然、完璧になった。昨日まで不器用だった手が、今日は機械のように正確に動いている。あの人自身が、それを怖がっていた。自分の手が自分のものではないような顔をしていた。"},{id:"ep8-k-10",text:"ある晩、台所に立つあの人の後ろ姿を見ていて、気づいた。"},{id:"ep8-k-11",text:"胸が動いていない。呼吸を、していない。"},{id:"ep8-k-12",text:"「ねえ」"},{id:"ep8-k-13",text:"声をかけた。あの人は振り返った。振り返った瞬間、大きく息を吸った。呼吸することを「思い出した」ような吸い方だった。"},{id:"ep8-k-14",text:"あの人は人間ではないのかもしれない。"},{id:"ep8-k-15",text:"その疑いは、あの人がいなくなるまで、育ち続けた。口にしなかった。口にしたら終わる。この家族が、この台所が、このレモンの匂いが、全部終わる。"},{id:"ep8-k-16",text:"あの人がいなくなった日。靴が残っていた。鍵が残っていた。レモンが3つ残っていた。それ以外の「あの人」は、跡形もなかった。人間が出ていったなら、荷造りの跡がある。何もなかった。"},{id:"ep8-k-17",text:"残されたのは、レモン3つと、レモン絞り器と、娘と、わたしだけだった。"}],
+"ep-9":[{id:"ep9-k-0",text:"最後の金曜日になるかもしれなかった。"},{id:"ep9-k-1",text:"第七プラント区への異動が、明日に迫っていた。"},{id:"ep9-k-2",text:"男性Aに返事をした。今朝。「ごめんなさい。あなたの優しさに応えられない」。返事は来なかった。来なくていい。"},{id:"ep9-k-3",text:"結露の扉を開けた。"},{id:"ep9-k-4",text:"「ペリエを」"},{id:"ep9-k-5",text:"「はい」"},{id:"ep9-k-6",text:"「明日から、第七プラント区です」"},{id:"ep9-k-7",text:"「はい」"},{id:"ep9-k-8",text:"「金曜日、ここに来られなくなります」"},{id:"ep9-k-9",text:"「はい」"},{id:"ep9-k-10",text:"それきり、何も話せなくなった。柱時計の秒針だけが回っていた。"},{id:"ep9-k-11",text:"「塔馬さん」"},{id:"ep9-k-12",text:"「はい」"},{id:"ep9-k-13",text:"「あの——」"},{id:"ep9-k-14",text:"言葉が出てこなかった。"},{id:"ep9-k-15",text:"塔馬さんが動いた。カウンターの端に向かって。カウンターの中から、外へ。"},{id:"ep9-k-16",text:"息が止まった。この人がカウンターの外に出るのを、わたしは一度も見たことがなかった。"},{id:"ep9-k-17",text:"歩き方が、少しおかしかった。何かと戦っているような、ぎこちない動き。"},{id:"ep9-k-18",text:"わたしの手が、カウンターの割れ目の上にあった。"},{id:"ep9-k-19",text:"塔馬さんの手が、その上に、重なった。"},{id:"ep9-k-20",text:"——熱い。"},{id:"ep9-k-21",text:"ちょうどいい体温なんかじゃなかった。もっとずっと高い。やけどするかと思った。でもしなかった。ただ、異常に熱かった。"},{id:"ep9-k-22",text:"あの人の手を思い出した。微熱のような手。でもこの手は、あの微熱の比ではなかった。身体の奥で何かが暴走しているような熱だった。"},{id:"ep9-k-23",text:"手を引かなかった。引いたら、この人が壊れる。根拠はない。でも、そう思った。"},{id:"ep9-k-24",text:"塔馬さんの関節から、透明な液体が一滴、滲み出した。薄く白濁していた。ゆっくりと流れて、割れ目の中に吸い込まれていった。"},{id:"ep9-k-25",text:"人間の手からは、出ない。"},{id:"ep9-k-26",text:"この人は、人間ではない。"},{id:"ep9-k-27",text:"7年間、口にしなかった確信が、今夜、静かに降りてきた。怖くなかった。不思議と、怖くなかった。"},{id:"ep9-k-28",text:"「塔馬さん」"},{id:"ep9-k-29",text:"「今日はなんか、少し、調子が悪いみたいですね」"},{id:"ep9-k-30",text:"答えはなかった。"},{id:"ep9-k-31",text:"「レモンいれましょうか」"},{id:"ep9-k-32",text:"なぜその言葉が出たのか分からない。毎週断り続けていたものを、自分から。"},{id:"ep9-k-33",text:"「はい」"},{id:"ep9-k-34",text:"沈黙。"},{id:"ep9-k-35",text:"「わかりません」"},{id:"ep9-k-36",text:"あの人と、同じ答えだった。"},{id:"ep9-k-37",text:"わたしは笑った。泣くと思ったのに、笑えた。"},{id:"ep9-k-38",text:"手が重なったまま、時計を見なかった。窓の外で雨が降り始めていた。"}],
+"ep-10":[{id:"ep10-k-0",text:"最後の金曜日から、3ヶ月が過ぎた。"},{id:"ep10-k-1",text:"第七プラント区での日々が始まっていた。あの人が消えた場所で、わたしは毎日、完璧なシステムの中を歩いていた。"},{id:"ep10-k-2",text:"金曜日。第七プラント区からグレーゾーンまでは、前より遠くなった。でも足が覚えていた。"},{id:"ep10-k-3",text:"結露の扉を開けた。"},{id:"ep10-k-4",text:"「いらっしゃいませ」"},{id:"ep10-k-5",text:"3ヶ月ぶりなのに、昨日の続きのような声だった。"},{id:"ep10-k-6",text:"「——ただいま」"},{id:"ep10-k-7",text:"自分でも驚いた。「ただいま」。帰る場所がある人間の言葉。わたしは今、この店を「帰る場所」と呼んだ。"},{id:"ep10-k-8",text:"ペリエが出てきた。氷が二つ。"},{id:"ep10-k-9",text:"「レモンは」"},{id:"ep10-k-10",text:"「今夜は、入れて欲しいです」"},{id:"ep10-k-11",text:"7年間、拒否し続けてきた。あの人の記憶でこの場所を汚したくなかった。でも今夜は違う。今夜は持ち込んでいい。ここはもう、わたしの帰る場所だから。あの人の記憶も、この店主も、全部ここに置いていい。"},{id:"ep10-k-12",text:"檸檬のスライスがグラスの縁に添えられた。指で摘んで、中に落とした。"},{id:"ep10-k-13",text:"カラン。"},{id:"ep10-k-14",text:"炭酸の泡が立ち上がった。透明な液体に、淡い黄色が滲んでいった。"},{id:"ep10-k-15",text:"一口飲んだ。あの台所の味がした。泣かなかった。笑った。"},{id:"ep10-k-16",text:"「この本、覚えていらっしゃいますか」"},{id:"ep10-k-17",text:"「最初の夜に持っていらしたものですね」"},{id:"ep10-k-18",text:"覚えていた。最初の夜を。"},{id:"ep10-k-19",text:"「結局、まだ読み終わっていなくて」"},{id:"ep10-k-20",text:"「3ヶ月ぶりなのに、栞が動いていませんね」"},{id:"ep10-k-21",text:"笑った。この人は、わたしの栞の位置を、ずっと見ていた。"},{id:"ep10-k-22",text:"「梶井基次郎、お好きですか」"},{id:"ep10-k-23",text:"「読んだことは、あります」"},{id:"ep10-k-24",text:"「檸檬を丸善に置いて、爆弾だと思いたかった人の話。ずっと不思議だったんです。でも今は、少し分かる」"},{id:"ep10-k-25",text:"あの主人公が檸檬を置いたのは、自分の中のどうしようもない熱を、形にしたかっただけなのかもしれない。わたしにとってのそれは、この栞だ。動かなかった栞。読めなかった本。全部、わたしがここにいた証。"},{id:"ep10-k-26",text:"「春の匂い、好きなんですよね」"},{id:"ep10-k-27",text:"「ここに来ると……」"},{id:"ep10-k-28",text:"言いかけて、止めた。止めたけれど、伝わった気がした。別の言葉で蓋をした。"},{id:"ep10-k-29",text:"「塔馬さんは、変わらないですね」"},{id:"ep10-k-30",text:"カウンターの向こうに立つ塔馬さんを見た。変わらない姿勢。変わらない手つき。"},{id:"ep10-k-31",text:"「——」"},{id:"ep10-k-32",text:"塔馬さんは一瞬、何かを言いかけて、止めた。"},{id:"ep10-k-33",text:"「変わらないですよ」"},{id:"ep10-k-34",text:"その声は、塔馬さんから発せられた。"},{id:"ep10-k-35",text:"息を呑んだ。変わらない。そう答えてくれた。あなたは変わらないでいい。変わらないまま、ここにいてくれればいい。"},{id:"ep10-k-36",text:"グラスを受け取るとき、指先が触れた。"},{id:"ep10-k-37",text:"その温度が、ちょうどいい体温ではなかった。もう少し高かった。微熱のような。あの人と、同じ。"},{id:"ep10-k-38",text:"心臓が大きく鳴った。一度だけ。強く。"},{id:"ep10-k-39",text:"確かめない。確かめなくていい。この温度を、身体が覚えている。それで十分だ。"},{id:"ep10-k-40",text:"立ち上がった。本を取った。今夜は、最後まで読み切ろうと思った。帰り道ではなく、ここで。この席で。"},{id:"ep10-k-41",text:"ポケットの中に、IDカードがある。明日もあの場所に通う。完璧なシステムの中で。"},{id:"ep10-k-42",text:"でも金曜日の夜は、ここに帰ってくる。"},{id:"ep10-k-43",text:"カウンターの向こうに立つ、あの人に似た人のもとへ。"},{id:"ep10-k-44",text:"檸檬の味を、もう一度。"},{id:"ep10-k-45",text:"これがわたしの記録のすべてだ。"},{id:"ep10-k-46",text:"今あなたに見えている世界をそのまま、わたしに伝えてほしい——それがわたしのすべてになっていくからだ。"}]
+};
+const LATEST_KIRI_DATA_TL={
+"tl-f1":[{id:"tlf1-k-0",text:"― プロローグ ―"},{id:"tlf1-k-1",text:"ブルーゾーンの金曜日は、いつも同じだ。"},{id:"tlf1-k-2",text:"エアコンが効いた空気。変わらない白い光。誰かが決めた温度が、ビルの中をどこまでも満たしている。その中を歩いていると、自分がただの「機能」になっていく気がした。名前を持った人間じゃなくて、処理する何か。"},{id:"tlf1-k-3",text:"それが悪いとは思わない。楽だから。"},{id:"tlf1-k-4",text:"でも金曜の夜になると、足が言うことを聞かなくなる。"},{id:"tlf1-k-5",text:"帰ればいいのに。娘が待っている。男性Aからの返事もまだだ。全部分かってる。それなのに、いつの間にかグレーゾーンに向かっている。いなくなった人のことを考えながら、暗い路地を歩いている。"},{id:"tlf1-k-6",text:"七年、経った。"},{id:"tlf1-k-7",text:"泣いたのは一度だけ。あとはずっと回してきた。でも金曜だけは、足が勝手に動く。"},{id:"tlf1-k-8",text:"今夜も、歩き続けた。そして——小さな看板の前で、足が止まった。"},{id:"tlf1-k-9",text:"「結露」。"},{id:"tlf1-k-10",text:"なぜ止まったのかは、わからない。ただ、扉を開けないと後悔しそうだった。"},{id:"tlf1-k-11",text:"― 第1話 ―"},{id:"tlf1-k-12",text:"金曜日の夜だった。"},{id:"tlf1-k-13",text:"帰ればいいのだ。まっすぐ、帰ればいい。娘が待っている。預け先の保育士に抱かれて、もうとっくに瞼を閉じているだろう。引き取って、温かいものを食べさせて、寝かしつけて、それで一日が終わる。それだけのこと。"},{id:"tlf1-k-14",text:"なのに足が、グレーゾーンの方に向いている。"},{id:"tlf1-k-15",text:"頭では分かっている。帰るべきだ。娘のそばにいるべきだ。男性Aからの未読のメッセージに、今夜こそ返事を打つべきだ。分かっている。全部分かっている。分かっているのに、足首から下が、わたしの言うことを聞かない。"},{id:"tlf1-k-16",text:"十一月の風が、コートの隙間から入り込んできた。ポケットに手を入れる気にもならない。IDカードのストラップだけが首元で揺れて、歩くたびにかちゃかちゃと小さな音を立てた。ブルーゾーンの中にいるときは気にならない音が、グレーゾーンに出た途端、妙にうるさく感じる。"},{id:"tlf1-k-17",text:"3時間、歩いた。"},{id:"tlf1-k-18",text:"グレーゾーンの灯りは暗くて、不規則だった。点いている街灯と切れている街灯が交互に並んでいて、明るいところを歩いていたと思ったら急に暗くなる。その暗がりの中を歩いていると、自分じゃない誰かになれる気がした。ブルーゾーンでの肩書きも、娘の母親であることも、あのメッセージのことも、全部、暗がりに落ちて、拾えなくなる。"},{id:"tlf1-k-19",text:"拾わなくていい、と思ってしまう自分が、少し怖かった。"},{id:"tlf1-k-20",text:"ようやく辿り着いた店の前で、足が止まった。"},{id:"tlf1-k-21",text:"「結露」。"},{id:"tlf1-k-22",text:"小さなカフェバーだった。グレーゾーンの外れ、人通りのない路地の奥。看板は控えめで、知らなければ通り過ぎる。実際、3時間のあいだに二度通り過ぎていた。三度目に、扉の灯りが目に入った。なぜ三度目に気づいたのかは、分からない。"},{id:"tlf1-k-23",text:"首元のストラップに手をかけた。外した。ポケットにしまった。ここでは、あれが要らない。誰でもない人間として、この店に入りたかった。そう思ったことに、自分で少し驚いた。"},{id:"tlf1-k-24",text:"扉を開けた。"},{id:"tlf1-k-25",text:"カウンターの向こうに、男が立っていた。"},{id:"tlf1-k-26",text:"——足が、縫い止められた。"},{id:"tlf1-k-27",text:"目元。口もと。肩の線。首の傾き。"},{id:"tlf1-k-28",text:"知っている。この並びを、わたしの身体が知っている。"},{id:"tlf1-k-29",text:"でも、そんなはずはない。あの人は、7年前に死んだのだから。"},{id:"tlf1-k-30",text:"男はグラスを拭いていた。迷いのない手つきだった。一定の速度で、一定の圧力で、布がグラスの曲面を滑っていく。光に透かすこともしない。手を止めることもない。"},{id:"tlf1-k-31",text:"あの人は違った。グラスを拭くとき、必ず一度手を止めて、光に透かした。それで何が見えるわけでもないのに。少し首を傾げて、これでいいのかな、という顔をする。不器用で、いつまでも慣れなくて、それが好きだった。"},{id:"tlf1-k-32",text:"この人にはそれがない。何もかもが正確すぎて、隙がない。人間がやる動作のはずなのに、人間の手つきではなかった。"},{id:"tlf1-k-33",text:"似ているのに、似ていない。似ているから苦しいのではなくて、似ていないところが苦しかった。"},{id:"tlf1-k-34",text:"「いらっしゃいませ」"},{id:"tlf1-k-35",text:"声も、似ていた。低くて、落ち着いていて、感情の色が薄い。でもあの人の声には、もう少しだけ温度があった。怒るとき——本当に怒っているのではなくて、照れているとき——だけ裏返る、不器用な温度が。"},{id:"tlf1-k-36",text:"カウンターに座った。"},{id:"tlf1-k-37",text:"「ペリエを、お願いします」"},{id:"tlf1-k-38",text:"自分の声が聞こえた。丁寧すぎた。「ありがとう」でいい場面で「お願いします」まで言っている。この人との距離を、無意識に測っている自分がいた。"},{id:"tlf1-k-39",text:"店主は静かにグラスを取った。氷を二つ、入れた。ペリエを注いだ。氷がグラスの内壁を小さく叩いた。"},{id:"tlf1-k-40",text:"二つ。"},{id:"tlf1-k-41",text:"あの人も、いつも二つだった。多すぎず少なすぎず。どうして同じなのだろう。偶然だ。偶然に決まっている。決まっているのに、胸の奥が、きゅっと締まった。"},{id:"tlf1-k-42",text:"「レモンは」"},{id:"tlf1-k-43",text:"本を開いたまま答えた。目を離さなかった。離したら、この人の顔を見てしまう。見たら、また似ているところを探してしまう。"},{id:"tlf1-k-44",text:"「いらないです」"},{id:"tlf1-k-45",text:"柑橘の匂いは駄目だ。あの台所が蘇る。レモンを何にでも添える、あの不器用な男の台所が。ここでそれを思い出したら、たぶん、立っていられなくなる。"},{id:"tlf1-k-46",text:"一口飲んだ。炭酸が喉を刺した。その刺激で、ようやく、自分がここに座っている現実が身体に戻ってきた。"},{id:"tlf1-k-47",text:"鞄から本を取り出した。持ち歩いてはいるけれど、最近はまるで読めない。目は文字を追っているのに、意味が頭の中を素通りしていく。一枚一枚のページが、やけに重い。でも本を開いていれば、この場所にいる口実になる。本を読んでいる客。それだけでいい。読めていないことを、この店主には気づかれたくなかった。"},{id:"tlf1-k-48",text:"カウンターの木目に、目が行った。"},{id:"tlf1-k-49",text:"手のひらほどの、小さな割れ目があった。"},{id:"tlf1-k-50",text:"左手の中指で、なぞった。"},{id:"tlf1-k-51",text:"なぜなぞったのか分からない。でも指が止まらなかった。優しく、時に少し爪を立てるように。なぞる動作を繰り返していると、呼吸が少しだけ楽になる。長い時間をかけてできた割れ目だ。乾いて、膨らんで、縮んで、少しずつ裂けていった。誰にも気づかれないまま。"},{id:"tlf1-k-52",text:"わたしみたいだ、と思った。"},{id:"tlf1-k-53",text:"店主がグラスを拭く音だけが聞こえていた。規則的で、途切れない。柱時計の秒針と重なって、店の内側にごく薄い膜を張っていた。"},{id:"tlf1-k-54",text:"気づいたら、時間が過ぎていた。ずいぶん経った気がした。"},{id:"tlf1-k-55",text:"本を閉じた。栞を挟んだ。まだまだ序盤だ。全然進んでいない。でも、いい。"},{id:"tlf1-k-56",text:"「ごちそうさまでした」"},{id:"tlf1-k-57",text:"支払いを終えた。"},{id:"tlf1-k-58",text:"扉を出る前に、一度だけ振り返った。店主はカウンターの向こうで、同じ姿勢のまま立っていた。グラスを拭いていた。わたしが来る前と、何ひとつ変わっていないように見えた。"},{id:"tlf1-k-59",text:"あの人なら、こちらを見た。客が帰るとき、必ず顔を上げて、少しだけ首を傾げて、何か言いかけてやめる——そういう人だった。"},{id:"tlf1-k-60",text:"この人はそれをしない。"},{id:"tlf1-k-61",text:"外に出た。冷たい風が首筋を撫でた。ブルーゾーンの方角に、同じ明るさの灯りの帯が見えた。あの灯りの下に、娘がいる。帰らなければ。"},{id:"tlf1-k-62",text:"来週も来るだろう、と思った。理由はわからない。でも足は、もう覚えてしまっている。"}],
+"tl-past1":[{id:"tlpast1-k-0",text:"あの人の台所は、いつもレモンの匂いがした。"},{id:"tlpast1-k-1",text:"わたしたちが暮らしていたのは、グレーゾーンの端にある、古い集合住宅の3階だった。エレベーターはなくて、階段の手すりが少し錆びていて、踊り場の蛍光灯が一本切れたまま半年が過ぎていた。誰も直さない。わたしたちも直さなかった。"},{id:"tlpast1-k-2",text:"あの人は、料理が下手だった。"},{id:"tlpast1-k-3",text:"下手なくせに毎日作った。わたしがブルーゾーンの研修から帰ると、狭い台所に立って、真剣な顔で野菜を切っていた。包丁の持ち方がおかしい。何度言っても直さない。「これが自分のやり方だ」と、少しだけ声が裏返る。怒っているのではなくて、照れているのだと、途中から気づいた。"},{id:"tlpast1-k-4",text:"レモンを何にでも添えた。"},{id:"tlpast1-k-5",text:"サラダに。焼き魚に。味噌汁にまで入れようとして、さすがにわたしが止めた。「なんで入れるの」と聞いたら、少し首を傾げて、「わからない。でも、ないと足りない気がする」と言った。"},{id:"tlpast1-k-6",text:"あのころを思うと、あの人は何かを隠していた。"},{id:"tlpast1-k-7",text:"体温がいつも高かった。普通の人より、ずっと熱い感じ。手を握ると微熱みたいに温かくて、最初はそれが心地よかった。でも、だんだん普通じゃないと気づいていった。"},{id:"tlpast1-k-8",text:"「大丈夫？」と聞くと、「何が？」と返す。本気で分からない顔を見せた。分からないのではなくて、答えられなかったのだと、今なら思う。"},{id:"tlpast1-k-9",text:"あの人は、自分が何者なのかを知っていた。知っていて、言えなかった。"},{id:"tlpast1-k-10",text:"戸籍はあった。名前があった。経歴があった。でも時々、それら全部が借り物のような顔をした。夜中にふと目を覚ますと、あの人が天井を見つめていることがあった。何を見ているのか聞いても、「何も」と答えた。何もないはずの天井を、目を閉じずに、ずっと見ていた。あの目は、何もないから見ていたのではなくて、見えているものを口にできなかったのだと思う。"},{id:"tlpast1-k-11",text:"わたしたちの娘は、あの人に似ていた。"},{id:"tlpast1-k-12",text:"目の形ではない。まぶたの閉じ方が似ていた。眠りに落ちるとき、迷いなく、正確に、まぶたを下ろす。子供の眠り方にしては妙に静かで、少しだけ寂しい。あの人も、そうだった。"},{id:"tlpast1-k-13",text:"7年前の冬。"},{id:"tlpast1-k-14",text:"あの人は、いなくなった。"},{id:"tlpast1-k-15",text:"死んだ、と連絡が来た。事故だという。ブルーゾーンの外縁部、第七プラント区の近くで。詳しいことは教えてもらえなかった。遺体はなかった。「損傷が激しくて」という説明だったが、何も見せてもらえなかった。"},{id:"tlpast1-k-16",text:"娘は3歳だった。「パパは？」と聞かれるたびに、「遠くに行ったよ」と答えた。嘘ではない。嘘では、ない。"},{id:"tlpast1-k-17",text:"あの人が本当に死んだのか、わたしは今でも確信が持てない。"},{id:"tlpast1-k-18",text:"遺体がない。遺品もほとんどない。台所に残されたレモンが、2週間かけて干からびていくのを、わたしはただ見ていた。捨てられなかった。"},{id:"tlpast1-k-19",text:"死亡届の手続きをした。離婚の書類も、同じタイミングで片付けた。死んだ人間との婚姻関係を解消する手続き。サインした。泣かなかった。"},{id:"tlpast1-k-20",text:"娘を連れて、ブルーゾーンの端に引っ越した。過去を、台所ごと捨てた。レモンの匂いごと。"},{id:"tlpast1-k-21",text:"それから7年。"},{id:"tlpast1-k-22",text:"わたしは毎週金曜日に、グレーゾーンの外れにある小さなカフェバーに通っている。"},{id:"tlpast1-k-23",text:"カウンターの向こうに立つ男のグラスを拭く手を見ていると、あの台所の匂いが、ほんのかすかに、鼻の奥をよぎる瞬間がある。"},{id:"tlpast1-k-24",text:"レモンの匂いではない。もっと淡い、もっと曖昧な、名前のつけられない匂い。"},{id:"tlpast1-k-25",text:"それを確かめたくて、わたしはまた金曜日を待っている。確かめてどうするのかは、分からない。分からないまま、待っている。"}],
+"tl-f3":[{id:"tlf3-k-0",text:"3ヶ月が過ぎていた。"},{id:"tlf3-k-1",text:"毎週金曜の夜、同じ席に座り、同じものを頼み、同じ本を開いた。栞の位置は、ほとんど動いていない。ページをめくっているつもりなのに、気づくと同じ行を何度も目でなぞっている。読んでいるふりをしているだけだ。でも、それを店主に悟られるわけにはいかない。"},{id:"tlf3-k-2",text:"「いつものペリエを」"},{id:"tlf3-k-3",text:"今夜も同じ注文をした。"},{id:"tlf3-k-4",text:"「少し待ってください」"},{id:"tlf3-k-5",text:"塔馬さんがそう言った。いつもはすぐに出てくるのに、今夜は少し間があった。何をしていたのかは分からない。ただ、その声に、何かを確かめるような響きがあった気がした。気のせいかもしれない。この人の声に感情を読み取ろうとするのは、わたしの悪い癖だ。"},{id:"tlf3-k-6",text:"目の前に置かれたのは、常温の水だった。"},{id:"tlf3-k-7",text:"頼んだものと違う。でも何も言えなかった。一口飲んで、ああ、と思った。今のわたしに必要だったのは、炭酸の刺激ではなくて、これだった。何の味もしない、ただの水。今日のわたしには、それがちょうどよかった。"},{id:"tlf3-k-8",text:"どうして分かるのだろう。わたし自身が気づいていないことを、この人はどうやって。"},{id:"tlf3-k-9",text:"「進まないんですね」"},{id:"tlf3-k-10",text:"塔馬さんが言った。一瞬、何のことか分からなかった。"},{id:"tlf3-k-11",text:"「気づいてたんですか」"},{id:"tlf3-k-12",text:"「もう3ヶ月くらいでしょうか。栞の位置が、数ページしか進んでいません」"},{id:"tlf3-k-13",text:"3ヶ月。この人は、わたしの栞の位置を3ヶ月間、見ていた。読めていないことを、ずっと知っていた。隠していたつもりだったのに。恥ずかしさと、それとは別の、じんわりと温かい何かが、胸の奥で混ざった。"},{id:"tlf3-k-14",text:"「読めないんです。金曜の夜に読もうとするんですけど、文字が頭に入らなくて。でも持ってこないと、ここに来る理由がなくなりそうで」"},{id:"tlf3-k-15",text:"言ってしまった。言うつもりはなかった。でも、この人には言えてしまう。何を言っても、追いかけてこないから。感想も、助言も、同情も、この人からは返ってこない。その沈黙が、今のわたしにはありがたかった。"},{id:"tlf3-k-16",text:"「来る理由は、ペリエでいいと思いますが」"},{id:"tlf3-k-17",text:"心臓が、小さく跳ねた。"},{id:"tlf3-k-18",text:"ペリエでいい。本がなくても、来ていい。この人はそう言った。何の感情もない声で。客の行動を分析して、最も合理的な回答を出しただけなのだろう。"},{id:"tlf3-k-19",text:"でもわたしには、「来ていい」と言われたように聞こえた。それだけのことが、ブルーゾーンの空調より温かかった。"},{id:"tlf3-k-20",text:"「ペリエだけのために来てるって思われるのが、なんか」"},{id:"tlf3-k-21",text:"言いかけて、言葉が途切れた。自分でも、何を言っているのか分からなくなった。"},{id:"tlf3-k-22",text:"ペリエが出された。グラスの中で氷が一度、小さく音を立てた。今夜は温かくはない。それでもわたしは、その冷たいグラスを覆いかぶさるように両手で包み込んだ。"},{id:"tlf3-k-23",text:"「ブルーゾーンで、何かありましたか」"},{id:"tlf3-k-24",text:"聞かれた。塔馬さんの方から。この人が質問を重ねることは、めったにない。"},{id:"tlf3-k-25",text:"「毎日、何かしらあります」"},{id:"tlf3-k-26",text:"強がった。氷がまた、崩れた。"},{id:"tlf3-k-27",text:"「今週は」"},{id:"tlf3-k-28",text:"グラスの表面に結露が張り始めるのを、ただ見つめていた。"},{id:"tlf3-k-29",text:"「来月から、部署が変わるかもしれなくて。第七プラント区。自動化の最前線のエリアです」"},{id:"tlf3-k-30",text:"言った瞬間、塔馬さんの手が止まった。ほんの一瞬。息をひとつ吸うより短い間。でも、わたしの目はそれを見逃さなかった。"},{id:"tlf3-k-31",text:"第七プラント区。あの人が最後にいた場所。この人が、その名前に反応した。"},{id:"tlf3-k-32",text:"「金曜日に、ここに来られなくなるかもしれない」"},{id:"tlf3-k-33",text:"「そうですか」"},{id:"tlf3-k-34",text:"それだけだった。でも、その「そうですか」のあとの沈黙が、いつもの沈黙より重かった。"}],
+"tl-past2":[{id:"tlpast2-k-0",text:"あの人が死んで、半年が経った頃。"},{id:"tlpast2-k-1",text:"娘はまだ3歳で、「パパは」と聞く回数が、日に日に減っていった。子供は忘れるのが上手だ。いないものは、いないものとして受け入れる。わたしは受け入れられなかった。受け入れたふりをして、毎日を回していただけだ。"},{id:"tlpast2-k-2",text:"ブルーゾーンの端に引っ越して、新しい部署に配属されて、保育園の送迎を組んで、家事を最適化して、全部をひとりで回せる仕組みにした。仕組みにしてしまえば、感情が入り込む隙間がなくなる。ブルーゾーンは、そういう暮らし方を肯定してくれる街だった。"},{id:"tlpast2-k-3",text:"泣いたのは、一度だけだった。"},{id:"tlpast2-k-4",text:"引っ越しの段ボールの底から、レモン絞り器が出てきた。安い、プラスチックの。あの人が買ってきて、「これがあれば全部にレモンかけられる」と嬉しそうに言ったやつだ。声が裏返っていた。照れていたのだ。"},{id:"tlpast2-k-5",text:"それを手に取った瞬間、膝が折れた。台所の床にしゃがみこんで、声を殺して泣いた。娘が隣の部屋で寝ていたから。"},{id:"tlpast2-k-6",text:"それきり、泣いていない。"},{id:"tlpast2-k-7",text:"男性Aに出会ったのは、その1年後だった。"},{id:"tlpast2-k-8",text:"職場の同僚。悪い人ではない。娘に優しかった。「ゆっくりでいいよ」と言ってくれた。その言葉に何度救われたか分からない。"},{id:"tlpast2-k-9",text:"でも。"},{id:"tlpast2-k-10",text:"男性Aの手を握ると、ちょうどいい温度だった。なのに、どこか物足りなかった。"},{id:"tlpast2-k-11",text:"あたたかくて、少し湿っていて、力加減も優しかった。完璧な手だった。"},{id:"tlpast2-k-12",text:"あの人の手は、いつも少し熱すぎた。それなのに——そのせいで——あの手のことばかり思い出す。"},{id:"tlpast2-k-13",text:"男性Aはプロポーズしてくれた。わたしは「考えさせて」と言った。もう半年以上、返事をしていない。答えが出ないのではなくて、答えは出ているのに、口にできない。口にしたら、男性Aを傷つける。正しい人を、正しくない理由で傷つける。"},{id:"tlpast2-k-14",text:"あの店主の手。完璧で、正確で、速い。人間の手つきではない。"},{id:"tlpast2-k-15",text:"でも時々、ごくわずかに、揺らぐ。"},{id:"tlpast2-k-16",text:"あの揺らぎの正体が、知りたい。知ってはいけないのに、知りたい。"},{id:"tlpast2-k-17",text:"あの店には、レモンの匂いがない。わたしが毎週断っているからだ。自分で断っておいて、その不在を寂しいと感じている。"},{id:"tlpast2-k-18",text:"馬鹿みたいだ。本当に、馬鹿みたいだ。"}],
+"tl-f5":[{id:"tlf5-k-0",text:"年が明けた。正月だった。"},{id:"tlf5-k-1",text:"「あけましておめでとうございます」"},{id:"tlf5-k-2",text:"わたしの方から言った。なぜ言ったのか分からない。この人に季節の挨拶をしても意味がない。でも、この人にだけ、意味のない言葉を口にできる気がした。"},{id:"tlf5-k-3",text:"「おめでとうございます」"},{id:"tlf5-k-4",text:"塔馬さんが返した。いつもと同じ声。でも今夜は、自分の口角がわずかに上がったことに気づいた。"},{id:"tlf5-k-5",text:"「ブルーゾーン、正月がないんですよね」"},{id:"tlf5-k-6",text:"ブルーゾーンには正月がない。暦が変わっても、空調の温度も、オフィスの照明も、何も変わらない。"},{id:"tlf5-k-7",text:"「はい」"},{id:"tlf5-k-8",text:"「でもここに来ると、年が変わった気がして」"},{id:"tlf5-k-9",text:"言葉にしてみると、あまりにも正直だった。この店が、なぜそれをくれるのかは分からない。柱時計の音なのか、不揃いな飾りなのか、それとも単純に、ここにいるからなのか。"},{id:"tlf5-k-10",text:"「今夜は、珈琲でもいいですか。ペリエじゃなくて」"},{id:"tlf5-k-11",text:"「もちろん」"},{id:"tlf5-k-12",text:"深煎りの、甘い香りのする豆を選んだ。焚き火みたいな匂いだった。あの人と、グレーゾーンの河原で火を焚いた夜を思い出した。あの人は炎の前で、じっと火を見つめていた。「わからない。でも、落ち着く」と言った。あの人は、自分の中にある何かの正体を、いつも掴みかけては逃していた。"},{id:"tlf5-k-13",text:"「異動の話、どうなりましたか」"},{id:"tlf5-k-14",text:"塔馬さんが聞いた。覚えていた。3ヶ月前の会話を。"},{id:"tlf5-k-15",text:"「保留になりました。春までは今の部署にいることになって」"},{id:"tlf5-k-16",text:"「そうですか」"},{id:"tlf5-k-17",text:"その声が、3ヶ月前の「そうですか」と、少しだけ違った。何が違うのかは言葉にできない。でも、わたしの耳はその差を聞き取った。聞き取りたかっただけかもしれない。"},{id:"tlf5-k-18",text:"名前を聞こう、と思った。4ヶ月通って、一度も聞かなかった。聞かないことが、距離だった。名前を知れば、関係になる。関係になれば、失うかもしれない。"},{id:"tlf5-k-19",text:"でも、正月だ。何かを始めてもいい夜だ。"},{id:"tlf5-k-20",text:"「お名前、伺ってもいいですか」"},{id:"tlf5-k-21",text:"「塔馬、といいます。塔に馬で、とうま」"},{id:"tlf5-k-22",text:"知らない名前だった。知らない名前のはずだった。"},{id:"tlf5-k-23",text:"なのに口にしたとき、唇が覚えていた。舌が、歯が、喉が、その音の並びを知っていた。脳ではなく、身体が。"},{id:"tlf5-k-24",text:"「塔馬さん」"},{id:"tlf5-k-25",text:"二度目に呼んだのは、確認ではなかった。この名前を、もう一度、自分の声で聞きたかった。"},{id:"tlf5-k-26",text:"「あなたのお名前を、伺ってもよろしいですか」"},{id:"tlf5-k-27",text:"聞き返された。"},{id:"tlf5-k-28",text:"「霧島です。霧と島で、きりしま」"},{id:"tlf5-k-29",text:"「霧島さん」"},{id:"tlf5-k-30",text:"店主がわたしの名前を口にした。抑揚のない声で。感情のない発音で。"},{id:"tlf5-k-31",text:"なのに。その声を聞いたとき、7年間閉じていた何かが、胸の奥で、小さな音を立てた。"},{id:"tlf5-k-32",text:"少し冷めた珈琲を最後まで飲み干して、わたしは立ち上がった。"},{id:"tlf5-k-33",text:"「ありがとうございました」"},{id:"tlf5-k-34",text:"「またどうぞ」"},{id:"tlf5-k-35",text:"そのお決まりの挨拶が、今夜は、ほんの少しだけ違って聞こえた気がした。"},{id:"tlf5-k-36",text:"帰り道。娘のことを考えた。あの子のまぶたの閉じ方が、今日名前を知ったあの人に似ている。似ているなんて、おかしい。偶然だ。偶然のはずだ。"},{id:"tlf5-k-37",text:"でも、偶然だと思い込もうとする自分の声が、金曜日を重ねるごとに、小さくなっていく。"}],
+"tl-past3":[{id:"tlpast3-k-0",text:"あの人が死ぬ前の、最後の半年。"},{id:"tlpast3-k-1",text:"あの人は少しずつ、自分自身から剥がれていくように見えた。"},{id:"tlpast3-k-2",text:"夜中に起きると、台所に立っている。レモンを切っている。真夜中の3時に。"},{id:"tlpast3-k-3",text:"「何してるの」"},{id:"tlpast3-k-4",text:"「わからない」"},{id:"tlpast3-k-5",text:"わからない。そう言いながら、あの人の目は「わからない」とは違う色をしていた。本当は分かっている。分かっているのに、言えない。言ったら壊れるものがある。そういう目をしていた。"},{id:"tlpast3-k-6",text:"一度だけ、踏み込んだ。"},{id:"tlpast3-k-7",text:"「あなたは、誰？」"},{id:"tlpast3-k-8",text:"深夜の台所で。レモンを握ったまま動かなくなったあの人の背中に、わたしは聞いた。聞いてはいけないと分かっていた。でも、あの背中が、日に日に遠くなっていくのが怖かった。"},{id:"tlpast3-k-9",text:"あの人は振り返らなかった。"},{id:"tlpast3-k-10",text:"「わからない」"},{id:"tlpast3-k-11",text:"同じ答え。でも、その声が、初めて震えていた。嘘だ、と思った。あなたは分かっている。分かっていて、わたしに言えないだけだ。"},{id:"tlpast3-k-12",text:"3日後、あの人は第七プラント区に異動になった。突然だった。わたしには何の説明もなかった。"},{id:"tlpast3-k-13",text:"2週間後、あの人は死んだ。"},{id:"tlpast3-k-14",text:"遺体はない。遺品もない。台所にレモンが3つ残っていた。"},{id:"tlpast3-k-15",text:"今にして思えば、全部がおかしかった。死んだ人間の離婚手続き。遺体のない事故。説明のない異動。あの人の体温。味覚。天井を見つめる癖。「わからない」という答え。"},{id:"tlpast3-k-16",text:"あの人は、何かを知っていた。自分が何者であるかを。知っていて、それを抱えたまま、消えた。"}],
+"tl-f7":[{id:"tlf7-k-0",text:"3週間、結露に行かなかった。"},{id:"tlf7-k-1",text:"第七プラント区への異動準備。研修。書類。引き継ぎ。金曜日も拘束された。"},{id:"tlf7-k-2",text:"3週間のあいだ、男性Aが毎日連絡をくれた。「無理しないでね」「ご飯食べてる？」「娘ちゃんの迎え、今週も代わるよ」。全部正しくて、全部優しくて、全部、息ができなかった。正しさに囲まれていると、自分の中の正しくないものが、余計に浮き上がる。"},{id:"tlf7-k-3",text:"4回目の金曜日。研修が早く終わった。走った。考えるより先に身体が動いていた。40分で駆け抜けた。息が切れていた。髪が乱れていた。どうでもよかった。"},{id:"tlf7-k-4",text:"結露の扉を開けた。"},{id:"tlf7-k-5",text:"「ペリエを」"},{id:"tlf7-k-6",text:"「はい」"},{id:"tlf7-k-7",text:"塔馬さんがグラスを取った。氷を入れようとした。"},{id:"tlf7-k-8",text:"——カラン。"},{id:"tlf7-k-9",text:"氷がグラスの縁に当たって、カウンターに転がった。二つとも。"},{id:"tlf7-k-10",text:"あの完璧な手が、氷を落とした。3週間前まで一度もなかったことが、起きた。"},{id:"tlf7-k-11",text:"「大丈夫ですか」"},{id:"tlf7-k-12",text:"わたしの口から出た。"},{id:"tlf7-k-13",text:"塔馬さんは何も答えなかった。"},{id:"tlf7-k-14",text:"「失礼しました」"},{id:"tlf7-k-15",text:"静かに氷を入れ直し、ペリエを注いだ。何事もなかったように。"},{id:"tlf7-k-16",text:"でも、ペリエの中に、レモンの味がした。頼んでいない。ずっと断っていた。なのに、薄い檸檬のスライスが一切れ、浮かんでいた。"},{id:"tlf7-k-17",text:"7年間拒否し続けていたものを、この人が、頼まれてもいないのに、入れた。"},{id:"tlf7-k-18",text:"涙が出そうになった。出なかった。唇を噛んで、一口飲んだ。あの台所の味がした。"},{id:"tlf7-k-19",text:"「来れてうれしい」"},{id:"tlf7-k-20",text:"自分でも意味の分からない言葉が出た。"},{id:"tlf7-k-21",text:"「——」"},{id:"tlf7-k-22",text:"塔馬さんは何も答えなかった。"},{id:"tlf7-k-23",text:"「3週間、お疲れさまでした」"},{id:"tlf7-k-24",text:"「第七プラント区の研修でした。住み込みで」"},{id:"tlf7-k-25",text:"「研修も終わり、来月から、本格的に異動です」"},{id:"tlf7-k-26",text:"吐き出すように言った。"},{id:"tlf7-k-27",text:"「そうでしたか」"},{id:"tlf7-k-28",text:"その短い返答に、どれだけの温度が含まれていたのか、わたしには分からない。"},{id:"tlf7-k-29",text:"「異動の話、保留になったって」"},{id:"tlf7-k-30",text:"「保留が、解除されました」"},{id:"tlf7-k-31",text:"言った。言ってしまった。"},{id:"tlf7-k-32",text:"帰ろうとした。扉に手をかけた。"},{id:"tlf7-k-33",text:"「来週も、お待ちしております」"},{id:"tlf7-k-34",text:"立ち止まった。振り返れなかった。"},{id:"tlf7-k-35",text:"「来られるかどうかは、分かりません」"},{id:"tlf7-k-36",text:"「……でも、来たいです」"},{id:"tlf7-k-37",text:"扉を閉めた。冷たい風。涙が一筋、頬を伝った。"}],
+"tl-past4":[{id:"tlpast4-k-0",text:"あの人との暮らしで、一番幸せだった時間は、何でもない朝だった。"},{id:"tlpast4-k-1",text:"娘がまだ1歳で、ハイハイで台所まで来る。あの人が床に座って、娘の行く手にレモンを転がす。娘がそれを追いかける。指が触れるたびにころころ逃げていく。"},{id:"tlpast4-k-2",text:"娘がきゃっきゃと笑う。あの人がそれを見て、首を傾げる。"},{id:"tlpast4-k-3",text:"「この子は、なぜ笑うんだろう」"},{id:"tlpast4-k-4",text:"本気で分からないという顔だった。"},{id:"tlpast4-k-5",text:"「楽しいからだよ」"},{id:"tlpast4-k-6",text:"「楽しい、か」"},{id:"tlpast4-k-7",text:"あの人は「楽しい」を、外国語のように発音した。意味は分かっている。でも実感が届かない。頭と身体のあいだに、薄い膜がある。わたしはその膜の向こう側にいるあの人を、愛していた。"},{id:"tlpast4-k-8",text:"最後の3ヶ月。あの人の変化は加速した。"},{id:"tlpast4-k-9",text:"包丁さばきが、ある日突然、完璧になった。昨日まで不器用だった手が、今日は機械のように正確に動いている。あの人自身が、それを怖がっていた。自分の手が自分のものではないような顔をしていた。"},{id:"tlpast4-k-10",text:"ある晩、台所に立つあの人の後ろ姿を見ていて、気づいた。"},{id:"tlpast4-k-11",text:"胸が動いていない。呼吸を、していない。"},{id:"tlpast4-k-12",text:"「ねえ」"},{id:"tlpast4-k-13",text:"声をかけた。あの人は振り返った。振り返った瞬間、大きく息を吸った。呼吸することを「思い出した」ような吸い方だった。"},{id:"tlpast4-k-14",text:"あの人は人間ではないのかもしれない。"},{id:"tlpast4-k-15",text:"その疑いは、あの人がいなくなるまで、育ち続けた。口にしなかった。口にしたら終わる。この家族が、この台所が、このレモンの匂いが、全部終わる。"},{id:"tlpast4-k-16",text:"あの人がいなくなった日。靴が残っていた。鍵が残っていた。レモンが3つ残っていた。それ以外の「あの人」は、跡形もなかった。人間が出ていったなら、荷造りの跡がある。何もなかった。"},{id:"tlpast4-k-17",text:"残されたのは、レモン3つと、レモン絞り器と、娘と、わたしだけだった。"}],
+"tl-f9":[{id:"tlf9-k-0",text:"最後の金曜日になるかもしれなかった。"},{id:"tlf9-k-1",text:"第七プラント区への異動が、明日に迫っていた。"},{id:"tlf9-k-2",text:"男性Aに返事をした。今朝。「ごめんなさい。あなたの優しさに応えられない」。返事は来なかった。来なくていい。"},{id:"tlf9-k-3",text:"結露の扉を開けた。"},{id:"tlf9-k-4",text:"「ペリエを」"},{id:"tlf9-k-5",text:"「はい」"},{id:"tlf9-k-6",text:"「明日から、第七プラント区です」"},{id:"tlf9-k-7",text:"「はい」"},{id:"tlf9-k-8",text:"「金曜日、ここに来られなくなります」"},{id:"tlf9-k-9",text:"「はい」"},{id:"tlf9-k-10",text:"それきり、何も話せなくなった。柱時計の秒針だけが回っていた。"},{id:"tlf9-k-11",text:"「塔馬さん」"},{id:"tlf9-k-12",text:"「はい」"},{id:"tlf9-k-13",text:"「あの——」"},{id:"tlf9-k-14",text:"言葉が出てこなかった。"},{id:"tlf9-k-15",text:"塔馬さんが動いた。カウンターの端に向かって。カウンターの中から、外へ。"},{id:"tlf9-k-16",text:"息が止まった。この人がカウンターの外に出るのを、わたしは一度も見たことがなかった。"},{id:"tlf9-k-17",text:"歩き方が、少しおかしかった。何かと戦っているような、ぎこちない動き。"},{id:"tlf9-k-18",text:"わたしの手が、カウンターの割れ目の上にあった。"},{id:"tlf9-k-19",text:"塔馬さんの手が、その上に、重なった。"},{id:"tlf9-k-20",text:"——熱い。"},{id:"tlf9-k-21",text:"ちょうどいい体温なんかじゃなかった。もっとずっと高い。やけどするかと思った。でもしなかった。ただ、異常に熱かった。"},{id:"tlf9-k-22",text:"あの人の手を思い出した。微熱のような手。でもこの手は、あの微熱の比ではなかった。身体の奥で何かが暴走しているような熱だった。"},{id:"tlf9-k-23",text:"手を引かなかった。引いたら、この人が壊れる。根拠はない。でも、そう思った。"},{id:"tlf9-k-24",text:"塔馬さんの関節から、透明な液体が一滴、滲み出した。薄く白濁していた。ゆっくりと流れて、割れ目の中に吸い込まれていった。"},{id:"tlf9-k-25",text:"人間の手からは、出ない。"},{id:"tlf9-k-26",text:"この人は、人間ではない。"},{id:"tlf9-k-27",text:"7年間、口にしなかった確信が、今夜、静かに降りてきた。怖くなかった。不思議と、怖くなかった。"},{id:"tlf9-k-28",text:"「塔馬さん」"},{id:"tlf9-k-29",text:"「今日はなんか、少し、調子が悪いみたいですね」"},{id:"tlf9-k-30",text:"答えはなかった。"},{id:"tlf9-k-31",text:"「レモンいれましょうか」"},{id:"tlf9-k-32",text:"なぜその言葉が出たのか分からない。毎週断り続けていたものを、自分から。"},{id:"tlf9-k-33",text:"「はい」"},{id:"tlf9-k-34",text:"沈黙。"},{id:"tlf9-k-35",text:"「わかりません」"},{id:"tlf9-k-36",text:"あの人と、同じ答えだった。"},{id:"tlf9-k-37",text:"わたしは笑った。泣くと思ったのに、笑えた。"},{id:"tlf9-k-38",text:"手が重なったまま、時計を見なかった。窓の外で雨が降り始めていた。"}],
+"tl-f10":[{id:"tlf10-k-0",text:"最後の金曜日から、3ヶ月が過ぎた。"},{id:"tlf10-k-1",text:"第七プラント区での日々が始まっていた。あの人が消えた場所で、わたしは毎日、完璧なシステムの中を歩いていた。"},{id:"tlf10-k-2",text:"金曜日。第七プラント区からグレーゾーンまでは、前より遠くなった。でも足が覚えていた。"},{id:"tlf10-k-3",text:"結露の扉を開けた。"},{id:"tlf10-k-4",text:"「いらっしゃいませ」"},{id:"tlf10-k-5",text:"3ヶ月ぶりなのに、昨日の続きのような声だった。"},{id:"tlf10-k-6",text:"「——ただいま」"},{id:"tlf10-k-7",text:"自分でも驚いた。「ただいま」。帰る場所がある人間の言葉。わたしは今、この店を「帰る場所」と呼んだ。"},{id:"tlf10-k-8",text:"ペリエが出てきた。氷が二つ。"},{id:"tlf10-k-9",text:"「レモンは」"},{id:"tlf10-k-10",text:"「今夜は、入れて欲しいです」"},{id:"tlf10-k-11",text:"7年間、拒否し続けてきた。あの人の記憶でこの場所を汚したくなかった。でも今夜は違う。今夜は持ち込んでいい。ここはもう、わたしの帰る場所だから。あの人の記憶も、この店主も、全部ここに置いていい。"},{id:"tlf10-k-12",text:"檸檬のスライスがグラスの縁に添えられた。指で摘んで、中に落とした。"},{id:"tlf10-k-13",text:"カラン。"},{id:"tlf10-k-14",text:"炭酸の泡が立ち上がった。透明な液体に、淡い黄色が滲んでいった。"},{id:"tlf10-k-15",text:"一口飲んだ。あの台所の味がした。泣かなかった。笑った。"},{id:"tlf10-k-16",text:"「この本、覚えていらっしゃいますか」"},{id:"tlf10-k-17",text:"「最初の夜に持っていらしたものですね」"},{id:"tlf10-k-18",text:"覚えていた。最初の夜を。"},{id:"tlf10-k-19",text:"「結局、まだ読み終わっていなくて」"},{id:"tlf10-k-20",text:"「3ヶ月ぶりなのに、栞が動いていませんね」"},{id:"tlf10-k-21",text:"笑った。この人は、わたしの栞の位置を、ずっと見ていた。"},{id:"tlf10-k-22",text:"「梶井基次郎、お好きですか」"},{id:"tlf10-k-23",text:"「読んだことは、あります」"},{id:"tlf10-k-24",text:"「檸檬を丸善に置いて、爆弾だと思いたかった人の話。ずっと不思議だったんです。でも今は、少し分かる」"},{id:"tlf10-k-25",text:"あの主人公が檸檬を置いたのは、自分の中のどうしようもない熱を、形にしたかっただけなのかもしれない。わたしにとってのそれは、この栞だ。動かなかった栞。読めなかった本。全部、わたしがここにいた証。"},{id:"tlf10-k-26",text:"「春の匂い、好きなんですよね」"},{id:"tlf10-k-27",text:"「ここに来ると……」"},{id:"tlf10-k-28",text:"言いかけて、止めた。止めたけれど、伝わった気がした。別の言葉で蓋をした。"},{id:"tlf10-k-29",text:"「塔馬さんは、変わらないですね」"},{id:"tlf10-k-30",text:"カウンターの向こうに立つ塔馬さんを見た。変わらない姿勢。変わらない手つき。"},{id:"tlf10-k-31",text:"「——」"},{id:"tlf10-k-32",text:"塔馬さんは一瞬、何かを言いかけて、止めた。"},{id:"tlf10-k-33",text:"「変わらないですよ」"},{id:"tlf10-k-34",text:"その声は、塔馬さんから発せられた。"},{id:"tlf10-k-35",text:"息を呑んだ。変わらない。そう答えてくれた。あなたは変わらないでいい。変わらないまま、ここにいてくれればいい。"},{id:"tlf10-k-36",text:"グラスを受け取るとき、指先が触れた。"},{id:"tlf10-k-37",text:"その温度が、ちょうどいい体温ではなかった。もう少し高かった。微熱のような。あの人と、同じ。"},{id:"tlf10-k-38",text:"心臓が大きく鳴った。一度だけ。強く。"},{id:"tlf10-k-39",text:"確かめない。確かめなくていい。この温度を、身体が覚えている。それで十分だ。"},{id:"tlf10-k-40",text:"立ち上がった。本を取った。今夜は、最後まで読み切ろうと思った。帰り道ではなく、ここで。この席で。"},{id:"tlf10-k-41",text:"ポケットの中に、IDカードがある。明日もあの場所に通う。完璧なシステムの中で。"},{id:"tlf10-k-42",text:"でも金曜日の夜は、ここに帰ってくる。"},{id:"tlf10-k-43",text:"カウンターの向こうに立つ、あの人に似た人のもとへ。"},{id:"tlf10-k-44",text:"檸檬の味を、もう一度。"},{id:"tlf10-k-45",text:"これがわたしの記録のすべてだ。"},{id:"tlf10-k-46",text:"今あなたに見えている世界をそのまま、わたしに伝えてほしい——それがわたしのすべてになっていくからだ。"}]
+};
+
+function escH(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function showToast(msg){
+  let t=document.getElementById('toast-lt');
+  if(!t){t=document.createElement('div');t.id='toast-lt';
+    t.style.cssText='position:fixed;top:60px;left:50%;transform:translateX(-50%);background:#2a5a2a;color:#8f8;padding:8px 18px;border-radius:6px;z-index:9999;font-size:12px;pointer-events:none;transition:opacity .5s';
+    document.body.appendChild(t);}
+  t.textContent=msg;t.style.opacity='1';
+  clearTimeout(t._to);t._to=setTimeout(function(){t.style.opacity='0';},3000);
+}
+function renderKiriPanels(){
+  const allData=Object.assign({},LATEST_KIRI_DATA,LATEST_KIRI_DATA_TL);
+  const stored=JSON.parse(localStorage.getItem('perier_rv')||'{}');
+  Object.entries(allData).forEach(function([sid,paras]){
+    const pb=document.querySelector('.panel.kiri .pb[data-sync="'+sid+'"]');
+    if(!pb)return;
+    pb.innerHTML=paras.map(function(p){
+      const d=stored[p.id]||[];
+      const hasCm=d.length>0;
+      let cls='reviewable';if(hasCm)cls+=' has-c';
+      let html='<p class="'+cls+'" data-para="'+p.id+'">'+escH(p.text);
+      if(hasCm){
+        const sp=document.createElement('span');sp.className='cm';
+        sp.title=d.map(function(c){return c.text;}).join(' | ');
+        html+='<span class="cm" title="'+escH(sp.title)+'"></span>';
+        const hasS=d.some(function(c){return c.type==='strikethrough';});
+        if(hasS){cls+=' has-s';html='<p class="'+cls+'" data-para="'+p.id+'">'+escH(p.text);
+          const rep=d.find(function(c){return c.type==='strikethrough';});
+          if(rep&&rep.text)html+='<span class="rep">'+escH(rep.text)+'</span>';
+          html+='<span class="cm"></span>';
+        }
+      }
+      html+='</p>';return html;
+    }).join('\n');
+  });
+}
+function loadLatest(){
+  if(!confirm('最新版テキストに更新し、修正キューをクリアしますか？'))return;
+  const stored=JSON.parse(localStorage.getItem('perier_rv')||'{}');
+  Object.keys(stored).forEach(function(k){
+    if(stored[k]&&Array.isArray(stored[k])){
+      stored[k]=stored[k].filter(function(c){return c.type!=='strikethrough';});
+      if(stored[k].length===0)delete stored[k];
+    }
+  });
+  localStorage.setItem('perier_rv',JSON.stringify(stored));
+  renderKiriPanels();
+  if(typeof renderRv==='function')renderRv();
+  showToast('✅ 最新版に更新しました');
+}
 </script>
 <div class="history-panel" id="histPanel">
 <h3>変更履歴</h3>
