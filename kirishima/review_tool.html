@@ -28,7 +28,8 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 .pb p:hover{background:rgba(255,255,255,.03)}
 .no-content{color:#555;font-style:italic;text-indent:0!important;text-align:center;padding:30px 0;cursor:default}
 .has-c{background:rgba(184,168,138,.1)!important;border-left:2px solid #b8a88a;padding-left:6px!important}
-.has-s{text-decoration:line-through;color:#777}
+.has-s{color:#777}
+.has-s>.orig-text{text-decoration:line-through}
 .rep{color:#6c6;font-style:italic;display:block;margin-top:3px;text-indent:0!important;font-size:12px}.rep::before{content:"\2192  ";color:#4a9eff}
 .cm{position:absolute;right:-3px;top:0;width:6px;height:6px;background:#b8a88a;border-radius:50%}
 .pop{position:fixed;z-index:300;background:#1a1a2e;border:1px solid #555;border-radius:6px;padding:12px;width:320px;box-shadow:0 4px 16px rgba(0,0,0,.6);display:none}
@@ -269,10 +270,8 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <div class="panel kiri"><div class="ph"><span class="lb kl">霧島版</span><span class="et">第1話 或る金曜日の夜</span></div><div class="pb" data-sync="ep-1">
 <p class="reviewable" data-para="ep1-k-0">― プロローグ ―</p>
 <p class="reviewable" data-para="ep1-k-1">ブルーゾーンの金曜日は、いつも同じだ。</p>
-<p class="reviewable" data-para="ep1-k-2">エアコンが効いた空気。変わらない白い光。誰かが決めた温度が、ビルの中をどこまでも満たしている。その中を歩いていると、自分がただの「機能」になっていく気がした。名前を持った人間じゃなくて、処理する何か。</p>
 <p class="reviewable" data-para="ep1-k-3">それが悪いとは思わない。楽だから。</p>
 <p class="reviewable" data-para="ep1-k-4">でも金曜の夜になると、足が言うことを聞かなくなる。</p>
-<p class="reviewable" data-para="ep1-k-5">帰ればいいのに。娘が待っている。男性Aからの返事もまだだ。全部分かってる。それなのに、いつの間にかグレーゾーンに向かっている。いなくなった人のことを考えながら、暗い路地を歩いている。</p>
 <p class="reviewable" data-para="ep1-k-6">七年、経った。</p>
 <p class="reviewable" data-para="ep1-k-7">泣いたのは一度だけ。あとはずっと回してきた。でも金曜だけは、足が勝手に動く。</p>
 <p class="reviewable" data-para="ep1-k-8">今夜も、歩き続けた。そして——小さな看板の前で、足が止まった。</p>
@@ -2146,7 +2145,7 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <p class="reviewable" data-para="tlf10-k-46">今あなたに見えている世界をそのまま、わたしに伝えてほしい——それがわたしのすべてになっていくからだ。</p>
 </div></div>
 </div>
-<div class="gn" id="gn"><h3>全体メモ（<span id="gnEp"></span>）</h3><textarea id="gnTxt" placeholder="EP全体のトーン・構成の指摘..."></textarea><button onclick="saveGN()" style="margin-top:6px">保存</button></div>
+<div class="gn" id="gn"><div style="display:flex;gap:4px;margin-bottom:8px"><button id="gnTab0" onclick="switchGnTab(0)" style="font-weight:bold;background:#2a2a3e;color:#b8a88a;border:1px solid #b8a88a;padding:3px 10px;font-size:11px;border-radius:3px;cursor:pointer">このEPのメモ</button><button id="gnTab1" onclick="switchGnTab(1)" style="background:#1a1a2e;color:#888;border:1px solid #444;padding:3px 10px;font-size:11px;border-radius:3px;cursor:pointer">本編全体メモ</button></div><h3>全体メモ（<span id="gnEp"></span>）</h3><textarea id="gnTxt" placeholder="EP全体のトーン・構成の指摘..."></textarea><button onclick="saveGN()" style="margin-top:6px">保存</button></div>
 <div class="ea" id="ea"><h3 style="font-size:13px;color:#b8a88a;margin-bottom:6px">レビューエクスポート</h3><pre id="eTxt"></pre><button onclick="cpEx()" style="margin-top:6px">コピー</button></div>
 <div class="pop" id="pop">
 <h4 id="pTit"></h4><div class="ex" id="pEx" style="display:none"></div>
@@ -2156,8 +2155,9 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 <textarea id="pTxt" placeholder="代替文を入力（元の段落テキストが入っています）..."></textarea>
 <div class="ac"><button onclick="saveCm()">保存</button><button onclick="closePop()">取消</button><button class="dg" onclick="delCm()" id="pDel" style="display:none">削除</button></div>
 </div>
+<button onclick="doExport()" style="position:fixed;bottom:24px;right:24px;z-index:400;background:#1a1a2e;color:#b8a88a;border:1px solid #b8a88a;border-radius:20px;padding:8px 16px;font-family:inherit;font-size:11px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.5)">📤 Export</button>
 <script>
-let mode='ep',cur='',rv=JSON.parse(localStorage.getItem('perier_rv')||'{}'),pt=null,origText='';
+let mode='ep',cur='',rv=JSON.parse(localStorage.getItem('perier_rv')||'{}'),pt=null,origText='',gnTab=0;
 const epL=[...Array(10)].map((_,i)=>'ep-'+(i+1));
 const tlL=["tl-f1", "tl-past1", "tl-f3", "tl-past2", "tl-f5", "tl-past3", "tl-f7", "tl-past4", "tl-f9", "tl-f10"];
 function getL(){return mode==='ep'?epL:tlL}
@@ -2230,13 +2230,13 @@ function saveCm(){
 function delCm(){if(!pt)return;addHist('del',pt,{text:'(deleted)'});delete rv[pt];localStorage.setItem('perier_rv',JSON.stringify(rv));closePop();renderRv();updCnt()}
 function getCm(k){return rv[k]||[]}
 function renderRv(){
-  document.querySelectorAll('.has-c,.has-s').forEach(el=>{el.classList.remove('has-c','has-s');el.querySelectorAll('.cm,.rep').forEach(m=>m.remove())});
+  document.querySelectorAll('.has-c,.has-s').forEach(el=>{el.classList.remove('has-c','has-s');el.querySelectorAll('.cm,.rep').forEach(m=>m.remove());const _os=el.querySelector('.orig-text');if(_os){el.replaceChild(document.createTextNode(_os.textContent),_os);}});
   for(const[k,comments]of Object.entries(rv)){
     if(k.startsWith('general'))continue;
     const p=document.querySelector('[data-para="'+k+'"]');if(!p)continue;
     let hs=false,rp='';
     for(const c of comments){if(c.type==='strikethrough'){hs=true;rp=c.text}}
-    p.classList.add('has-c');if(hs)p.classList.add('has-s');
+    p.classList.add('has-c');if(hs){p.classList.add('has-s');const _os=document.createElement('span');_os.className='orig-text';_os.textContent=p.textContent.trim();while(p.firstChild)p.removeChild(p.firstChild);p.appendChild(_os);}
     const m=document.createElement('span');m.className='cm';m.title=comments.map(c=>{const a=c.author==='kuro'?'[クロ]':c.author==='gemi'?'[Gemi]':c.author==='non'?'[のん]':'[黒海乃愛]';return a+c.text}).join(' | ');p.appendChild(m);
     if(rp){const r=document.createElement('span');r.className='rep';r.textContent=rp;p.appendChild(r)}
   }
@@ -2247,14 +2247,14 @@ function updCnt(){
   document.getElementById('cnt').innerHTML=h;
   const c2=document.getElementById('cnt2');if(c2)c2.innerHTML=h;
 }
+function switchGnTab(n){gnTab=n;const b0=document.getElementById('gnTab0'),b1=document.getElementById('gnTab1');b0.style.fontWeight=n===0?'bold':'normal';b0.style.background=n===0?'#2a2a3e':'#1a1a2e';b0.style.color=n===0?'#b8a88a':'#888';b0.style.borderColor=n===0?'#b8a88a':'#444';b1.style.fontWeight=n===1?'bold':'normal';b1.style.background=n===1?'#2a2a3e':'#1a1a2e';b1.style.color=n===1?'#b8a88a':'#888';b1.style.borderColor=n===1?'#b8a88a':'#444';const k=n===0?'general-'+cur:'general-all';document.getElementById('gnTxt').value=rv[k]?rv[k][0].text:'';document.getElementById('gnEp').textContent=n===0?cur:'全体';}
 function toggleGN(){
   const d=document.getElementById('gn');
   if(d.classList.contains('vis')){d.classList.remove('vis');return}
-  d.classList.add('vis');document.getElementById('gnEp').textContent=cur;
-  const k='general-'+cur;document.getElementById('gnTxt').value=rv[k]?rv[k][0].text:'';
+  d.classList.add('vis');switchGnTab(gnTab);
 }
 function saveGN(){
-  const txt=document.getElementById('gnTxt').value.trim();const k='general-'+cur;
+  const txt=document.getElementById('gnTxt').value.trim();const k=gnTab===0?'general-'+cur:'general-all';
   if(txt){rv[k]=[{type:'general',text:txt,ts:new Date().toISOString()}]}else{delete rv[k]}
   localStorage.setItem('perier_rv',JSON.stringify(rv));updCnt();alert('保存しました');
 }
@@ -2570,7 +2570,7 @@ function renderKiriPanels(){
         sp.title=d.map(function(c){return c.text;}).join(' | ');
         html+='<span class="cm" title="'+escH(sp.title)+'"></span>';
         const hasS=d.some(function(c){return c.type==='strikethrough';});
-        if(hasS){cls+=' has-s';html='<p class="'+cls+'" data-para="'+p.id+'">'+escH(p.text);
+        if(hasS){cls+=' has-s';html='<p class="'+cls+'" data-para="'+p.id+'"><span class="orig-text">'+escH(p.text)+'</span>';
           const rep=d.find(function(c){return c.type==='strikethrough';});
           if(rep&&rep.text)html+='<span class="rep">'+escH(rep.text)+'</span>';
           html+='<span class="cm"></span>';
