@@ -41,10 +41,11 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 #pTxtLbl{display:none;font-size:9px;color:#6c6;margin-bottom:3px}
 #pTxtNote{display:none;font-size:9px;color:#666;margin-top:2px}
 .cm{position:absolute;right:-3px;top:0;width:6px;height:6px;background:#b8a88a;border-radius:50%}
-.pop{position:fixed;z-index:300;background:#1a1a2e;border:1px solid #555;border-radius:6px;padding:12px;width:320px;box-shadow:0 4px 16px rgba(0,0,0,.6);display:none}
+.pop{position:fixed;z-index:300;background:#1a1a2e;border:1px solid #555;border-radius:6px;padding:12px;width:min(500px,90vw);max-height:80vh;overflow-y:auto;top:50%;left:50%;transform:translate(-50%,-50%);box-shadow:0 4px 16px rgba(0,0,0,.6);display:none}
 .pop h4{font-size:11px;color:#b8a88a;margin-bottom:6px}
 .pop textarea{width:100%;height:100px;background:#0d0d14;color:#d4d4d4;border:1px solid #444;border-radius:3px;padding:6px;font-family:inherit;font-size:11px;resize:vertical}
-.pop .ac{display:flex;gap:4px;margin-top:6px}.pop .ac button{font-size:10px;padding:3px 8px}
+.pop .ac{display:flex;gap:4px;margin-top:6px;position:sticky;bottom:0;background:#1a1a2e;padding:6px 0 0}.pop .ac button{font-size:10px;padding:3px 8px}
+.pop-bd{position:fixed;top:0;left:0;right:0;bottom:0;z-index:299;background:rgba(0,0,0,.4);display:none}
 .pop .ac button.dg{border-color:#c44;color:#c44}
 .pop .ex{background:#0d0d14;border-radius:3px;padding:6px;margin-bottom:6px;font-size:11px;max-height:80px;overflow-y:auto}
 .pop .nt{margin-bottom:4px;padding-bottom:4px;border-bottom:1px solid #222}.pop .nt:last-child{border:0;margin:0;padding:0}
@@ -55,7 +56,7 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 .ea{display:none;padding:10px;max-width:700px;margin:0 auto}.ea.vis{display:block}
 .ea pre{background:#0d0d14;padding:10px;border-radius:4px;font-size:10px;overflow:auto;max-height:300px;white-space:pre-wrap}
 .ib{text-align:center;padding:3px;font-size:9px;color:#444}
-@media(max-width:768px){.view-section.vis{grid-template-columns:1fr}.pop{width:90%;left:5%!important}}
+@media(max-width:768px){.view-section.vis{grid-template-columns:1fr}.pop{width:90vw}}
 
 .author-sel{background:#0d0d14;color:#d4d4d4;border:1px solid #444;padding:2px 4px;font-size:10px;border-radius:2px;margin-bottom:4px;margin-left:4px}
 .author-tag{font-size:8px;padding:1px 4px;border-radius:8px;margin-right:4px;font-weight:700}
@@ -2196,6 +2197,7 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 </div>
 <div class="gn" id="gn"><div style="display:flex;gap:4px;margin-bottom:8px"><button id="gnTab0" onclick="switchGnTab(0)" style="font-weight:bold;background:#2a2a3e;color:#b8a88a;border:1px solid #b8a88a;padding:3px 10px;font-size:11px;border-radius:3px;cursor:pointer">このEPのメモ</button><button id="gnTab1" onclick="switchGnTab(1)" style="background:#1a1a2e;color:#888;border:1px solid #444;padding:3px 10px;font-size:11px;border-radius:3px;cursor:pointer">本編全体メモ</button></div><h3>全体メモ（<span id="gnEp"></span>）</h3><textarea id="gnTxt" placeholder="EP全体のトーン・構成の指摘..."></textarea><button onclick="saveGN()" style="margin-top:6px">保存</button></div>
 <div class="ea" id="ea"><h3 style="font-size:13px;color:#b8a88a;margin-bottom:6px">レビューエクスポート</h3><pre id="eTxt"></pre><button onclick="cpEx()" style="margin-top:6px">コピー</button></div>
+<div class="pop-bd" id="popBd" onclick="closePop()"></div>
 <div class="pop" id="pop">
 <h4 id="pTit"></h4><div class="ex" id="pEx" style="display:none"></div>
 <select id="pTyp" style="background:#0d0d14;color:#d4d4d4;border:1px solid #444;padding:2px;font-size:10px;border-radius:2px;margin-bottom:4px">
@@ -2308,11 +2310,9 @@ const authCls=c.author?'author-'+c.author:'author-hancho';
 const authName=c.author==='kuro'?'クロ':c.author==='gemi'?'Gemi':c.author==='non'?'のん':'黒海乃愛';
 return '<div class="nt"><div class="tp"><span class="author-tag '+authCls+'">'+authName+'</span>'+(c.type==='strikethrough'?'取消':c.type==='reorder'?'順序':'memo')+'</div><div class="tx">'+c.text+'</div></div>'}).join('');document.getElementById('pDel').style.display='inline-block'}
   else{exDiv.style.display='none';document.getElementById('pDel').style.display='none'}
-  pop.style.left=Math.min(x,window.innerWidth-340)+'px';
-  pop.style.top=Math.min(y,window.innerHeight-250)+'px';
-  pop.style.display='block';document.getElementById('pTxt').focus();
+  pop.style.display='block';document.getElementById('popBd').style.display='block';document.getElementById('pTxt').focus();
 }
-function closePop(){document.getElementById('pop').style.display='none';pt=null;origText=''}
+function closePop(){document.getElementById('pop').style.display='none';document.getElementById('popBd').style.display='none';pt=null;origText=''}
 document.getElementById('pTyp').addEventListener('change',function(){
   const ta=document.getElementById('pTxt');
   const isS=this.value==='strikethrough';
