@@ -94,6 +94,8 @@ body{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;background:#0a0a0f
 .added-para{background:rgba(100,200,100,.08)!important;border-left:2px solid #6c6!important;padding-left:6px!important}
 .serif-hl{outline:2px solid #e6c200!important;background:rgba(230,194,0,.10)!important}
 .ss-btn.on{background:#e6c200!important;color:#0a0a0f!important;border-color:#e6c200!important;font-weight:bold}
+.serif-span{cursor:pointer;border-radius:2px;transition:background .1s}
+.serif-span:hover{background:rgba(74,158,255,.15)}
 </style></head><body>
 <div class="hd"><h1>ペリエの栞 レビューツール</h1><p>段落クリック→全文textarea（取り消し線＋代替文デフォルト）| 全体メモ | EP/時系列切替 | エクスポート</p></div>
 <div class="mt">
@@ -2240,6 +2242,33 @@ function go(id){
 }
 function nv(d){const l=getL();let i=l.indexOf(cur);i=(i+d+l.length)%l.length;go(l[i])}
 document.addEventListener('click',function(e){
+  if(e.target.classList&&e.target.classList.contains('serif-span')){
+    var sp=e.target;
+    var srcPara=sp.closest('.reviewable');if(!srcPara)return;
+    var serifText=sp.textContent.replace(/^「/,'').replace(/」$/,'');
+    var srcPanel=srcPara.closest('.panel');
+    var isToma=srcPanel&&srcPanel.classList.contains('toma');
+    var srcSection=srcPanel&&srcPanel.closest('.view-section');
+    var targetPanel=srcSection&&srcSection.querySelector(isToma?'.kiri':'.toma');
+    var targetPb=targetPanel&&targetPanel.querySelector('.pb');
+    if(targetPb){
+      var found=null;
+      targetPb.querySelectorAll('.reviewable').forEach(function(tp){
+        if(found)return;
+        if(tp.textContent.includes('「'+serifText+'」'))found=tp;
+      });
+      if(found){
+        var fr=found.getBoundingClientRect(),pr=targetPb.getBoundingClientRect();
+        targetPb.scrollTop+=fr.top-pr.top-(pr.height/2-fr.height/2);
+        found.style.outline='2px solid #e6c200';
+        found.style.background='rgba(230,194,0,.10)';
+        setTimeout(function(){found.style.outline='';found.style.background='';},2000);
+      }
+    }
+    srcPara.style.outline='2px solid #4a9eff';
+    setTimeout(function(){srcPara.style.outline='';},2000);
+    return;
+  }
   const p=e.target.closest('.reviewable');if(!p)return;
   const raw=Array.from(p.childNodes).filter(n=>n.nodeType===3).map(n=>n.textContent).join('').trim();
   openPop(p.dataset.para,e.clientX,e.clientY,raw.substring(0,30),raw);
@@ -2303,6 +2332,7 @@ function renderRv(){
     p.appendChild(m);
     if(rp){const r=document.createElement('span');r.className='rep';r.textContent=rp;p.appendChild(r)}
   }
+  wrapSerifSpans();
 }
 function updCnt(){
   const t=Object.values(rv).reduce((s,a)=>s+a.length,0);
@@ -2328,6 +2358,29 @@ function toggleSerifSync(){
     }else{
       p.classList.remove('serif-hl');
     }
+  });
+}
+function wrapSerifSpans(){
+  document.querySelectorAll('.pb p.reviewable').forEach(function(p){
+    if(p.querySelector('.serif-span'))return;
+    var walker=document.createTreeWalker(p,NodeFilter.SHOW_TEXT,{acceptNode:function(n){
+      var par=n.parentElement;
+      if(par.classList.contains('cm')||par.classList.contains('rep'))return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }},false);
+    var nodes=[],n;
+    while((n=walker.nextNode()))nodes.push(n);
+    nodes.forEach(function(tn){
+      if(!tn.textContent.includes('「'))return;
+      var text=tn.textContent,frag=document.createDocumentFragment(),re=/「[^」]*」/g,last=0,m;
+      while((m=re.exec(text))!==null){
+        if(m.index>last)frag.appendChild(document.createTextNode(text.slice(last,m.index)));
+        var sp=document.createElement('span');sp.className='serif-span';sp.textContent=m[0];
+        frag.appendChild(sp);last=re.lastIndex;
+      }
+      if(last<text.length)frag.appendChild(document.createTextNode(text.slice(last)));
+      tn.parentNode.replaceChild(frag,tn);
+    });
   });
 }
 function saveGN(){
