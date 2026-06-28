@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }}｜制作ノート</title>
+  <link rel="stylesheet" href="{{ '/assets/css/keiro.css' | relative_url }}">
+</head>
+<body>
+  <header class="keiro-header">
+    {% if page.version %}<div class="keiro-eyebrow">PRODUCTION NOTES — {{ page.version }}</div>{% endif %}
+    <h1 class="keiro-title">{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="keiro-subtitle">{{ page.subtitle }}</p>{% endif %}
+  </header>
+  <main class="keiro-wrap">
+    {{ content }}
+  </main>
+</body>
+</html>

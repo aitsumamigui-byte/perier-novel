@@ -1,0 +1,178 @@
+/* ===== 結露テーマ（Keiro Theme） =====
+   琥珀色のサイフォン × 曇りガラスの滲む光
+   制作ノート『ペリエの栞』用カスタムスタイル
+   ===================================== */
+
+:root {
+  --keiro-bg:        #1a1512;  /* 深夜の店内の暗さ（焦げ茶） */
+  --keiro-bg-soft:   #221a15;
+  --keiro-amber:     #c8902f;  /* サイフォンの灯り */
+  --keiro-amber-lt:  #f2c97a;
+  --keiro-text:      #d8cab2;  /* 温白色の本文 */
+  --keiro-head:      #f2e6d2;
+  --keiro-muted:     #9a886a;
+  --keiro-line:      rgba(214, 150, 60, 0.18);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--keiro-bg);
+  color: var(--keiro-text);
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+  line-height: 1.95;
+  font-size: 16.5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.keiro-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+}
+
+/* ヘッダー：右上から琥珀の光が滲む */
+.keiro-header {
+  margin: 0 -1.5rem 2.5rem;
+  padding: 3.5rem 2.25rem 2.75rem;
+  background:
+    radial-gradient(120% 80% at 78% 12%,
+      rgba(214, 150, 60, 0.16),
+      rgba(26, 21, 18, 0) 60%);
+  border-bottom: 0.5px solid var(--keiro-line);
+}
+.keiro-eyebrow {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: #b07d3a;
+  margin-bottom: 1.25rem;
+}
+.keiro-title {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--keiro-head);
+  margin: 0 0 0.5rem;
+}
+.keiro-subtitle {
+  font-size: 15px;
+  color: #c9b48f;
+  margin: 0;
+}
+
+/* 見出し：静かな明朝、琥珀の下線 */
+h2 {
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--keiro-head);
+  margin: 3rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.5px solid var(--keiro-line);
+}
+h3 {
+  font-size: 17px;
+  font-weight: 500;
+  color: #ecdcc0;
+  margin: 2rem 0 0.75rem;
+}
+
+p { margin: 0 0 1.25rem; }
+strong { color: var(--keiro-head); font-weight: 600; }
+
+a {
+  color: var(--keiro-amber-lt);
+  text-decoration: none;
+  border-bottom: 0.5px solid rgba(242, 201, 122, 0.4);
+}
+a:hover { border-bottom-color: var(--keiro-amber-lt); }
+
+/* 本編リンクをボタン化（はじめにセクションのリスト） */
+.keiro-wrap ul { list-style: none; padding: 0; display: flex; gap: 12px; flex-wrap: wrap; }
+.keiro-wrap ul li a {
+  display: inline-flex;
+  padding: 11px 18px;
+  border: 0.5px solid rgba(214, 150, 60, 0.45);
+  border-radius: 10px;
+  background: rgba(214, 150, 60, 0.06);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* 取り消し線＝血の通った傷跡（琥珀色に発光） */
+del, s {
+  color: var(--keiro-muted);
+  text-decoration: line-through;
+  text-decoration-color: rgba(214, 150, 60, 0.55);
+}
+
+/* 引用（キャッチコピー等） */
+blockquote {
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.3rem;
+  border-left: 2px solid rgba(214, 150, 60, 0.4);
+  color: #e6d8bf;
+  font-style: normal;
+}
+
+/* システムログ＝怒号ブロック（バグの痕跡） */
+blockquote.system-log {
+  background: rgba(214, 150, 60, 0.05);
+  border-left: 3px solid var(--keiro-amber);
+  border-radius: 0;
+  padding: 1.1rem 1.3rem;
+  box-shadow: inset 0 0 40px rgba(214, 150, 60, 0.04);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+blockquote.system-log .log-head {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #b07d3a;
+  margin-bottom: 0.75rem;
+}
+blockquote.system-log p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--keiro-muted);
+  text-decoration: line-through;
+  text-decoration-color: rgba(200, 144, 47, 0.4);
+  margin: 0 0 0.75rem;
+}
+blockquote.system-log p:last-child { margin-bottom: 0; }
+blockquote.system-log strong { color: #c9a25f; }
+
+/* 表 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 14px;
+}
+th, td {
+  text-align: left;
+  padding: 9px 12px;
+  border-bottom: 0.5px solid var(--keiro-line);
+}
+th { color: var(--keiro-amber-lt); font-weight: 500; }
+
+hr {
+  border: none;
+  border-top: 0.5px solid var(--keiro-line);
+  margin: 2.5rem 0;
+}
+
+code {
+  font-family: ui-monospace, monospace;
+  font-size: 0.88em;
+  background: rgba(214, 150, 60, 0.1);
+  padding: 1px 6px;
+  border-radius: 4px;
+  color: #e0b878;
+}
+
+@media (max-width: 600px) {
+  .keiro-title { font-size: 24px; }
+  .keiro-header { padding: 2.5rem 1.5rem 2rem; }
+}
