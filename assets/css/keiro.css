@@ -36,8 +36,9 @@ body {
 .keiro-header {
   margin: 0 -1.5rem 2.5rem;
   padding: 3.5rem 2.25rem 2.75rem;
+  text-align: center;
   background:
-    radial-gradient(120% 80% at 78% 12%,
+    radial-gradient(120% 80% at 50% 12%,
       rgba(214, 150, 60, 0.16),
       rgba(26, 21, 18, 0) 60%);
   border-bottom: 0.5px solid var(--keiro-line);
