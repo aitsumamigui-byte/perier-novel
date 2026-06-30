@@ -3,31 +3,32 @@
 """
 regen_kirishima_review_tool.py
 perier_kirishima_complete.md の最新版から review_tool_NEW.html を生成する。
-霧島版パネル（data-sync="prologue", "ep-1"..）の段落を全話再同期。
+霧島版段落ブロックを全話再同期。重複出現があれば2件目以降を削除する。
 """
 
 import re
 import sys
 from pathlib import Path
 
-BASE     = Path(__file__).parent / "kirishima"
+# scripts/ の1つ上がリポジトリルート
+BASE     = Path(__file__).resolve().parent.parent / "kirishima"
 MD_FILE  = BASE / "perier_kirishima_complete.md"
 SRC_HTML = BASE / "review_tool.html"
 OUT_HTML = BASE / "review_tool_NEW.html"
 
-# EP番号 → (data-sync値, data-para prefix)
+# EP番号 → data-para prefix
 EP_MAP = {
-    "prologue": ("prologue",  "prologue-k"),
-    "ep1":      ("ep-1",      "ep1-k"),
-    "ep2":      ("ep-2",      "ep2-k"),
-    "ep3":      ("ep-3",      "ep3-k"),
-    "ep4":      ("ep-4",      "ep4-k"),
-    "ep5":      ("ep-5",      "ep5-k"),
-    "ep6":      ("ep-6",      "ep6-k"),
-    "ep7":      ("ep-7",      "ep7-k"),
-    "ep8":      ("ep-8",      "ep8-k"),
-    "ep9":      ("ep-9",      "ep9-k"),
-    "ep10":     ("ep-10",     "ep10-k"),
+    "prologue": "prologue-k",
+    "ep1":      "ep1-k",
+    "ep2":      "ep2-k",
+    "ep3":      "ep3-k",
+    "ep4":      "ep4-k",
+    "ep5":      "ep5-k",
+    "ep6":      "ep6-k",
+    "ep7":      "ep7-k",
+    "ep8":      "ep8-k",
+    "ep9":      "ep9-k",
+    "ep10":     "ep10-k",
 }
 
 
@@ -84,17 +85,9 @@ def parse_md(text):
             i += 1
             continue
 
-        # 段落: 連続する非空行をまとめて1ブロック
-        para_lines = []
-        while i < len(lines):
-            l = lines[i]
-            if l.strip() == "" or re.match(r'^-{3,}$', l.strip()) or l.startswith("#"):
-                break
-            para_lines.append(l.rstrip())
-            i += 1
-
-        if para_lines:
-            current_blocks.append({"type": "p", "text": "\n".join(para_lines)})
+        # 1行 = 1段落ブロック（1文1行整形済みMD対応）
+        current_blocks.append({"type": "p", "text": line.rstrip()})
+        i += 1
 
     if current_key is not None:
         sections[current_key] = current_blocks
@@ -120,28 +113,46 @@ def blocks_to_html(blocks, prefix):
     return "\n".join(parts)
 
 
-def replace_kiri_panel(html, sync_id, new_inner):
+def replace_episode_block(html, prefix, new_block):
     """
-    <div class="panel kiri"> 配下の data-sync="{sync_id}" を持つ .pb div の
-    内容を new_inner に置換する（塔馬パネルには触れない）。
+    data-para="{prefix}-数字" を持つ <p class="reviewable"> の連続ブロックを
+    re.finditer で全件検出し、最初の出現を new_block に置換、
+    2件目以降は空文字列で削除する。
+    インデックスのズレを防ぐため後ろから前に向かって処理する。
     """
-    pattern = (
-        rf'(<div class="panel kiri">.*?'
-        rf'<div class="pb" data-sync="{re.escape(sync_id)}">)'
-        rf'(.*?)'
-        rf'(</div>\s*</div>)'
+    single_p = (
+        rf'<p class="reviewable" data-para="{re.escape(prefix)}-\d+">.*?</p>'
+    )
+    # 連続ブロック: 段落の間に <hr> と空白のみ許容
+    block_pat = (
+        rf'(?:{single_p})'
+        rf'(?:\s*(?:<hr[^>]*>)?\s*(?:{single_p}))*'
     )
 
-    def replacer(m):
-        return m.group(1) + "\n" + new_inner + "\n" + m.group(3)
+    matches = list(re.finditer(block_pat, html, flags=re.DOTALL))
 
-    new_html, count = re.subn(pattern, replacer, html, flags=re.DOTALL)
-    if count == 0:
-        print(f"  WARN: data-sync='{sync_id}' が霧島パネル内に見つかりません", file=sys.stderr)
-    else:
-        p_count = new_inner.count('data-para=')
-        print(f"  OK  [{sync_id}] {p_count} 段落を再同期")
-    return new_html
+    if not matches:
+        print(f"  WARN: [{prefix}] ブロック未検出", file=sys.stderr)
+        return html
+
+    spans = [(m.start(), m.end()) for m in matches]
+    result = html
+    removed = 0
+
+    # 後ろから前へ：2件目以降を削除
+    for i in range(len(spans) - 1, 0, -1):
+        start, end = spans[i]
+        result = result[:start] + result[end:]
+        removed += 1
+
+    # 1件目を new_block に置換
+    start, end = spans[0]
+    result = result[:start] + new_block + result[end:]
+
+    p_count = new_block.count('data-para=')
+    dup_msg = f", {removed}件重複削除" if removed else ""
+    print(f"  OK  [{prefix}] {p_count}段落{dup_msg}")
+    return result
 
 
 def main():
@@ -156,14 +167,14 @@ def main():
     found = list(sections.keys())
     print(f"      セクション: {found}")
 
-    print("[4/4] 霧島版パネルを置換中...")
-    for ep_key, (sync_id, prefix) in EP_MAP.items():
+    print("[4/4] 霧島版段落ブロックを置換中...")
+    for ep_key, prefix in EP_MAP.items():
         if ep_key not in sections:
-            print(f"  SKIP [{sync_id}] (markdownに未収録)")
+            print(f"  SKIP [{prefix}] (markdownに未収録)")
             continue
         blocks = sections[ep_key]
-        inner_html = blocks_to_html(blocks, prefix)
-        html = replace_kiri_panel(html, sync_id, inner_html)
+        new_block = blocks_to_html(blocks, prefix)
+        html = replace_episode_block(html, prefix, new_block)
 
     OUT_HTML.write_text(html, encoding="utf-8")
     size = OUT_HTML.stat().st_size
