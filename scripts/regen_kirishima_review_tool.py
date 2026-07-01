@@ -4,6 +4,8 @@
 regen_kirishima_review_tool.py
 perier_kirishima_complete.md の最新版から review_tool_NEW.html を生成する。
 霧島版段落ブロックを全話再同期。重複出現があれば2件目以降を削除する。
+併せて、ルート index.html（商用公開版・塔馬版）から ep{n}-t-* ブロックも再同期する。
+index.html 自体は参照のみで一切変更しない。
 """
 
 import re
@@ -11,12 +13,14 @@ import sys
 from pathlib import Path
 
 # scripts/ の1つ上がリポジトリルート
-BASE     = Path(__file__).resolve().parent.parent / "kirishima"
+ROOT     = Path(__file__).resolve().parent.parent
+BASE     = ROOT / "kirishima"
 MD_FILE  = BASE / "perier_kirishima_complete.md"
 SRC_HTML = BASE / "review_tool.html"
 OUT_HTML = BASE / "review_tool_NEW.html"
+INDEX_HTML = ROOT / "index.html"
 
-# EP番号 → data-para prefix
+# EP番号 → data-para prefix（霧島版）
 EP_MAP = {
     "prologue": "prologue-k",
     "ep1":      "ep1-k",
@@ -30,6 +34,9 @@ EP_MAP = {
     "ep9":      "ep9-k",
     "ep10":     "ep10-k",
 }
+
+# EP番号 → data-para prefix（塔馬版、index.html由来）
+EP_MAP_T = {f"ep{n}": f"ep{n}-t" for n in range(1, 11)}
 
 
 def parse_md(text):
@@ -95,6 +102,97 @@ def parse_md(text):
     return sections
 
 
+def _handle_index_p_content(content, entries):
+    """index.html の <p>...</p> 中身を段落エントリのリストへ展開する。
+    <br> による複数行、<span class="log">...</span> の混在に対応。"""
+    for seg in content.split("<br>"):
+        seg = seg.strip()
+        if not seg:
+            continue
+        m = re.match(r'^(.*?)<span class="log">(.*?)</span>(.*)$', seg)
+        if m:
+            before, logtext, after = m.group(1).strip(), m.group(2), m.group(3).strip()
+            if before:
+                entries.append(before)
+            entries.append(logtext)
+            if after:
+                entries.append(after)
+        else:
+            entries.append(seg)
+
+
+def parse_index_html(text):
+    """
+    ルート index.html（商用公開版・塔馬版）から
+    {ep_key: [段落文字列, ...]} を抽出する。参照のみ、index.html は変更しない。
+    """
+    sections = {}
+    for m in re.finditer(r'<section class="episode" id="ep(\d+)">(.*?)</section>', text, re.DOTALL):
+        num = str(int(m.group(1)))
+        body = m.group(2)
+
+        title_m = re.search(r'<span class="ep-title">(.*?)</span>', body)
+        entries = [title_m.group(1)] if title_m else []
+
+        # episode-header は本文抽出対象から除外
+        body = re.sub(r'<div class="episode-header">.*?</div>\s*', '', body, flags=re.DOTALL)
+
+        in_dash = False
+        for line in body.split("\n"):
+            line = line.strip()
+            if not line:
+                continue
+
+            if line == '<div class="dash-block">':
+                in_dash = True
+                continue
+            if in_dash and line == "</div>":
+                in_dash = False
+                continue
+            if in_dash and line.endswith("</div>"):
+                line = line[: -len("</div>")].strip()
+                in_dash = False
+
+            dm = re.match(r'^<span class="dash">(.*?)</span>$', line)
+            if dm:
+                entries.append(dm.group(1))
+                continue
+
+            pm = re.match(r'^<p>(.*)</p>$', line)
+            if pm:
+                _handle_index_p_content(pm.group(1), entries)
+                continue
+
+            sm = re.match(r'^<div class="spacer">(.*?)</div>$', line)
+            if sm:
+                entries.append(sm.group(1))
+                continue
+
+            dv = re.match(r'^<div class="divider">(.*?)</div>$', line)
+            if dv:
+                entries.append(dv.group(1))
+                continue
+
+            lg = re.match(r'^<span class="log">(.*?)</span>$', line)
+            if lg:
+                entries.append(lg.group(1))
+                continue
+
+            print(f"  WARN: [ep{num}-t] 未対応の行を検出: {line[:80]}", file=sys.stderr)
+
+        sections[f"ep{num}"] = entries
+
+    return sections
+
+
+def blocks_to_html_t(entries, prefix):
+    """塔馬版(index.html由来)の段落文字列リスト → HTML文字列"""
+    parts = []
+    for idx, text in enumerate(entries):
+        parts.append(f'<p class="reviewable" data-para="{prefix}-{idx}">{text}</p>')
+    return "\n".join(parts)
+
+
 def blocks_to_html(blocks, prefix):
     """ブロックリスト → HTML 文字列"""
     parts = []
@@ -156,24 +254,39 @@ def replace_episode_block(html, prefix, new_block):
 
 
 def main():
-    print(f"[1/4] 読込: {MD_FILE.name}")
+    print(f"[1/6] 読込: {MD_FILE.name}")
     md_text = MD_FILE.read_text(encoding="utf-8")
 
-    print(f"[2/4] 読込: {SRC_HTML.name}")
+    print(f"[2/6] 読込: {SRC_HTML.name}")
     html = SRC_HTML.read_text(encoding="utf-8")
 
-    print("[3/4] markdown を解析中...")
+    print("[3/6] markdown を解析中...")
     sections = parse_md(md_text)
     found = list(sections.keys())
     print(f"      セクション: {found}")
 
-    print("[4/4] 霧島版段落ブロックを置換中...")
+    print("[4/6] 霧島版段落ブロックを置換中...")
     for ep_key, prefix in EP_MAP.items():
         if ep_key not in sections:
             print(f"  SKIP [{prefix}] (markdownに未収録)")
             continue
         blocks = sections[ep_key]
         new_block = blocks_to_html(blocks, prefix)
+        html = replace_episode_block(html, prefix, new_block)
+
+    print(f"[5/6] 読込・解析: {INDEX_HTML.name} (塔馬版・参照のみ)")
+    index_text = INDEX_HTML.read_text(encoding="utf-8")
+    sections_t = parse_index_html(index_text)
+    found_t = list(sections_t.keys())
+    print(f"      セクション: {found_t}")
+
+    print("[6/6] 塔馬版段落ブロックを置換中...")
+    for ep_key, prefix in EP_MAP_T.items():
+        if ep_key not in sections_t:
+            print(f"  SKIP [{prefix}] (index.htmlに未収録)")
+            continue
+        entries = sections_t[ep_key]
+        new_block = blocks_to_html_t(entries, prefix)
         html = replace_episode_block(html, prefix, new_block)
 
     OUT_HTML.write_text(html, encoding="utf-8")
